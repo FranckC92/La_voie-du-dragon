@@ -8,9 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AccountPaswwordController extends AbstractController
 {
-    #[Route('/compte/modifie-mon-mot-de-passe', name: 'app_account_paswword')]
+    #[Route('/compte/modifie-mon-mot-de-passe', name: 'app_account_password')]
     public function index(): Response
     {
-        return $this->render('account/pasword.html.twig');
+        return $this->render('account/password.html.twig');
     }
 }
