@@ -33,6 +33,12 @@ class Product
     #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'products')]
     private $category;
 
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $url;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $email;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
@@ -123,6 +129,30 @@ class Product
     public function removeCategory(Category $category): self
     {
         $this->category->removeElement($category);
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(?string $url): self
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(?string $email): self
+    {
+        $this->email = $email;
 
         return $this;
     }
