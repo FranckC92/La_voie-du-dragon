@@ -17,7 +17,7 @@ class ProductController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
-    #[Route('/product', name: 'app_product')]
+    #[Route('/nos-articles', name: 'products')]
     public function index(): Response
     {
         //declare et recupere donnes repoostyory fichier
@@ -29,5 +29,19 @@ class ProductController extends AbstractController
             
         ]);
     }
+
     //2 eme fonction
+    #[Route('/article/{slug}', name: 'product')]
+    public function show($slug): Response
+    {
+        dd($slug);
+        //declare et recupere donnes repoostyory fichier
+        $product = $this->entityManager->getRepository(Product::class)->findOneBySlug($slug);
+      
+        //barre de rechercher
+        return $this->render('product/index.html.twig', [
+            'product' => $product
+            
+        ]);
+    } 
 }
