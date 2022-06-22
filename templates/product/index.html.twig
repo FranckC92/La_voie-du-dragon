@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles - la voie du dragon{% endblock %}
+
+{% block content %}
+<h2>Articles</h2>
+    <div class="row">
+             {% for product in products %}
+             <div class="col-md-4">
+                <div class="product-item text-center">
+                    <h5>{{ product.name }}</h5>
+                    <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
+                   
+                    <span class="">{{ product.subtitle}}</span>
+                    <span class="">{{ product.url }}</span>
+                </div>
+             </div>
+            {% endfor %}
+        </div>
+{% endblock %}
