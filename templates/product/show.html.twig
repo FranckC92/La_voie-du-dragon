@@ -5,18 +5,20 @@
 
 
 {% block content %}
-<div class="col-md-2"></div>
-        <div class="col-md-10">
-             <h1 class="product-title">{{ product.name }}</h1>
-        </div>
+<hr>
+<div class="">
+        <h1 class="product-title">{{ product.name }}</h1>
+        <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
+        
+    </div>
+       
+<div class="">
+        <span class="">{{ product.subtitle}}</span>
+        {{ product.description}}  
 
-
- <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
- {{ product.description}}    
-<span class="">{{ product.subtitle}}</span>
 <hr>
 <span class="">{{ product.url }}</span>
 <hr>
 <span>{{ product.email}}</span>    
-       
+</div>     
 {% endblock %}
