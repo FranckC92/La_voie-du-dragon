@@ -39,6 +39,11 @@ class ProductController extends AbstractController
         //declare et recupere donnes repoostyory fichier
         $product = $this->entityManager->getRepository(Product::class)->findOneBySlug($slug);
       
+        //redirection si tu trouve pas de produits
+        if (!$product) {
+            return $this->redirectToRoute('products');
+
+        }
         //barre de rechercher
         return $this->render('product/show.html.twig', [
             'product' => $product

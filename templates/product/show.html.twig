@@ -1,15 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}La voie du Dragon{% endblock %}
+{% block title %}{{ product.name }}-La voie du Dragon{% endblock %}
+
+
 
 {% block content %}
-<div class="row">
-           <div class="col-md-5">
-               
-           </div>
-           <div class="col-md-7 my-auto"></div>
-</div>
-        
+<h1>{{ product.name }}</h1>
+
+
             
        
 {% endblock %}
