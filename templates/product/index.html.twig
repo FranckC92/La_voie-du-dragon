@@ -9,7 +9,9 @@
              <div class="col-md-4">
                 <div class="product-item text-center">
                     <h5>{{ product.name }}</h5>
-                    <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
+                        <a href="{{ path('product',{'slug': product.slug})}}"> 
+                        <img src="/uploads/{{ product.illustration }}" 
+                    alt="{{ product.name }}" class="img-fluid"></a>
                    
                     <span class="">{{ product.subtitle}}</span>
                     <span class="">{{ product.url }}</span>
