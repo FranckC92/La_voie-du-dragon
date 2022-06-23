@@ -2,9 +2,12 @@
 
 namespace App\Repository;
 
+use App\Classe\Search;
 use App\Entity\Product;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\ORMException;
+use Doctrine\ORM\OptimisticLockException;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @extends ServiceEntityRepository<Product>
@@ -20,7 +23,39 @@ class ProductRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Product::class);
     }
+        /**
+     *  Fonction  pour recuperer en fonction de la recherche de produits de l'ux
+     *  @return Product[]
+     */
+    public function findWithsearch (Search $search)
+    {
+        $query = $this
+        ->createQueryBuilder('p')
+        ->select('c','p')
+        ->join('p.category', 'c');
+         
+        if (!empty($search->categories)) {
+            $query= $query
+            ->andWhere('c.id IN (:categories)')
+            ->setParameter('categories', $search->categories);
+        }
+       
 
+
+        if (!empty($search->string)) 
+        {   $query =$query
+            ->andWhere('p.name LIKE :string')
+            ->setParameter('string',"%{$search->string}%");
+
+        }
+        return $query->getQuery()->getResult();
+    }
+
+       
+    /**
+     * @throws ORMException
+     * @throws OptimisticLockException
+     */
     public function add(Product $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);

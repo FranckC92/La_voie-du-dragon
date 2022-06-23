@@ -31,6 +31,13 @@ class ProductController extends AbstractController
         //barre de rechercher et enoie du form lie a laclasse search
         $search = new Search();
         $form = $this->createForm( SearchType::class, $search);
+        //formulaire
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()){
+            $products = $this->entityManager->getRepository(Product::class)->findWithSearch($search);
+            
+           
+        }
         return $this->render('product/index.html.twig', [
             'products' => $products,
             'form'=> $form->createView(),
