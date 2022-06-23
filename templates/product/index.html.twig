@@ -1,22 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articles - la voie du dragon{% endblock %}
+{% block title %}Articles - la voie du Dragon{% endblock %}
 
 {% block content %}
-<h2>Articles</h2>
     <div class="row">
-             {% for product in products %}
-             <div class="col-md-4">
-                <div class="product-item text-center">
-                    <h5>{{ product.name }}</h5>
-                        <a href="{{ path('product',{'slug': product.slug})}}"> 
-                        <img src="/uploads/{{ product.illustration }}" 
-                    alt="{{ product.name }}" class="img-fluid"></a>
-                   
-                    <span class="">{{ product.subtitle}}</span>
-                    <span class="">{{ product.url }}</span>
-                </div>
-             </div>
-            {% endfor %}
+        <div class="col-md-2">
+            <h1>Recherche</h1>
+                {{ form(form) }}
         </div>
+        <div class="col-md-10">
+    <h2>Articles</h2>
+        <div class="row">
+                 {% for product in products %}
+                 <div class="col-md-4">
+                    <div class="product-item text-center">
+                        <h5>{{ product.name }}</h5>
+                            <a href="{{ path('product',{'slug': product.slug})}}"> 
+                            <img src="/uploads/{{ product.illustration }}" 
+                             alt="{{ product.name }}" class="img-fluid"></a>
+                       
+                        <span class="">{{ product.subtitle}}</span>
+                        <span class="">{{ product.url }}</span>
+                    </div>
+                 </div>
+                {% endfor %}
+            </div>
+        </div>
+
+  
 {% endblock %}
