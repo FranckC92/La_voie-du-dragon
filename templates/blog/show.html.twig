@@ -3,5 +3,20 @@
 {% block title %}Mon article- La voie du Dragon{% endblock %}
 
 {% block content %}
-
+<hr>
+    <div class="">
+            <h1 class="">{{ blog.name }}</h1>
+            <img src="/uploads/{{ blog.illustration }}" alt="{{ blog.name }}" class="img-fluid">
+            
+        </div>
+           
+    <div class="">
+            <span class="">{{ blog.subtitle}}</span>
+                {{ blog.description}}  
+    
+                <hr>
+                <span class="">{{ blog.url }}</span>
+                <hr>
+                <span>{{ blog.email}}</span>    
+    </div>     
 {% endblock %}
