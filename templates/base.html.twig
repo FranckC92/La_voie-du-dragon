@@ -50,20 +50,21 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
         <nav class="navbar navbar-expand-xl navbar-lg fixed-top bg-body">
-            <a class="navbar-brand" href="{{ path('app_home')}}">La voie du Dragon</a>
+         <img src="/assets/img/{{ 'logo.png' }}" alt="..." height="100" class="">
+            <a class="navbar-brand" href="{{ path('app_home')}}">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Ecole</a>
+                        <a class="nav-link" href="#">Blog</a>
                     </li>
                    
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{ path('products')}}">Articles</a>
+                        <a class="nav-link" href="{{ path('products')}}">Arts Martiaux</a>
                     </li>
-                    
+                   
                 </ul>
             
                 <div class="navbar-item-Custom">
