@@ -3,5 +3,29 @@
 {% block title %}Le Blog- La voie du Dragon{% endblock %}
 
 {% block content %}
+<div class="row">
+        <div class="col-md-3">
+        <h1>Recherche</h1>
+        
+     </div>
+<div class="col-md-9">
+        <h2>Blog</h2>
+    <div class="row">
+     {% for blog in blogs %}
+     <div class="col-md-4">
+        <div class="product-item text-center">
+            <h5>{{ blog.name }}</h5>
+                <img src="/uploads/{{ blog.illustration }}" 
+            alt="{{ blog.name }}" class="img-fluid"></a>
+            
+            <span class="">{{ blog.subtitle}}</span>
+            <span class="">{{ blog.url }}</span> 
+           
+           
+        </div>
+     </div>
+    {% endfor %}
 
+
+</div>
 {% endblock %}
