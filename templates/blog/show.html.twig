@@ -4,19 +4,22 @@
 
 {% block content %}
 <hr>
-    <div class="">
-            <h1 class="">{{ blog.name }}</h1>
-            <img src="/uploads/{{ blog.illustration }}" alt="{{ blog.name }}" class="img-fluid">
-            
-        </div>
+    <h1 class="">{{ blog.name }}</h1>
+<div class="row">
+    <div class="col-md-7 ">
+        <span class="">{{ blog.subtitle}}</span>
+        {{ blog.description}}  
+
+        <hr>
+        <span class="">{{ blog.url }}</span>
+        <hr>
+        <span>{{ blog.email}}</span>    
+        <a href="{{blog.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>
+    </div>       
+
            
-    <div class="">
-            <span class="">{{ blog.subtitle}}</span>
-                {{ blog.description}}  
-    
-                <hr>
-                <span class="">{{ blog.url }}</span>
-                <hr>
-                <span>{{ blog.email}}</span>    
+    <div class="col-md-5 my-xl-auto">
+        <img src="/uploads/{{ blog.illustration }}" alt="{{ blog.name }}" class="img-fluid">
     </div>     
+</div>
 {% endblock %}

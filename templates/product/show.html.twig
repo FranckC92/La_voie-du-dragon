@@ -4,13 +4,14 @@
 
 {% block content %}
 <hr>
-<div class="">
+<div class="row">
         <h1 class="product-title">{{ product.name }}</h1>
+        <div class="col-md-7">
         <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
-        
-    </div>
+       </div>
+   
        
-<div class="">
+<div class="col-md-5 my-auto">
         <span class="">{{ product.subtitle}}</span>
             {{ product.description}}  
 
@@ -18,5 +19,7 @@
             <span class="">{{ product.url }}</span>
             <hr>
             <span>{{ product.email}}</span>    
-</div>     
+            <a href="{{product.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>
+ </div>   
+</div>  
 {% endblock %}
