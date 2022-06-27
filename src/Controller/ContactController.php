@@ -14,7 +14,7 @@ class ContactController extends AbstractController
     #[Route('/contact', name: 'app_contact')]
     public function index(Request $request): Response
     {
-       
+      
         //creation du formulaire
         $form = $this->createForm(ContactType::class);
    
@@ -27,7 +27,8 @@ class ContactController extends AbstractController
             //email
             $mail = new Mail();
             $mail->send('lavoiedudragonidf@gmail.com', 'la voie du Dragon', 'vous avez reçu un nouveau contact', '');
-         }
+            $this->addFlash('notice', 'votre message a bien étè envoyé');
+        }
             //envoyer formulaire sur le vue de twig
         return $this->render('contact/index.html.twig', [
                 'form' => $form->createView(),
