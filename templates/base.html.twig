@@ -100,6 +100,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ path('products')}}">Arts martiaux</a>
           </li>
+          <li class="nav-item">
+        <a class="nav-link" href="{{ path('app_contact')}}">Contact</a>
+      </li>
         </ul>
         {% if app.user %}
          <a href="{{ path('app_account')}}">Mon compte <small> <({{ app.user.firstname}})</small>></a> | <a href="{{ path('app_logout')}}">Déconnexion</a>
