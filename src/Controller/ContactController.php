@@ -14,9 +14,10 @@ class ContactController extends AbstractController
     #[Route('/contact', name: 'app_contact')]
     public function index(Request $request): Response
     {
-        $notification = null;
+       
         //creation du formulaire
-        $form = $this->createForm(ContactType::class,);
+        $form = $this->createForm(ContactType::class);
+   
         //handlerequest methode
         $form->handleRequest($request);
         //condition du formulaire si tu es remplis et valid
@@ -30,7 +31,7 @@ class ContactController extends AbstractController
             //envoyer formulaire sur le vue de twig
         return $this->render('contact/index.html.twig', [
                 'form' => $form->createView(),
-                'notification' => $notification
+                
         ]);
     }
 }
