@@ -28,4 +28,23 @@
     font-family: cursive;
     color: whitesmoke;
     
+} 
+.form {
+    font-weight:bold;
+    text-align:center;
+    font-family: Helvetica;
+    color: #000;
+    border: 5px solid rgb(42, 6, 6);
+    border-top: 15px solid rgb(42, 6, 6);
+    background-image: url(../img/logo2.png);
+}
+.register-item, .register-item a{
+    text-align:center;
+    font-family: cursive;
+    color:azure;
+    background-color: #000;
+    border: 5px solid rgb(42, 6, 6);
+    border-top: 20px solid rgb(42, 6, 6);
+    border-bottom: 20px solid rgb(42,6,6);
+
 }
