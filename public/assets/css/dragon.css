@@ -23,5 +23,9 @@
 
 }
 .style {
-    border-radius: 20;
+    font-size: 30px;
+    font-weight:bold;
+    font-family: cursive;
+    color: whitesmoke;
+    
 }
