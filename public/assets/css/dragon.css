@@ -1,12 +1,27 @@
+.navbar-dark,  .navbar-dark a {
+    font-size: 20px;
+    font-weight:bold;
+    font-family: cursive;
+    background-color: black;
+    
 
-
+}
+.navbar{
+    background-color: #000;
+}
 
 .product-title  {
     text-align: center;
     text-transform: uppercase;
     font-weight:bold;
+    }
+.footer-custom{
+    text-align:center;
+    background-color: #000;
+    color: azure;
+    
 
 }
 .style {
-    align-items: center;
+    border-radius: 20;
 }
