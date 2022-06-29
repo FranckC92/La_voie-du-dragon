@@ -3,6 +3,7 @@
 {% block title %}S' inscrire - La voie du Dragon{% endblock %}
 {% block content %}
 <hr>
+    
     <h1 class="register-item">Inscriptions</h1> 
         {% if notification %}
     <div  class="alert alert-info">{{notification}}</div>
@@ -11,4 +12,5 @@
     <div class="form">
    {{ form(form) }}
     </div>
+
 {% endblock %}

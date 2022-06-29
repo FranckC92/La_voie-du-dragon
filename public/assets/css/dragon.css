@@ -52,8 +52,10 @@
     font-weight:bold;
     text-align:center;
     font-family: Helvetica;
-    color: #000;
+    color: azure;
     border: 5px solid rgb(42, 6, 6);
     border-top: 15px solid rgb(42, 6, 6);
-    background-image: url(../img/dragon.jpg);
+    background-image: url(../img/dhd.jpg);
+   
+    
 }
