@@ -3,12 +3,11 @@
     font-weight:bold;
     font-family: cursive;
     background-color: black;
+    color: azure;
     
 
 }
-.navbar{
-    background-color: #000;
-}
+
 
 .product-title  {
     text-align: center;
@@ -17,16 +16,17 @@
     }
 .footer-custom{
     text-align:center;
+    position: relative;
+    bottom:0px;
     background-color: #000;
     color: azure;
-    
-
 }
 .style {
     font-size: 30px;
     font-weight:bold;
     font-family: cursive;
     color: whitesmoke;
+   
     
 } 
 .form {
