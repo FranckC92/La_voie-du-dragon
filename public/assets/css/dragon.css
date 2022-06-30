@@ -4,7 +4,7 @@
     font-family: cursive;
     background-color: black;
     color: azure;
-    
+   
 
 }
 
@@ -18,8 +18,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
     bottom:0px;
+    margin-left: -9%;
+    margin-right: -9%;
     background-color: #000;
     color: azure;
     position: relative;
@@ -84,11 +86,16 @@
     justify-content: center;
     text-align: center;
     font-family: cursive;
-    border-bottom: 10px solid rgb(42, 6, 6);
+    border: 10px solid rgb(42, 6, 6);
+    
 }
 .account-item{
   
     text-align: center;
     font-family: cursive;
+    border: 5px solid rgb(42,6,6);
   
+}
+.account-long {
+    justify-content: center;
 }
