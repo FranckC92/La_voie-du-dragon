@@ -86,16 +86,37 @@
     justify-content: center;
     text-align: center;
     font-family: cursive;
-    border: 10px solid rgb(42, 6, 6);
+    border-top: 10px solid rgb(42, 6, 6);
+    border-left: 8px solid rgb(42, 6, 6);
+    border-bottom: 10px solid rgb(42, 6, 6);
+   
+
+
     
 }
 .account-item{
   
     text-align: center;
     font-family: cursive;
-    border: 5px solid rgb(42,6,6);
-  
+    border-top: 10px solid rgb(42, 6, 6);
+    border-left: 10px solid rgb(42, 6, 6);
+    border-bottom: 10px solid rgb(42, 6, 6);
 }
-.account-long {
-    justify-content: center;
+.account-admin {
+    border-left: 10px solid rgb(42, 6, 6);
+    border-right: 10px solid rgb(42, 6, 6);
+    border-bottom: 10px solid rgb(42, 6, 6);
+    border-radius: 30px;
+    background-color: #000;
+    color:#fff;
+    font-weight:bold;
+}
+.account-link{
+    border-left: 10px solid rgb(42, 6, 6);
+    border-right: 10px solid rgb(42, 6, 6);
+    border-top: 7px solid rgb(42, 6, 6);
+    border-radius: 30px;
+    color:#000;
+    font-weight:bold;
+
 }
