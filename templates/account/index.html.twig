@@ -3,7 +3,14 @@
 {% block title %}Mon compte-La voie du Dragon{% endblock %}
 
 {% block content %}
-        <hr>
+<hr>
+<div class="row">
+        <div class="col-1">
+        <img src="/assets/img/dragon-account.png" width="100" height="auto">
+        <img src="/assets/img/dragon-account.png" width="100" height="auto">
+        </div>
+   
+    <div class="col-11">
         <h1 class="account-title">Mon compte</h1>
         <p class="account-item">Bienvenue {{ app.user.firstname }} dans votre compte.</br>
         C'est dans cet espace que vous allez pouvoir gérer votre mot de passe et me contacter.</p></br>
@@ -19,8 +26,8 @@
             <a href="{{path('app_contact') }}" class="">
             Me contacter</a><br/> 
             </div>    
+        </div>
         
-       
-       
+ </div>  
 
 {% endblock %}

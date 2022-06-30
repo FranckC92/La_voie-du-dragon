@@ -81,6 +81,7 @@
 }
 .account-title{
     font-size: 40px;
+    justify-content: center;
     text-align: center;
     font-family: cursive;
     border-bottom: 10px solid rgb(42, 6, 6);
