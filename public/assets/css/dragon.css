@@ -3,7 +3,7 @@
     font-weight:bold;
     font-family: cursive;
     background-color: black;
-    color: rgb(48, 134, 134);
+    color:  rgb(18, 236, 210);
    
 
 }
@@ -21,7 +21,7 @@
     margin-left: -9%;
     margin-right: -9%;
     background-color: #000;
-    color: azure;
+    color: whitesmoke;
     position: relative;
 }
 .style {
@@ -45,7 +45,7 @@
 .register-item, .register-item a{
     text-align:center;
     font-family: cursive;
-    color:azure;
+    color: whitesmoke;
     background-color: #000;
     border: 5px solid rgb(42, 6, 6);
     border-top: 20px solid rgb(42, 6, 6);
@@ -53,10 +53,10 @@
 
 }
 .form2 {
+    font-size: 30px;
     font-weight:bold;
     text-align:center;
-    font-family: Helvetica;
-    color: azure;
+    color: whitesmoke;
     border: 5px solid rgb(42, 6, 6);
     border-top: 15px solid rgb(42, 6, 6);
     background-image: url(../img/dhd.jpg);
