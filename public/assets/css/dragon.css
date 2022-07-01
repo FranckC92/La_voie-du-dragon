@@ -3,7 +3,7 @@
     font-weight:bold;
     font-family: cursive;
     background-color: black;
-    color:  rgb(18, 236, 210);
+    color: cyan;
    
 
 }
@@ -21,7 +21,7 @@
     margin-left: -9%;
     margin-right: -9%;
     background-color: #000;
-    color: whitesmoke;
+    color:  cyan;
     position: relative;
 }
 .style {
@@ -36,8 +36,7 @@
 .form {
     font-weight:bold;
     text-align:center;
-    font-family: Helvetica;
-    color: #000;
+    color:  rgb(23, 165, 149);
     border: 5px solid rgb(42, 6, 6);
     border-top: 15px solid rgb(42, 6, 6);
     background-image: url(../img/logo2.png);
@@ -62,6 +61,16 @@
     border-top: 15px solid rgb(42, 6, 6);
     background-image: url(../img/dragon-or.jpg);
     background-size: 1200px 500px;
+}
+.form3 {
+   
+    font-weight:bold;
+    text-align:center;
+    color: #000;
+    border: 5px solid #000;
+    border-top: 15px solid #000;
+    background-image: url(../img/logo2.png);
+   
 }
 
 .title {
@@ -90,6 +99,13 @@
 }
 .title-item2 {
     font-family:cursive;
+    text-align: center;
+    border: 10px solid #000;
+    background-color: #fff;
+}
+.title-search {
+    font-family:cursive;
+    font-size:x-large;
     text-align: center;
     border: 10px solid #000;
     background-color: #fff;
