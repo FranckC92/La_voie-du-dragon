@@ -129,6 +129,8 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1" ></li>
                 <li data-target="#myCarousel" data-slide-to="2" ></li>
+                <li data-target="#myCarousel" data-slide-to="3" ></li>
+                <li data-target="#myCarousel" data-slide-to="4" ></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -136,33 +138,38 @@
                     <img src="/assets/img/{{ 'body2.jpg' }}"class="d-block w-50"alt="First slide" >
                     <div class="container">
                         <div class="carousel-caption ">
-                            <h2>Bienvenue dans la voie du dragon</h>
-                            <p>Ce site est un blog sur les arts martiaux , l'histoire, les differents styles.</p>
-                            <p><a class="btn btn-lg btn-primary" href="{{ path('app_blogs')}}" role="button">Le blog</a></p>
+                            <h2 class="title-carousel">Bienvenue dans la voie du Dragon</h2>
                         </div>
                     </div>
                 </div>
+                <div class="carousel-item">
+                <img src="/assets/img/{{ 'c1.jpg' }}"class="d-block w-100"alt="First slide" >
+                <div class="container">
+                    <div class="carousel-caption text-center">
+                        <h2 class="title-carousel2">Espace Menbre Inscrivez vous</h2>
+                        <p class="text-carousel">Vous pouvez à tout moment vous désinscrire , et l'espace menbre vous permet de contacter l'adminsitrateur</p>
+                        <p><a class="btn btn-lg btn-primary" href="{{ path('app_register')}}" role="button">Inscriptions</a></p>
+                    </div>
+                </div>
+            </div>
                 <div class="carousel-item">
                     <img src="/assets/img/{{ 'c4.jpg' }}"class="d-block w-100"alt="First slide" >
                     
                     <div class="container">
                         <div class="carousel-caption">
-                            <h2>Arts martiaux</h2>
-                            <p>dans cete categorie, retrouvrez les styles, les liens officiels, et les maitres,</p> 
-                            <p><a class="btn btn-lg btn-primary" href="{{ path('products')}}" role="button">Learn more</a></p>
+                            <h2 class="title-carousel2">Temple de shaolin</h2>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="/assets/img/{{ 'c1.jpg' }}"class="d-block w-100"alt="First slide" >
-                    <div class="container">
-                        <div class="carousel-caption text-center">
-                            <h2>Espace Menbre Inscrivez vous</h2>
-                            <p>Vous pouvez à tout moment vous désinscrire , et l'espace menbre vous permet de contacter l'adminsitrateur</p>
-                            <p><a class="btn btn-lg btn-primary" href="{{ path('app_register')}}" role="button">Inscriptions</a></p>
-                        </div>
-                    </div>
-                </div>
+                <img src="/assets/img/{{ 'templehd.jpg' }}"class="d-block w-100"alt="First slide" >
+               </div>
+            <div class="carousel-item">
+            <img src="/assets/img/{{ 'dragon-or.jpg' }}"class="d-block w-100"alt="First slide" >
+            <div class="container">
+               
+            </div>
+        </div>
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
