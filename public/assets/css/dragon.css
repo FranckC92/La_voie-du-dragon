@@ -3,14 +3,13 @@
     font-weight:bold;
     font-family: cursive;
     background-color: black;
-    color: cyan;
+    color:  #0dcaf0;
    
 
 }
 .body {
     background-color: darkgray;
 }
-
 
 .footer-custom{
     display: flex;
@@ -21,7 +20,7 @@
     margin-left: -9%;
     margin-right: -9%;
     background-color: #000;
-    color:  cyan;
+    color:   #0dcaf0;
     position: relative;
 }
 .style {
@@ -36,7 +35,7 @@
 .form {
     font-weight:bold;
     text-align:center;
-    color:  rgb(23, 165, 149);
+    color:   #0dcaf0;
     border: 5px solid rgb(42, 6, 6);
     border-top: 15px solid rgb(42, 6, 6);
     background-image: url(../img/logo2.png);
@@ -163,7 +162,7 @@
 .title-carousel {
     font-size: 50px;
     font-family: cursive;
-   color: rgb(48, 134, 134);
+   color:  #0dcaf0;
 
 }
 .title-carousel2 {
@@ -174,5 +173,17 @@
 .text-carousel{
     font-size: 18px;
     font-family: cursive;
-     color: #000;
+    color: #000;
+}
+.title-address {
+    font-size: 24px;
+    font-family: cursive;
+    color: #000;
+    text-align: center;
+}
+.text-address {
+    font-size: 16px;
+    font-family: cursive;
+    color: #000;
+    text-align: center;
 }
