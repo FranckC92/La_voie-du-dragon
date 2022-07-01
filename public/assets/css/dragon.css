@@ -7,13 +7,11 @@
    
 
 }
+.body {
+    background-color: darkgray;
+}
 
 
-.product-title  {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight:bold;
-    }
 .footer-custom{
     display: flex;
     flex-wrap: wrap;
@@ -68,10 +66,17 @@
     font-size: 60px;
     text-align: center;
     font-family: cursive;
-    border: 5px solid rgb(42, 6, 6);
-    border-top: 20px solid rgb(42, 6, 6);
-    border-bottom: 20px solid rgb(42,6,6);
+    border: 20px solid rgb(42, 6, 6);
     border-width: 30px;
+}
+.title2 {
+    font-size: 60px;
+    font-weight:bold;
+    text-align: center;
+    font-family: cursive;
+    border: 20px solid #000;
+    border-width: 30px;
+    background-color: #fff;
 }
 .title-item {
     font-family:cursive;
@@ -81,6 +86,12 @@
     text-align: center;
 
 }
+.title-item2 {
+    font-family:cursive;
+    text-align: center;
+    border: 10px solid #000;
+    background-color: #fff;
+}
 .account-title{
     font-size: 40px;
     justify-content: center;
@@ -89,10 +100,6 @@
     border-top: 10px solid rgb(42, 6, 6);
     border-left: 8px solid rgb(42, 6, 6);
     border-bottom: 10px solid rgb(42, 6, 6);
-   
-
-
-    
 }
 .account-item{
   
@@ -122,4 +129,13 @@
 }
 .feature- .feature a {
    font-size: 14px;
+}
+.subtitle-item {
+    font-size: 18px;
+    font-family: cursive;
+}
+.text-item {
+    font-size: 18px;
+    border:2px solid #000;
+    background-color: azure;
 }

@@ -3,23 +3,27 @@
 {% block title %}{{ product.name }}-La voie du Dragon{% endblock %}
 
 {% block content %}
-<hr>
-<div class="row">
-        <h1 class="product-title">{{ product.name }}</h1>
-        <div class="col-md-7">
-        <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
-       </div>
-   
-       
-<div class="col-md-5 my-auto">
-        <span class="">{{ product.subtitle}}</span>
-            {{ product.description}}  
+<div class="body">
+        <div class="row">
+                <h1 class="title2">{{ product.name }}</h1>
+                <div class="col-md-4">
+                <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid" width="300" height="300"></br>
 
-            <hr>
-            <span class="">{{ product.url }}</span>
-            <hr>
-            <span>{{ product.email}}</span>    
-            <a href="{{product.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>
- </div>   
-</div>  
+                <span class="subtitle-item">{{ product.subtitle}}</span></br>
+                <hr>
+                <span>{{ product.email}}</span></br>
+                        <hr>
+                <span class="subtitle-item">{{ product.url }}</span>
+        </div>
+        
+        
+        <div class="col-md-8 mx-auto">
+               <div class="text-item">
+                {{ product.description}}  
+        </div>
+               <hr>        
+         <a href="{{product.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>
+        </div>   
+        </div> 
+</div> 
 {% endblock %}

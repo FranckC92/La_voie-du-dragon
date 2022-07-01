@@ -1,34 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Articles - la voie du Dragon{% endblock %}
+{% block title %}Arts Martiaux - la voie du Dragon{% endblock %}
 
 {% block content %}
+<div class="body">
     <div class="row">
         <div class="col-md-2">
         <hr>
-            <h1>Recherche</h1>
+            <h2>Recherche</h2>
                 {{ form(form) }}
                 <img src="/assets/img/dragon-account.png" width="200" height="auto">
         </div>
         <div class="col-md-10">
         <hr>
-            <h2>Articles</h2>
+            <h1 class="title2">Arts Martiaux</h1>
         <div class="row">
                  {% for product in products %}
                  <div class="col-md-4">
-                    <div class="product-item text-center">
-                        <h5>{{ product.name }}</h5>
+                    <div class="title-item2">
+                        <h2>{{ product.name }}</h2>
+                     </div>
                             <a href="{{ path('product',{'slug': product.slug})}}"> 
                             <img src="/uploads/{{ product.illustration }}" 
                              alt="{{ product.name }}" class="img-fluid"></a>
                        
                         <span class="">{{ product.subtitle}}</span>
                         <span class="">{{ product.url }}</span>
-                    </div>
+                   
                  </div>
                 {% endfor %}
             </div>
     </div>
 
-  
+</div> 
 {% endblock %}
