@@ -41,6 +41,7 @@
     border: 5px solid rgb(42, 6, 6);
     border-top: 15px solid rgb(42, 6, 6);
     background-image: url(../img/logo2.png);
+    background-size: 1200px auto;
 }
 .register-item, .register-item a{
     text-align:center;
