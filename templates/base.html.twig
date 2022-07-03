@@ -78,6 +78,8 @@
     
     <!-- Custom styles for this template -->
     <link href="{{ asset('assets/css/carousel.css')}}" rel="stylesheet">
+    <!-- liens pour cookies consentement osano-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     {% block javascripts %}
     {#{{ encore_entry_script_tags('app') }}#}
     {% endblock %}
@@ -98,7 +100,10 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ path('products')}}" target="_blank">Arts martiaux</a>
-              </li>
+                 </li> 
+                 <li class="nav-item">
+                <a href="{{ path('app_c_g_u')}}" class="nav-link">C.G.U</a>
+                 </li>
             <li class="nav-item">
               <img src="/assets/img/logo2.png" class="" width="80" height="auto">
           </li>
@@ -199,6 +204,31 @@
               </footer>
           </div>
     </main>
+      <!-- script consentement cookies -->
+      <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+      <script>
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#252e39"
+          },
+          "button": {
+            "background": "transparent",
+            "text": "#14a7d0",
+            "border": "#14a7d0"
+          }
+        },
+        "position": "bottom-left",
+        "type": "opt-in",
+        "content": {
+          "message": "Notre site utilise des cookies pour vous permettre une meilleur expérience.",
+          "dismiss": "Refusez cookies",
+          "allow": "Acceptez cookies",
+          "deny": "Refusez cookies",
+          "href": "https://localhost:8000/cgu"
+        }
+      });
+      </script>
       <!-- script js&jquery -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
       <script src={{ asset('assets/js/bootstrap.bundle.js') }}></script>
