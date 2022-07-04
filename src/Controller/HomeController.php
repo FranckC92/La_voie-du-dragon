@@ -14,14 +14,14 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         //créations cookies avec propriété nom/valeur/expiration/path(home)/domaine/secu hhtps & http
-        $cookie = new Cookie('couleur',
-                            'rouge',
+        $cookie = new Cookie('la voie du Dragon',
+                            'blog',
                             strtotime('tomorrow'),
                             '/',
                             'digitaldev.fr',
                             true,
                             true);
-                         
+                        
 
         return $this->render('home/index.html.twig');
     }
