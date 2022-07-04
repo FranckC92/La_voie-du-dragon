@@ -206,3 +206,14 @@
     color: #000;
     text-align: center;
 }
+.doubledragon {
+    background-color: cadetblue;
+    border: 10px solid rgb(42, 6, 6);
+    border-radius: 60px;
+    color:#000;
+}
+.home-item {
+    font-size: 24px;
+    font-family: cursive;
+    text-align: center;
+}

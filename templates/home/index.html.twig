@@ -8,16 +8,24 @@
 
 <div class="container marketing {% if block ("carousel") is not defined %}mt-5{% endif %}">
 
-<!-- blog de bienvenue -->
-<div class="row"> 
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-<p class="subtitle-item ">Ce site est un blog sur les arts martiaux, l'histoire, les différents styles. L'idée est de 
-rétablir la vérité sur l'histoire des arts martiaux et rediriger vers les sites officiels des disciplines.
-Les arts martiaux, c'est bien plus que des enchaînements de coups de pieds et de poings ou de la soumission.
- L'objectif est de centraliser et de vous faire découvrir les autres aspects des arts martiaux et du bien être en général.</p>
-  <p><a class="btn btn-lg btn-primary" href="{{ path('app_blogs')}}" role="button">Le blog</a></p>
-</div>
-</div>
+    <!-- blog de bienvenue -->
+    <div class="row"> 
+     <div class="doubledragon">
+        <div class="p-4 p-md-3 ">
+              <p class="subtitle-item ">Ce site est un blog sur les arts martiaux,<a href="#histoire_arts_martiaux"> l'histoire</a>, les différents styles. L'idée est de 
+              rétablir la vérité sur l'histoire des arts martiaux et rediriger vers les sites officiels des disciplines.
+              Les arts martiaux, c'est bien plus que des enchaînements de coups de pieds et de poings ou de la soumission.
+              L'objectif est de centraliser et de vous faire découvrir les autres aspects des arts martiaux et du bien être en général.Des articles sur les lieux important tel que
+              le berceau du kung fu <a href="#temple_shaolin">Temple de Shaolin</a>, et le fameux <a href="#temple_mt_wu_dang"> Temple du Mont WU-Dang</a>.Dans la partie
+              <a  href="{{ path('app_blogs')}}">BLOG</a> , des articles et prochainement des liens sur des videos de bien être, réservé aux Membres, <a href={{ path('app_register')}}>l'inscription est gratuite</a>,
+            l'onglet <a href="{{ path('products')}}">Arts martiaux</a> vous emmenes à la bibliothèques de l histoire, les écoles, les styles, les maitres, bien sur il va me falloir
+              beaucoup de temps et de patience pour la completer à 100%, merci par avance pour votre patience.
+              </p> 
+            <p class="home-item">"Le bonheur n'est pas la destination, le bonheur c'est le chemin"</p>
+            <p class="home-item"> citation de Lao Tseu</p>
+        </div>
+      </div>
+    </div>
     <!-- Three columns of text below the carousel -->
     <div class="row"> 
       <div class="col-lg-4">
@@ -30,8 +38,8 @@ Les arts martiaux, c'est bien plus que des enchaînements de coups de pieds et d
       <div class="col-lg-4">
       <img src="{{ asset('assets/img/taichichuan.png')}}" class="bd-placeholder-img " width="140" height="140" alt="Arts martiaux internes ou externes?">
       <hr>
-      <h2 class="fw-normal">Tai chi chuan </h2>
-        <p>Le taic chichuan est ancien d 'environ 600 ans</p>
+      <h2 class="fw-normal">Tai Chi Chuan </h2>
+        <p>Art martial chinois dit « interne » (neijia)</p>
         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
@@ -51,7 +59,7 @@ Les arts martiaux, c'est bien plus que des enchaînements de coups de pieds et d
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">Temple de shaolin <span class="text-muted">Shaolin Quan.</span></h2>
+          <h2 class="featurette-heading fw-normal lh-1" id="temple_shaolin">Temple de shaolin <span class="text-muted">Shaolin Quan.</span></h2>
         <p class="feature"><b>Le monastère de Shaolin</b> se situe sur le mont Song dans la province de Henan en chine. C'est un 
         temple bouddhiste Chan (zen en nippon) qui fut édifié vers la fin du V Siècle, en l'honneur du moine indien <b>Batuo</b>.
         Le style <b>Shaolin Quan</b> est généralement considéré comme le premier art martial institutionnalisé. Selon la légende,
@@ -79,7 +87,7 @@ Les arts martiaux, c'est bien plus que des enchaînements de coups de pieds et d
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1">Mont wu-Tang <span class="text-muted">See for yourself.</span></h2>
+          <h2 class="featurette-heading fw-normal lh-1" id="temple_mt_wu_dang">Mont wu-Tang <span class="text-muted">See for yourself.</span></h2>
           <p class="lead">Berceau des arts martiaux internes And yes, this is the last block of representative placeholder 
           content. Again, not really intended to be actually
          read, simply here to give you a better view of what this would look like with some actual content. Your content 
@@ -96,7 +104,7 @@ Les arts martiaux, c'est bien plus que des enchaînements de coups de pieds et d
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1">L'histoire des Arts Martiaux <span class="text-muted">Checkmate.</span></h2>
+          <h2 class="featurette-heading fw-normal lh-1" id="histoire_arts_martiaux">L'histoire des Arts Martiaux <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, 
           simply here to give you a better view of what this would look like with some actual content. Your content.
         And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content</p>
