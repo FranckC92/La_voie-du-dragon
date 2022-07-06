@@ -224,3 +224,7 @@
     border-top:  5px solid rgb(42, 6, 6);
     border-bottom:  5px solid rgb(42, 6, 6);
 }
+.blog-image {
+    border: 5px solid rgb(42, 6, 6);
+   
+}

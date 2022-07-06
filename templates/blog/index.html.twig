@@ -8,17 +8,23 @@
     <h2 class="title">Blog</h2>
         <div class="row">
             {% for blog in blogs %}
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="product-item text-center">
+            <div class="row">
+            <div class="col-8">
                 <h5 class="title-item">{{ blog.name }}</h5>
+                <div class="blog-image">
+                <div class="blog-image">
                     <a href="{{ path('app_blog',{'slug': blog.slug})}}"> 
-                    <img src="/uploads/{{ blog.illustration }}" 
-                alt="{{ blog.name }}" class="img-fluid"></a>
-                
+                    <img src="/uploads/{{ blog.illustration }}" width="150px"
+                alt="{{ blog.name }}" title="{{ blog.subtitle}}" class="img-fluid"></a>
+            </div>
+            <div class="col-md-4 mx-auto">
                 <span class="subtitle-item ">{{ blog.subtitle}}</span>
-                <span class="">{{ blog.url }}</span> 
-        
-            
+            </div>
+            </div>
+            </div>
+        </div>
             </div>
         
        </div>
