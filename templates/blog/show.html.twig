@@ -6,12 +6,13 @@
 <hr>
     <h1 class="title-item">{{ blog.name }}</h1>
 <div class="row">
-    <div class="col-md-7 ">
-        <span class="">{{ blog.subtitle}}</span>
-        {{ blog.description}}  
+    <div class="col-md-7">
+        <span class="subtitle-item">{{ blog.subtitle}}</span></br>
+            <div class="blog-item"> {{ blog.description}}  
+            </div>
 
         <hr>
-        <span class="">{{ blog.url }}</span>
+        <span>{{ blog.url }}</span>
         <hr>
         <span>{{ blog.email}}</span>    
         <a href="{{blog.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>

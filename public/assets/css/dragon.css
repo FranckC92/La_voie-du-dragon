@@ -217,3 +217,10 @@
     font-family: cursive;
     text-align: center;
 }
+.blog-item {
+    font-family: cursive;
+    font-size: 14px;
+    border-right: 5px solid rgb(42, 6, 6);
+    border-top:  5px solid rgb(42, 6, 6);
+    border-bottom:  5px solid rgb(42, 6, 6);
+}
