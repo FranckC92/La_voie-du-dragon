@@ -4,13 +4,10 @@
     font-family: cursive;
     background-color: black;
     color:  #0dcaf0;
-   
-
 }
 .body {
     background-color: darkgray;
 }
-
 .footer-custom{
     display: flex;
     flex-wrap: wrap;
