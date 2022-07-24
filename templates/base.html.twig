@@ -102,7 +102,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-4 mb-md-0">
+            <ul class="navbar-nav me-auto  mb-4 mb-md-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ path('app_blogs')}}">Blog</a>
               </li>
@@ -112,16 +112,20 @@
                  <li class="nav-item">
                 <a href="{{ path('app_c_g_u')}}" class="nav-link">C.G.U</a>
                  </li>
-            <li class="nav-item">
-              <img src="/assets/img/logo2.png" class="" width="80" height="auto">
-          </li>
-          <li class="nav-item">
-          <p class="justify-content-center"> La voie du Dragon</p>
-          </li>
-          <li class="nav-item">
-          <img src="/assets/img/logo3.png" class="" width="80">
-          </li>
-            </ul>
+                 <li class="nav-item">
+                <a class="nav-link" href="{{path('app_contact') }}" >Nous contacter</a>
+                 </li> 
+         
+                  <li class="nav-item">
+                 <img src="/assets/img/logo2.png" class="" width="80" height="auto">
+                </li>
+                <li class="nav-item">
+                <p class="navbar-title"> La voie du Dragon</p>
+                </li>
+                <li class="nav-item">
+                <img src="/assets/img/logo3.png" class="" width="80">
+                </li>
+                  </ul>
             {% if app.user %}
             <a href="{{ path('app_account')}}" target="_blank">Mon compte <small> <({{ app.user.firstname}})</small>></a> | <a href="{{ path('app_logout')}}">Déconnexion</a>
             {% else %}

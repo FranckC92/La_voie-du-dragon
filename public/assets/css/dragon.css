@@ -1,9 +1,16 @@
 .navbar-dark,  .navbar-dark a {
-    font-size: 20px;
+    font-size: 15px;
     font-weight:bold;
     font-family: cursive;
     background-color: black;
     color:  #0dcaf0;
+    justify-content: center;
+}
+.navbar-title, .navbar-title a {
+    font-family: cursive;
+    font-size: 30px;
+    color:  #0dcaf0;
+    text-align: center;
 }
 .body {
     background-color: darkgray;
