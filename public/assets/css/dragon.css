@@ -1,5 +1,5 @@
 .navbar-dark,  .navbar-dark a {
-    font-size: 15px;
+    font-size: 18px;
     font-weight:bold;
     font-family: cursive;
     background-color: black;
@@ -10,7 +10,7 @@
     font-family: cursive;
     font-size: 30px;
     color:  #0dcaf0;
-    text-align: center;
+   
 }
 .body {
     background-color: darkgray;
@@ -69,7 +69,7 @@
    
     font-weight:bold;
     text-align:center;
-    color: #000;
+    color: cadetblue;
     border: 5px solid #000;
     border-top: 15px solid #000;
     background-image: url(../img/logo2.png);
@@ -90,7 +90,7 @@
     font-family: cursive;
     border: 20px solid #000;
     border-width: 30px;
-    background-color: #fff;
+    background-color:whitesmoke;
 }
 .title-item {
     font-family:cursive;
@@ -104,21 +104,21 @@
     font-family:cursive;
     text-align: center;
     border: 10px solid #000;
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 .title-search {
     font-family:cursive;
     font-size:x-large;
     text-align: center;
     border: 10px solid #000;
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 .title-cgu {
     font-family:cursive;
     font-size:x-large;
     text-align: center;
     border: 10px solid rgb(42, 6, 6);;
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 .light-cgu {
     border-top: 30px solid rgb(42, 6, 6);
@@ -155,7 +155,7 @@
     border-bottom: 10px solid rgb(42, 6, 6);
     border-radius: 30px;
     background-color: #000;
-    color:#fff;
+    color: whitesmoke;
     font-weight:bold;
 }
 .account-link{
