@@ -60,10 +60,10 @@
     font-weight:bold;
     text-align:center;
     color: whitesmoke;
-    border: 5px solid rgb(42, 6, 6);
+    border: 15px solid rgb(42, 6, 6);
     border-top: 15px solid rgb(42, 6, 6);
     background-image: url(../img/dragon-or.jpg);
-    background-size: 1200px 500px;
+    background-size: 1500px 500px;
 }
 .form3 {
    
