@@ -26,13 +26,13 @@
                      <div class="image-arts">
                             <a href="{{ path('product',{'slug': product.slug})}}"> 
                             <img src="/uploads/{{ product.illustration }}" 
-                             alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid"></a></br>
+                             alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid" width="400" height="400"></a></br>
                             </div>
                              <hr>
                             </div>
                 {% endfor %}
             </div>
-    </div>
+  
 
 </div> 
 {% endblock %}
