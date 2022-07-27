@@ -2,8 +2,6 @@
 
 {% block carousel %}{% endblock %}
 {% block content %}
-
-
     <!-- blog de bienvenue -->
     <div class="row"> 
      <div class="doubledragon">
@@ -22,7 +20,7 @@
         </div><!-- /.p-4 p-md-3 -->
       </div><!-- /.doubledragon -->
     </div><!-- /.row -->
-    <!-- Three columns of text below the carousel -->
+    <!-- trois colonnes apres le carousel -->
     <div class="row"> 
           <div class="col-lg-4">
               <img src="{{ asset('assets/img/body.png')}}" class="img-fluid" width="140" height="140" title="ying yang dragon"alt="Arts martiaux internes ou externes?">
@@ -54,79 +52,72 @@
     </div><!-- /.row -->
 
 
-      <!-- START THE FEATURETTES -->
-
+      <!-- début des articles -->
       <hr class="featurette-divider">
-
+      <!-- premier article -->
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading fw-normal lh-1" id="temple_shaolin">Temple de shaolin <span class="text-muted">Les Moines Guerriers Bouddhistes</span></h2>
-        <p class="feature"><b>Le monastère de Shaolin</b> se situe sur le mont Song dans la province de Henan en chine. C'est un 
-        temple bouddhiste Chan (zen en nippon) qui fut édifié vers la fin du V Siècle, en l'honneur du moine indien <b>Batuo</b>.
-        Le style <b>Shaolin Quan</b> est généralement considéré comme le premier art martial institutionnalisé. Selon la légende,
-        <b> Bodhidharma</b> aurait enseigné cet art martial au ve siècle aux moines du temple Shaolin, pour les aider à se défendre 
-        des animaux et des brigands qui rôdaient autour du monastère. Le <B>shǒubó</b> (手搏, attesté dès le IIIe siècle av. J.-C.),
-        et le <B>xiang bo</b> (similaire au sanda) dans les années 600 av. J.-C., ne sont que deux exemples d'anciens arts martiaux chinois.
-        Il existe deux styles : Shaolin Quan. Le style du Nord et celui du Sud. La différence est due à la situation géographique de la Chine.
-         Au Sud peu de place, le style du Sud se caractérise par des mouvements courts, puissants et des positions assez hautes. Au Nord de 
-         vastes plaines permettant de s’entraîner, se définit en souplesse, amplitude et de basses positions, suites ou enchaînements de mouvements 
-         permettant un travail aussi bien respiratoire que musculaire.. Le temple Shaolin du Nord est
-        l'original du Monastère de Shaolin, (Henan). Au sud le Temple Nan monastère Shaolin en Fujian est détruit depuis plusieurs siècles. 
-        (L’existence et l’emplacement sont encore discutés). Chaque école utilise cinq animaux de base (Dragon, Serpent, Grue, Tiger, Léopard),
-         chacun a plusieurs branches, à son tour.
-         </p><p><a class="btn btn-info" href="{{ path('products')}}">La suite...</a></p>
-        </div>
+          <p class="feature"><b>Le monastère de Shaolin</b> se situe sur le mont Song dans la province de Henan en chine. C'est un 
+          temple bouddhiste Chan (zen en nippon) qui fut édifié vers la fin du V Siècle, en l'honneur du moine indien <b>Batuo</b>.
+          Le style <b>Shaolin Quan</b> est généralement considéré comme le premier art martial institutionnalisé. Selon la légende,
+          <b> Bodhidharma</b> aurait enseigné cet art martial au ve siècle aux moines du temple Shaolin, pour les aider à se défendre 
+          des animaux et des brigands qui rôdaient autour du monastère. Le <B>shǒubó</b> (手搏, attesté dès le IIIe siècle av. J.-C.),
+          et le <B>xiang bo</b> (similaire au sanda) dans les années 600 av. J.-C., ne sont que deux exemples d'anciens arts martiaux chinois.
+          Il existe deux styles : Shaolin Quan. Le style du Nord et celui du Sud. La différence est due à la situation géographique de la Chine.
+          Au Sud peu de place, le style du Sud se caractérise par des mouvements courts, puissants et des positions assez hautes. Au Nord de 
+          vastes plaines permettant de s’entraîner, se définit en souplesse, amplitude et de basses positions, suites ou enchaînements de mouvements 
+          permettant un travail aussi bien respiratoire que musculaire.. Le temple Shaolin du Nord est
+          l'original du Monastère de Shaolin, (Henan). Au sud le Temple Nan monastère Shaolin en Fujian est détruit depuis plusieurs siècles. 
+          (L’existence et l’emplacement sont encore discutés). Chaque école utilise cinq animaux de base (Dragon, Serpent, Grue, Tiger, Léopard),
+          chacun a plusieurs branches, à son tour.
+          </p><p><a class="btn btn-info" href="{{ path('products')}}">La suite...</a></p>
+        </div><!-- /.col-md-7 -->
         <div class="col-md-5">
-        <img src="{{ asset('assets/img/c4.jpg')}}" class="img-fluid" width="500" height="500" title="L'entrée du temple" alt="Temple de Shaolin les Moines guerriers">
-        <p class="text-center">Monastère Shaolin</p>
-        <img src="{{ asset('assets/img/c8.jpg')}}" class="img-fluid" width="500" height="500" title="Démonstration du Shaolin Quan"alt="Démonstration du shaolin Quan">
-      <p class="text-center">Démonstration du Shaolin Quan</p>
-        </div>
-      </div>
-
+          <img src="{{ asset('assets/img/c4.jpg')}}" class="img-fluid" width="500" height="500" title="L'entrée du temple" alt="Temple de Shaolin les Moines guerriers">
+          <p class="text-center">Monastère Shaolin</p>
+          <img src="{{ asset('assets/img/c8.jpg')}}" class="img-fluid" width="500" height="500" title="Démonstration du Shaolin Quan"alt="Démonstration du shaolin Quan">
+          <p class="text-center">Démonstration du Shaolin Quan</p>
+        </div><!-- /.col-md-5 -->
+      </div><!-- /.row featurette -->
       <hr class="featurette-divider">
-
+      <!-- deuxieme article -->
       <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading fw-normal lh-1" id="temple_mt_wu_dang">Mont Wudang <span class="text-muted">Les Moines Guerriers Taoistes</span></h2>
-          <p class="feature">Le Monts Wudang , Le berceau des arts martiaux internes Taoiste.
-        Les monts Wudang sont une chaine de montagnes d’une superficie de 250km2, dans la province du <b>Hubei</b>, en chine.
-        A  son point le plus élevé, le Sommet du pilier céleste altitude 1 613 mètres. Un panorama de 72 pics, 36 falaises et 24 torrents. 
-        Les monastères ont été classés sites de l'héritage culturel mondial par l'UNESCO en 1994 .
-        L'ensemble de ce complexe de batiments est consititué de  72 temples, 9 monastères, 36 couvents et 9 palais racontent l' histoire 
-        trois dynasties chinoises des Yuan, Ming et Qing. Certains édifices datent du <b>VIIe siècle,</b>tout début de la dynastie des Tang.</p>
-        <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">Par ici pour lire la suite</a>
-        </div>
-        <div class="col-md-5 order-md-1">
-        <img src="{{ asset('assets/img/c9.jpg')}}" class="img-fluid" width="500" height="500" alt="Arts martiaux internes ou externes?" title="Chaines des Monts Wudang">
-        <p class="text-center">Temple du Mont Wudang</p>
-
-        </div>
-      </div>
-
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1" id="temple_mt_wu_dang">Mont Wudang <span class="text-muted">Les Moines Guerriers Taoistes</span></h2>
+              <p class="feature">Le Monts Wudang , Le berceau des arts martiaux internes Taoiste.
+              Les monts Wudang sont une chaine de montagnes d’une superficie de 250km2, dans la province du <b>Hubei</b>, en chine.
+              A  son point le plus élevé, le Sommet du pilier céleste altitude 1 613 mètres. Un panorama de 72 pics, 36 falaises et 24 torrents. 
+              Les monastères ont été classés sites de l'héritage culturel mondial par l'UNESCO en 1994 .
+              L'ensemble de ce complexe de batiments est consititué de  72 temples, 9 monastères, 36 couvents et 9 palais racontent l' histoire 
+              trois dynasties chinoises des Yuan, Ming et Qing. Certains édifices datent du <b>VIIe siècle,</b>tout début de la dynastie des Tang.</p>
+              <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">Par ici pour lire la suite</a>
+            </div><!-- /.col-md-7 order-md-2 -->
+            <div class="col-md-5 order-md-1">
+            <img src="{{ asset('assets/img/c9.jpg')}}" class="img-fluid" width="500" height="500" alt="Arts martiaux internes ou externes?" title="Chaines des Monts Wudang">
+            <p class="text-center">Temple du Mont Wudang</p>
+          </div><!-- /.col-md-5 order-md-1 -->
+      </div><!-- /.row featurette -->
       <hr class="featurette-divider">
-
+      <!-- troisieme articles -->
       <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1" id="histoire_arts_martiaux">L'histoire des Arts Martiaux <span class="text-muted">Les origines</span></h2>
-          <p class="lead">L’histoire des arts martiaux, malgré ce que pense beaucoup de personnes, les arts martiaux ne vient pas de <b>chine</b> mais c’est encore plus ancien.
-          Les premières traces remontent en <b>Egypte</b> et en <b>Nubie</b>, il y a plus de 3000 ans. Le <b>Aha ou Ahah,kermet Mariama</b>est une forme de boxe et de lutte pratiquées
-           par les prêtes. Le <b>Kuta </b>a été créer par les gardes du corps des Anciens Pharaons pour trouver les meilleures méthodes efficaces pour défendre le Phararon. <b>La lutte de Nubie</b>, pratiquée depuis plus de 3000 ans, a vraisemblablement précédé la lutte grecque de plusieurs centaines d’années. </p>
-           <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">La suite</a>
-          </div>
-        <div class="col-md-5">
-        <img src="{{ asset('assets/img/body9.jpg')}}" class="img-fluid" width="500" height="500" title="coup de pied"alt="L'histoire des arts martiaux">
-        <p class="text-center">Coup de pied du cheval</p>
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-    <!-- spotify sons -->
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/15k7PgVvz3M2DEUTRM42uE?utm_source=generator" width="100%" height="80" frameBorder="0"
-   allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    <!-- /END THE FEATURETTES -->
-
-
+          <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1" id="histoire_arts_martiaux">L'histoire des Arts Martiaux <span class="text-muted">Les origines</span></h2>
+              <p class="lead">L’histoire des arts martiaux, malgré ce que pense beaucoup de personnes, les arts martiaux ne vient pas de <b>chine</b> mais c’est encore plus ancien.
+              Les premières traces remontent en <b>Egypte</b> et en <b>Nubie</b>, il y a plus de 3000 ans. Le <b>Aha ou Ahah,kermet Mariama</b>est une forme de boxe et de lutte pratiquées
+              par les prêtes. Le <b>Kuta </b>a été créer par les gardes du corps des Anciens Pharaons pour trouver les meilleures méthodes efficaces pour défendre le Phararon. <b>La lutte de Nubie</b>, pratiquée depuis plus de 3000 ans, a vraisemblablement précédé la lutte grecque de plusieurs centaines d’années. </p>
+              <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">La suite</a>
+          </div><!-- /.col-md-7 -->
+          <div class="col-md-5">
+          <img src="{{ asset('assets/img/body9.jpg')}}" class="img-fluid" width="500" height="500" title="coup de pied"alt="L'histoire des arts martiaux">
+          <p class="text-center">Coup de pied du cheval</p>
+          </div><!-- /.col-md-5 -->
+      </div><!-- /.row featurette -->
+      <hr class="featurette-divider">
+      <!-- /END THE FEATURETTES -->
+      <!-- spotify sons -->
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/15k7PgVvz3M2DEUTRM42uE?utm_source=generator" width="100%" height="80" frameBorder="0"
+      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 {% endblock %}
 
 
