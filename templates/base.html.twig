@@ -149,12 +149,17 @@
                 </a>
           </div>
        {% endif %} 
+ <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-              {% block content %}  
-              
-              
-              {% endblock %}   
-              <!-- FOOTER -->
+          <div class="container marketing {% if block ("carousel") is not defined %}mt-5{% endif %}">
+                        {% block content %}  
+                        
+                        
+                        {% endblock %}   
+          </div><!-- /.container -->
+                        <!-- FOOTER -->
               <div class="container-fluid">
                   <footer class="footer-custom">
                   <ul class="col-md-4 mb-0 justify-content-center">&copy; 2022 DigitalDev</ul>
