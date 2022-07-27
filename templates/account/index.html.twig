@@ -1,43 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Mon compte-La voie du Dragon{% endblock %}
-
+<!-- espace membres -->
 {% block content %}
-
-<div class="row">
-  
-    <div class="col-1 overflow-auto">
-          <hr>
-         
-            <img src="/assets/img/yingyang2.jpg" width="80" height="68"></br>
-            <img src="/assets/img/dragon-accountxs.png" width="80" height="432">
-            <img src="/assets/img/long2.jpg" width="80" height="100"> 
-        
-    </div>
-   
-    <div class="col-11">
-        <hr>
-        <h1 class="account-title">Mon compte</h1>
-        <p class="account-item">Bienvenue {{ app.user.firstname }} dans votre compte.</br>
-        C'est dans cet espace que vous allez pouvoir gérer votre mot de passe et me contacter.</p></br>
-        
+  <div class="row">
+            <div class="col-1 overflow-auto">
+                <hr>
+                    <img src="/assets/img/yingyang2.jpg" width="80" height="68"></br>
+                    <img src="/assets/img/dragon-accountxs.png" width="80" height="432">
+                    <img src="/assets/img/long2.jpg" width="80" height="100"> 
+            </div>
+     <div class="col-11">
+            <hr>
+            <h1 class="account-title">Mon compte</h1>
+            <p class="account-item">Bienvenue {{ app.user.firstname }} dans votre compte.</br>
+            C'est dans cet espace que vous allez pouvoir gérer votre mot de passe et me contacter.</p></br>
             <div class="account-item">
-                {% if is_granted('ROLE_ADMIN') %}
-                <a href="/admin" target="_blank" class="account-admin">
-                Back Office pour Administrateur</a><br/>
-                {% endif %}</br>
-                <a href="{{path('app_contact') }}" target="_blank" class="account-link">
-                Pour Me Contacter</a><br/> 
-
-                <a href="{{path('app_account_password') }}" class="account-link">
-                Modifier mon mot de passe </a><br/>
-            
-            </div>   
-           
-            <img src="/assets/img/logo2.png" width="1400" height="300">  
-          
-        
-        
- </div>  
-
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <a href="/admin" target="_blank" class="account-admin">
+                    Back Office pour Administrateur</a><br/>
+                    {% endif %}</br>
+                    <a href="{{path('app_contact') }}" target="_blank" class="account-link">
+                    Pour Me Contacter</a><br/> 
+                    <hr>
+                    <a href="{{path('app_account_password') }}" class="account-link">
+                    Modifier mon mot de passe </a><br/>
+                </div>  
+      </div>   
+           <img src="/assets/img/logo2.png" width="1400" height="300">  
+  </div>  
 {% endblock %}

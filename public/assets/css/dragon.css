@@ -17,7 +17,7 @@
     min-height: 100%;
     margin: 0;
     padding: 0;
-    position: static;
+    position: relative;
 }
 .footer-custom{
     display: flex;
@@ -29,7 +29,8 @@
     margin-right: 0px;
     background-color: #000;
     color:   #0dcaf0;
-    position: relative;
+    position: absolute;
+    width: 100%;
 }
 .style {
     font-size: 30px;

@@ -26,6 +26,7 @@ class RegisterType extends AbstractType
                 ]),
                 "attr" => [
                     "placeholder" => "Veuillez saisir votre prénom"
+                    
                 ]
             ])
             ->add('lastname', TextType::class, [
