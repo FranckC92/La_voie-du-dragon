@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-
+{# function twig pour blocker le carousel #}
 {% block carousel %}{% endblock %}
 {% block content %}
     <!-- blog de bienvenue -->
@@ -12,7 +12,7 @@
               L'objectif est de centraliser et de vous faire découvrir les autres aspects des arts martiaux et du bien être en général.Des articles sur les lieux important tel que
               le berceau du kung fu <a href="#temple_shaolin">Temple de Shaolin</a>, et le fameux <a href="#temple_mt_wu_dang"> Temple du Mont WU-Dang</a>.Dans la partie
               <a  href="{{ path('app_blogs')}}">BLOG</a> , des articles et prochainement des liens sur des videos de bien être, réservé aux Membres, <a href={{ path('app_register')}}>l'inscription est gratuite</a>,
-            l'onglet <a href="{{ path('products')}}">Arts martiaux</a> vous emmenes à la bibliothèques de l histoire, les écoles, les styles, les maitres, bien sur il va me falloir
+               l'onglet <a href="{{ path('products')}}">Arts martiaux</a> vous emmenes à la bibliothèques de l histoire, les écoles, les styles, les maitres, bien sur il va me falloir
               beaucoup de temps et de patience pour la completer à 100%, merci par avance pour votre patience.
               </p> 
             <p class="home-item">"Le bonheur n'est pas la destination, le bonheur c'est le chemin"</p>
@@ -50,8 +50,6 @@
                 <p><a class="btn btn-info" href="{{ path('app_blogs')}}">Par ici pour lire la suite</a></p>
             </div><!-- 3/.col-lg-4 -->
     </div><!-- /.row -->
-
-
       <!-- début des articles -->
       <hr class="featurette-divider">
       <!-- premier article -->
@@ -114,7 +112,7 @@
           </div><!-- /.col-md-5 -->
       </div><!-- /.row featurette -->
       <hr class="featurette-divider">
-      <!-- /END THE FEATURETTES -->
+      <!-- /fin des articles -->
       <!-- spotify sons -->
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/15k7PgVvz3M2DEUTRM42uE?utm_source=generator" width="100%" height="80" frameBorder="0"
       allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>

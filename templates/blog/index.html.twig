@@ -4,6 +4,7 @@
         <hr>
         <h2 class="title">Blog</h2>
         <div class="row">
+            {# fonction twig/ avec conditions #}
             {% for blog in blogs %}
                     <div class="col-md-5">
                         <div class="product-item text-center">
@@ -11,15 +12,19 @@
                     </div><!-- /.col-md-5 -->
                             <div class="row">
                                 <div class="col-8">
+                                    {# fonction twig/ci dessous pour afficher le nom du blog #}
                                     <h5 class="title-item">{{ blog.name }}</h5>
                                     <div class="blog-image">
+                                        {# fonction twig/ancre avec slug#}
                                         <a href="{{ path('app_blog',{'slug': blog.slug})}}"> 
+                                             {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
                                             <img src="/uploads/{{ blog.illustration }}" width="150px"
                                             alt="{{ blog.name }}" title="{{ blog.subtitle}}" class="img-fluid">
                                         </a>
                                     </div><!-- /.blog-image -->
                                 </div><!-- /.col-8 -->
                                 <div class="col-md-4 mx-auto">
+                                    {# fonction twig/ci dessous pour afficher le subtitle #}
                                     <span class="subtitle-item ">{{ blog.subtitle}}</span>
                                 </div><!-- /.col-md-4 mx-auto -->
                             </div><!-- /.row -->
