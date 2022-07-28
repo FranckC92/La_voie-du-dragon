@@ -1,16 +1,19 @@
+{# twig pour étendre ma base.html #}
 {% extends 'base.html.twig' %}
-
-{% block title %}Rénitialisation du Mot de passe- La voie du dragon
-{% endblock %}
-
+{# twig pour titre #}
+{% block title %}Rénitialisation du Mot de passe- La voie du dragon{% endblock %}
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
 	<div class="block-small">
-<h1 class="title">Réinitialiser mon mot de passe</h1>
-		{% for message in app.flashes('notice')%}
-<div class="alert alert-info">{{ message }}</div>
-		{% endfor %}
-		<div class="form2">
-			{{ form(form)}}
-		</div>
-	</div>
-{% endblock %}
+		<h1 class="title">Réinitialiser mon mot de passe</h1>
+			{# twig boucle For #}
+			{% for message in app.flashes('notice')%}
+				{# div avec alert et fonction twig pour faire apparaitre message #}
+				<div class="alert alert-info">{{ message }}
+				</div><!-- /. alert alert-info -->
+			{% endfor %}{# twig fin de la boucle for #}
+			<div class="form2">
+				{{ form(form)}}
+			</div><!-- /. form2 -->
+	</div><!-- /.block-small -->
+{% endblock %}{# twig fin du contenue #}
