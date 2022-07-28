@@ -1,38 +1,47 @@
 {% extends 'base.html.twig' %}
-
+{# twig pour étendre ma base.html #}
+{# twig pour titre #}
 {% block title %}Arts Martiaux - la voie du Dragon{% endblock %}
-
 {% block content %}
-<div class="body">
-    <div class="row">
-        <div class="col-md-2">
-            <hr>
-                <h2 class="title-search">Recherche</h2>
-                <div class="form3">
-                {{ form(form) }}
-                <img src="/assets/img/dragon-account.png" width="150" height="auto">
-                <img src="/assets/img/dragon-account.png" width="150" height="auto">
-            </div>
-        </div>
-        <div class="col-md-10">
-        <hr>
-            <h1 class="title2">Arts Martiaux</h1>
+    <div class="body">
         <div class="row">
-                 {% for product in products %}
-                 <div class="col-md-4">
-                    <div class="title-item2">
-                        <h2>{{ product.name }}</h2>
-                     </div>
-                     <div class="image-arts">
-                            <a href="{{ path('product',{'slug': product.slug})}}"> 
-                            <img src="/uploads/{{ product.illustration }}" 
-                             alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid" width="400" height="400"></a></br>
-                            </div>
-                             <hr>
-                            </div>
-                {% endfor %}
-            </div>
-  
-
-</div> 
+            <div class="col-md-2"><!-- diviser en 2 colonnes/1 er colonne pour la barre de recherche -->
+                    <hr>
+                    <h2 class="title-search">Recherche</h2><!-- class css habiller barre de rechercher -->
+                    <div class="form3"><!-- class css pour habiller form -->
+                        {# twig pour envoyer le formulaire #}
+                        {{ form(form) }}
+                        {# j utilise twig pour envoyer deux images de dragon #}
+                        <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
+                        width="150" height="auto">
+                        <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
+                        width="150" height="auto">
+                    </div><!-- /.form3 -->
+            </div><!-- /.col-md-2 -->
+            <div class="col-md-10"><!-- 2 colonnne plus grandes pour mettre les fiches(product) -->
+                <hr>
+                <h1 class="title2">Arts Martiaux</h1>
+                <div class="row"><!-- rediviser pour que chaque fiches produits -->
+                    {# twig boucle for #}
+                    {% for product in products %}
+                        <div class="col-md-4"><!-- fiche produits largeur -->
+                                    <div class="title-item2">
+                                        {# twig pour afficher la fiche produits #}
+                                        <h2>{{ product.name }}</h2>
+                                    </div><!-- /.title-item2 -->
+                                    <div class="image-arts"><!-- css classe pour habiller la fiche -->
+                                        {# twig pour afficher le slug #}
+                                        <a href="{{ path('product',{'slug': product.slug})}}"> 
+                                        {# fonctions twig pour afficher l'image du produits/nom/subtitle #}
+                                        <img src="/uploads/{{ product.illustration }}" 
+                                        alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid" width="400" 
+                                        height="400"></a></br>
+                                    </div><!-- /.image-arts -->
+                                    <hr>
+                        </div><!-- /.col-md-4 -->
+                    {% endfor %}{# fin de la boucle for twig #}
+                </div><!-- /.row -->
+            </div><!-- /.col-md-10 -->
+        </div><!-- /.row -->
+    </div><!-- /.body -->
 {% endblock %}
