@@ -1,29 +1,33 @@
 {% extends 'base.html.twig' %}
-
+{# twig pour etendre ma base sans le carrousel et les articles #}
 {% block title %}{{ product.name }}-La voie du Dragon{% endblock %}
-
+{# twig ci dessus pour afficher le titre #}
 {% block content %}
-<div class="body">
-        <div class="row">
-                <h1 class="title2">{{ product.name }}</h1>
-                <div class="col-md-4">
-                <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid" width="300" height="300"></br>
-
-                <span class="subtitle-item">{{ product.subtitle}}</span></br>
-                <hr>
-                <span>{{ product.email}}</span></br>
-                        <hr>
-                <span class="subtitle-item">{{ product.url }}</span>
-        </div>
-        
-        
-        <div class="col-md-8 mx-auto">
-               <div class="text-item">
-                {{ product.description}}  
-        </div>
-               <hr>        
-         <a href="{{product.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>
-        </div>   
-        </div> 
-</div> 
+        <div class="body">
+                <div class="row">
+                        {# twig pour afficher le nom du produits et je le mets en H1 comme titre #}
+                        <h1 class="title2">{{ product.name }}</h1>
+                        <div class="col-md-4"> <!-- 1er colonne moins large pour mettre image -->
+                                {# fonctions twig pour afficher image/nom/subtitle #}
+                                <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}"
+                                title="{{ product.subtitle}}" class="img-fluid" width="300" height="300"></br>
+                                {# twig pour afficher le sous titre de l image #}
+                                <span class="subtitle-item">{{ product.subtitle}}</span></br>
+                                <hr>{# twig pour afficher l email #}
+                                <span>{{ product.email}}</span></br>
+                                <hr>{# twig pour afficher l'url #}
+                                <span class="subtitle-item">{{ product.url }}</span>
+                        </div><!-- /.col-md-4 -->
+                        <!-- 2eme colonne plus grande pour afficher la description avec bouton -->
+                        <div class="col-md-8 mx-auto"><!-- mx auto pour afficher le texte a l image -->
+                                <div class="text-item">
+                                        {# twig pour afficher description #}
+                                        {{ product.description}}  
+                                </div><!-- /.text-item -->
+                                <hr>{# twig pour afficher l url & html pour le bouton #}        
+                                <a href="{{product.url}}" class="btn btn-primary"
+                                 target="_blank">Aller sur le site</a>
+                        </div><!-- /.col-md-8 mx-auto -->   
+                </div><!-- /.row -->
+        </div><!-- /.body --> 
 {% endblock %}
