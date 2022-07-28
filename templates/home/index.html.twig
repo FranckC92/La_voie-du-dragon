@@ -1,6 +1,8 @@
+{# twig pour étendre ma base.html #}
 {% extends 'base.html.twig' %}
 {# function twig pour blocker le carousel #}
 {% block carousel %}{% endblock %}
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
     <!-- blog de bienvenue -->
     <div class="row"> 
@@ -54,6 +56,7 @@
       <hr class="featurette-divider">
       <!-- premier article -->
       <div class="row featurette">
+        <!--  1 er colonne avec une plus grande largeur pour le text -->
         <div class="col-md-7">
           <h2 class="featurette-heading fw-normal lh-1" id="temple_shaolin">Temple de shaolin <span class="text-muted">Les Moines Guerriers Bouddhistes</span></h2>
           <p class="feature"><b>Le monastère de Shaolin</b> se situe sur le mont Song dans la province de Henan en chine. C'est un 
@@ -69,9 +72,11 @@
           l'original du Monastère de Shaolin, (Henan). Au sud le Temple Nan monastère Shaolin en Fujian est détruit depuis plusieurs siècles. 
           (L’existence et l’emplacement sont encore discutés). Chaque école utilise cinq animaux de base (Dragon, Serpent, Grue, Tiger, Léopard),
           chacun a plusieurs branches, à son tour.
-          </p><p><a class="btn btn-info" href="{{ path('products')}}">La suite...</a></p>
+          </p><p><a class="btn btn-info" href="{{ path('products')}}">La suite...</a></p>{# twig ancre pour envoyer sur page product #}
         </div><!-- /.col-md-7 -->
+        <!-- 2 eme colonne pour les images moins large -->
         <div class="col-md-5">
+          {# j utilise twig pour faire afficher les photos #}
           <img src="{{ asset('assets/img/c4.jpg')}}" class="img-fluid" width="500" height="500" title="L'entrée du temple" alt="Temple de Shaolin les Moines guerriers">
           <p class="text-center">Monastère Shaolin</p>
           <img src="{{ asset('assets/img/c8.jpg')}}" class="img-fluid" width="500" height="500" title="Démonstration du Shaolin Quan"alt="Démonstration du shaolin Quan">
@@ -81,6 +86,7 @@
       <hr class="featurette-divider">
       <!-- deuxieme article -->
       <div class="row featurette">
+            <!-- 1er colonne avec text je rajoute du bootstap order-md-2 pour inverser l ordre et la mettre en 2 -->
             <div class="col-md-7 order-md-2">
               <h2 class="featurette-heading fw-normal lh-1" id="temple_mt_wu_dang">Mont Wudang <span class="text-muted">Les Moines Guerriers Taoistes</span></h2>
               <p class="feature">Le Monts Wudang , Le berceau des arts martiaux internes Taoiste.
@@ -89,9 +95,11 @@
               Les monastères ont été classés sites de l'héritage culturel mondial par l'UNESCO en 1994 .
               L'ensemble de ce complexe de batiments est consititué de  72 temples, 9 monastères, 36 couvents et 9 palais racontent l' histoire 
               trois dynasties chinoises des Yuan, Ming et Qing. Certains édifices datent du <b>VIIe siècle,</b>tout début de la dynastie des Tang.</p>
+              {# utilise twig pour renvoyer sur la page blog #}
               <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">Par ici pour lire la suite</a>
             </div><!-- /.col-md-7 order-md-2 -->
-            <div class="col-md-5 order-md-1">
+             <!-- 2 eme colonne avec image je rajoute du bootstap order-md-1 pour inverser l ordre et la mettre en 1 er -->
+            <div class="col-md-5 order-md-1"><!-- en dessous twig pour mettre image -->
             <img src="{{ asset('assets/img/c9.jpg')}}" class="img-fluid" width="500" height="500" alt="Arts martiaux internes ou externes?" title="Chaines des Monts Wudang">
             <p class="text-center">Temple du Mont Wudang</p>
           </div><!-- /.col-md-5 order-md-1 -->
@@ -99,14 +107,15 @@
       <hr class="featurette-divider">
       <!-- troisieme articles -->
       <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-7"><!-- 1er colonne avec text -->
               <h2 class="featurette-heading fw-normal lh-1" id="histoire_arts_martiaux">L'histoire des Arts Martiaux <span class="text-muted">Les origines</span></h2>
               <p class="lead">L’histoire des arts martiaux, malgré ce que pense beaucoup de personnes, les arts martiaux ne vient pas de <b>chine</b> mais c’est encore plus ancien.
               Les premières traces remontent en <b>Egypte</b> et en <b>Nubie</b>, il y a plus de 3000 ans. Le <b>Aha ou Ahah,kermet Mariama</b>est une forme de boxe et de lutte pratiquées
               par les prêtes. Le <b>Kuta </b>a été créer par les gardes du corps des Anciens Pharaons pour trouver les meilleures méthodes efficaces pour défendre le Phararon. <b>La lutte de Nubie</b>, pratiquée depuis plus de 3000 ans, a vraisemblablement précédé la lutte grecque de plusieurs centaines d’années. </p>
               <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">La suite</a>
           </div><!-- /.col-md-7 -->
-          <div class="col-md-5">
+          <div class="col-md-5"><!-- 2 eme colonne pour l'image -->
+          {# twig pour mettre image #}
           <img src="{{ asset('assets/img/body9.jpg')}}" class="img-fluid" width="500" height="500" title="coup de pied"alt="L'histoire des arts martiaux">
           <p class="text-center">Coup de pied du cheval</p>
           </div><!-- /.col-md-5 -->
@@ -115,8 +124,9 @@
       <!-- /fin des articles -->
       <!-- spotify sons -->
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/15k7PgVvz3M2DEUTRM42uE?utm_source=generator" width="100%" height="80" frameBorder="0"
-      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-{% endblock %}
+      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></br>
+      <hr>
+{% endblock %}{# twig fin du block de contenue #}
 
 
 
