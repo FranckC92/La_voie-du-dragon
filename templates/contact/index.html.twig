@@ -1,28 +1,23 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Nous contacter - La voie du Dragon{% endblock %}
-
 {% block content %}
-
-<div class="row">
-
-    <div class="col-lg-8"> 
-            <div class="form2">
-            {{ form(form) }}
-            </div>
-    </div>
-        <div class="col-lg-4 my-auto">
-        
-                <img src="/assets/img/logo.png" alt="img-fluid" title="La voie du dragon" width="420px" height="300px"></br>
-                     <h1 class="title-address"> La voie du Dragon</h1>
-                      <hr>
-                    <p class="text-address"> square de la forge</br>
-                         92310 Sèvres</p>
-                        <hr>
-                      <p class="text-address">  lavoiedudragonidf@gmail.com</P>
-               
- </div>
-
-
-
+  <div class="row">
+        <!-- divise en 2 colonnes -->
+        <div class="col-lg-8"><!-- premiere colonne la je mets le formulaire -->
+                <div class="form2"><!-- utlise une div avec class css pour habiller le formulaire -->
+                {# utilise twig pour envoyer le formulaire#}
+                {{ form(form) }}
+                </div><!-- /.form2 -->
+        </div><!-- /.col-lg-8 -->
+        <div class="col-lg-4 my-auto"><!-- deuxieme colonne avec logo du site  et adresse de contact -->
+                        {# utilise twig pour  mettre le logo avec title et redimensionne image #}
+                        <img src="{{ asset('assets/img/logo.png')}}" alt="img-fluid" title="La voie du dragon" width="400px" height="300px"></br>
+                                <h1 class="title-address">La voie du Dragon</h1>
+                                <hr>
+                                <p class="text-address">square de la forge</br>
+                                92310 Sèvres</p>
+                                <hr>
+                                <p class="text-address">lavoiedudragonidf@gmail.com</P>
+        </div><!-- /.col-lg-4 my-auto -->
+  </div><!-- /.row -->
 {% endblock %}
