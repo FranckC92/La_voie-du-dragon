@@ -1,57 +1,64 @@
+{# twig pour étendre ma base.html #}
 {% extends 'base.html.twig' %}
-
+{# twig pour titre #}
 {% block title %}Se connecter - La voie du Dragon{% endblock %}
-
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
-<div class="form2"> 
- <form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    <div class="form2"> 
+        <!-- formulaire avec methode post -->
+        <form method="post">
+            {# twig conditions if si il y a une erreur #}
+            {% if error %}
+                {# div alert avec fonctions twig poour afficher erreur messages & security #}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}
+                </div><!-- /. alert alert-danger -->
+            {% endif %}{# twig fin de la condition if #}
+             {# twig 2 eme conditions if pour user #}
+            {% if app.user %}
+                {# fonction twig pour afficher identification utilsateur & route pour se deconnecter #}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div><!-- /. mb-3 -->
+            {% endif %}{# twig fin de la condition if #}
+            <h1>Se connecter</h1>
+                <hr>
+                <div class="row">
+                        <label for="inputEmail">Votre email</label>
+                        <hr>{# input et twig fonction pour afficher nom de l'utilisateur #}
+                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" 
+                        class="form-control" placeholder="Votre adresse email"required autofocus>
+                </div><!-- /.row -->
+                    <hr>
+                <div class="row">
+                    <label for="inputPassword">Votre mot de passe</label>
+                    <hr><!-- input type mot de passe -->
+                    <input type="password" name="password" id="inputPassword" class="form-control" 
+                    placeholder="Votre mot de passe" required>
+                    <!-- input  avec authentification crf token de symfony-->
+                    <input type="hidden" name="_csrf_token"
+                        value="{{ csrf_token('authenticate') }}">
+                     {#
+                        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                        See https://symfony.com/doc/current/security/remember_me.html
 
-    {% if app.user %}
-        <div class="mb-3">
-            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-        </div>
-    {% endif %}
-    
-
-    <h1>Se connecter</h1>
-        <hr>
-     <div class="row">
-            <label for="inputEmail">Votre email</label>
-            <hr>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Votre adresse email"required autofocus>
-     </div>
-            <hr>
-        <div class="row">
-    <label for="inputPassword">Votre mot de passe</label>
-    <hr>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Votre mot de passe" required>
-
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}">
-
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
-
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
-    </div>
-    <hr>
-   <button class="btn btn-lg btn-primary btn-sm" type="submit">
-        Se connecter
-    </button>
-    <hr>
-    <p class="text-center">Ou souhaitez-vous<a href="{{ path('app_reset_password') }}">
-					Mot de passe oubliées</a></p>
-     <p class="text-center">Ou souhaitez-vous<a href="{{ path('app_register') }}">
-					creer un compte</a>?</p>
- </form>
-</div>
-{% endblock %}
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" name="_remember_me"> Remember me
+                            </label>
+                        </div>
+                     #}
+                </div><!-- /.row -->
+                <hr><!-- boutton pour envoyer formulaire se logger -->
+                <button class="btn btn-lg btn-primary btn-sm" type="submit">
+                    Se connecter
+                </button>
+                <hr>{# twig ancre fonction twig path pour la route pour mot de passe oublies #}
+                <p class="text-center">Ou souhaitez-vous<a href="{{ path('app_reset_password') }}">
+                                Mot de passe oubliées</a></p>
+                <hr>
+                 {# twig ancre fonction twig path pour la route inscriptions #}
+                <p class="text-center">Ou souhaitez-vous<a href="{{ path('app_register') }}">
+                                creer un compte</a>?</p>
+        </form><!-- fin dur formulaire methode post -->
+    </div><!-- /.form2 -->
+{% endblock %}{# twig fin du contenue #}
