@@ -1,181 +1,182 @@
-{% extends 'base.html.twig' %}
 {# twig pour étendre ma base.html #}
+{% extends 'base.html.twig' %}
 {# twig pour titre #}
 {% block title %}C.G.U - La voie du Dragon{% endblock %}
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
-<div class="row">
-    <div class="col-md-2"><!-- divise en 3 colonnes les 2 colonnes de chaque cote avec logo ying yang -->
-              <div class="light-cgu">{# utilise twig pour placer une image ying yang #}
-              <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="yingyang" width="150" height="auto">
-              </div><!-- /.light-cgu -->
-    </div><!-- /.col-md-2 -->
-    <!-- text des conditons generales d'utilisateur -->
-    <div class="col-md-8">
-            <hr>
-            <h1 class="title-cgu">Conditions Genérales d'utilisateur & Mentions légales - La voie du Dragon</h1>
-            <hr>
-            <h5>ARTICLE 1 : Objet</h5>
-            <hr>
-            <p>Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement juridique de l’utilisation du 				
-              site la voie du Dragon et de ses services.
+  <div class="row">
+      <div class="col-md-2"><!-- divise en 3 colonnes les 2 colonnes de chaque cote avec logo ying yang -->
+                <div class="light-cgu">{# utilise twig pour placer une image ying yang #}
+                <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="yingyang" width="150" height="auto">
+                </div><!-- /.light-cgu -->
+      </div><!-- /.col-md-2 -->
+      <!-- text des conditons generales d'utilisateur -->
+      <div class="col-md-8">
+              <hr>
+              <h1 class="title-cgu">Conditions Genérales d'utilisateur & Mentions légales - La voie du Dragon</h1>
+              <hr>
+              <h5>ARTICLE 1 : Objet</h5>
+              <hr>
+              <p>Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement juridique de l’utilisation du 				
+                site la voie du Dragon et de ses services.
 
-            Ce contrat est conclu entre :
+              Ce contrat est conclu entre :
 
-            L’administrateur du site internet, ci-après désigné « l’Administrateur »,
+              L’administrateur du site internet, ci-après désigné « l’Administrateur »,
 
-            Toute personne physique ou morale souhaitant accéder au site et à ses services, ci-après appelé « l’Utilisateur ».
+              Toute personne physique ou morale souhaitant accéder au site et à ses services, ci-après appelé « l’Utilisateur ».
 
-            Les conditions générales d'utilisation doivent être acceptées par tout Utilisateur, et son accès au site vaut a				
-            acceptation de ces conditions.</p>
-            <hr>
-            <h5>ARTICLE 2 : Mentions légales</h5>
-            <hr>
-            <p>En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est 			
-                précisé aux utilisateurs du site l’identité des différents intervenants dans le cadre de sa réalisation et de son 				
-                suivi :
-                Webmaster
-            Franck Ceyssat
-            Etudiant en développeur D’application multimédia.
+              Les conditions générales d'utilisation doivent être acceptées par tout Utilisateur, et son accès au site vaut a				
+              acceptation de ces conditions.</p>
+              <hr>
+              <h5>ARTICLE 2 : Mentions légales</h5>
+              <hr>
+              <p>En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est 			
+                  précisé aux utilisateurs du site l’identité des différents intervenants dans le cadre de sa réalisation et de son 				
+                  suivi :
+                  Webmaster
+              Franck Ceyssat
+              Etudiant en développeur D’application multimédia.
 
-            16 rue de ville d’Avray.
-            92310 Sèvres
-            France	
-            
-            Serveur
-            IONOS SARL
-            SARL au Capital de 100.000 EUR
-            SIRET 431 303 775 000 16 - APE 642 B - R.C.S Sarreguemines B 431 303 775 
-            7, place de la Gare
-            BP 70109
-            57201 Sarreguemines Cedex
-            </p>
-            <hr>
-            <h5>ARTICLE 3 : accès aux services</h5>
-            <hr>
-            <p>L’Utilisateur du site la voie du Dragon a accès aux services suivants :
-            -	Articles sur les arts martiaux
+              16 rue de ville d’Avray.
+              92310 Sèvres
+              France	
+              
+              Serveur
+              IONOS SARL
+              SARL au Capital de 100.000 EUR
+              SIRET 431 303 775 000 16 - APE 642 B - R.C.S Sarreguemines B 431 303 775 
+              7, place de la Gare
+              BP 70109
+              57201 Sarreguemines Cedex
+              </p>
+              <hr>
+              <h5>ARTICLE 3 : accès aux services</h5>
+              <hr>
+              <p>L’Utilisateur du site la voie du Dragon a accès aux services suivants :
+              -	Articles sur les arts martiaux
 
-            Tout Utilisateur ayant accès a internet peut accéder gratuitement et depuis n’importe où au site. Les frais 					
-            supportés par l’Utilisateur pour y accéder (connexion internet, matériel informatique, etc.) ne sont pas à la charge 			 
-            de l’Éditeur.
+              Tout Utilisateur ayant accès a internet peut accéder gratuitement et depuis n’importe où au site. Les frais 					
+              supportés par l’Utilisateur pour y accéder (connexion internet, matériel informatique, etc.) ne sont pas à la charge 			 
+              de l’Éditeur.
 
-            Les services suivants ne sont pas accessible pour l’Utilisateur que s’il est membre du site (c’est-à-dire qu’ile st 			
-            identifié à l’aide de ses identifiants de connexion) :
-            •	Accéder au BLOG vidéo de Bien-être.
-            •	Modifier son mot de passe
-            •	Contacter l’administrateur pour supprimer son compte.
-            •	Contacter l’administrateur pour toutes autres questions.
+              Les services suivants ne sont pas accessible pour l’Utilisateur que s’il est membre du site (c’est-à-dire qu’ile st 			
+              identifié à l’aide de ses identifiants de connexion) :
+              •	Accéder au BLOG vidéo de Bien-être.
+              •	Modifier son mot de passe
+              •	Contacter l’administrateur pour supprimer son compte.
+              •	Contacter l’administrateur pour toutes autres questions.
 
-            Le site et ses différents services peuvent être interrompus ou suspendus par l’Éditeur, notamment à l’occasion d’une 			 
-            maintenance, sans obligation de préavis ou de justification.</p>
-            <hr>
-            <h5>ARTICLE 4 : Responsabilité de l’Utilisateur</h5>
-            <p>L'Utilisateur est responsable des risques liés à l’utilisation de son identifiant de connexion et de son mot 					
-            de passe. 
+              Le site et ses différents services peuvent être interrompus ou suspendus par l’Éditeur, notamment à l’occasion d’une 			 
+              maintenance, sans obligation de préavis ou de justification.</p>
+              <hr>
+              <h5>ARTICLE 4 : Responsabilité de l’Utilisateur</h5>
+              <p>L'Utilisateur est responsable des risques liés à l’utilisation de son identifiant de connexion et de son mot 					
+              de passe. 
 
-            Le mot de passe de l’Utilisateur doit rester secret. En cas de divulgation de mot de passe, l’Éditeur décline 					
-            toute responsabilité.
+              Le mot de passe de l’Utilisateur doit rester secret. En cas de divulgation de mot de passe, l’Éditeur décline 					
+              toute responsabilité.
 
-            L’Utilisateur assume l’entière responsabilité de l’utilisation qu’il fait des informations et contenus présents 				
-            sur le site La voie du Dragon.
+              L’Utilisateur assume l’entière responsabilité de l’utilisation qu’il fait des informations et contenus présents 				
+              sur le site La voie du Dragon.
 
-            Tout usage du service par l'Utilisateur ayant directement ou indirectement pour conséquence des dommages doit 					
-            faire l'objet d'une indemnisation au profit du site.
+              Tout usage du service par l'Utilisateur ayant directement ou indirectement pour conséquence des dommages doit 					
+              faire l'objet d'une indemnisation au profit du site.
 
-            Le site ne permet pas aux membres de publier sur le site :
-            </p>
-            <h5>Responsabilité de l’Éditeur</h5>
-            <hr>
-            <p>Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilité de l’Éditeur.
-
-            De même, la responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et 					
-            insurmontable d'un tiers.
-
-            Le site la voie du dragon s'engage à mettre en œuvre tous les moyens nécessaires pour garantir la sécurité et la 					
-            confidentialité des données. Toutefois, il n’apporte pas une garantie de sécurité totale.
-
-            L’Éditeur se réserve la faculté d’une non-garantie de la fiabilité des sources, bien que les informations 						
-            diffusées sur le site soient réputées fiables.</p>
-            <hr>
-            <h5>ARTICLE 5 : Responsabilité de l’Administrateur</h5>
-            <hr>
-            <p>Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilité de l’Éditeur.
+              Le site ne permet pas aux membres de publier sur le site :
+              </p>
+              <h5>Responsabilité de l’Éditeur</h5>
+              <hr>
+              <p>Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilité de l’Éditeur.
 
               De même, la responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et 					
               insurmontable d'un tiers.
 
-            Le site la voie du Dragon s'engage à mettre en œuvre tous les moyens nécessaires pour garantir la sécurité et la 					
-            confidentialité des données. Toutefois, il n’apporte pas une garantie de sécurité totale.
+              Le site la voie du dragon s'engage à mettre en œuvre tous les moyens nécessaires pour garantir la sécurité et la 					
+              confidentialité des données. Toutefois, il n’apporte pas une garantie de sécurité totale.
 
-            L’Éditeur se réserve la faculté d’une non-garantie de la fiabilité des sources, bien que les informations 						
-            diffusées sur le site soient réputées fiables.</p>
-            <hr>
-            <h5>ARTICLE 6 : Propriété intellectuelle</h5>
-            <hr>
-            <p>Les contenus du site la voie du Dragon (logos, textes, éléments graphiques, vidéos, etc.) son protégés par le 					 
-              droit d’auteur, en vertu du Code de la propriété intellectuelle.
+              L’Éditeur se réserve la faculté d’une non-garantie de la fiabilité des sources, bien que les informations 						
+              diffusées sur le site soient réputées fiables.</p>
+              <hr>
+              <h5>ARTICLE 5 : Responsabilité de l’Administrateur</h5>
+              <hr>
+              <p>Tout dysfonctionnement du serveur ou du réseau ne peut engager la responsabilité de l’Éditeur.
 
-              L’Utilisateur devra obtenir l’autorisation de l’éditeur du site avant toute reproduction, copie ou 							  
-              publication de ces différents contenus.
+                De même, la responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et 					
+                insurmontable d'un tiers.
 
-              Ces derniers peuvent être utilisés par les utilisateurs à des fins privées ; tout usage commercial est 						  
-              interdit.
+              Le site la voie du Dragon s'engage à mettre en œuvre tous les moyens nécessaires pour garantir la sécurité et la 					
+              confidentialité des données. Toutefois, il n’apporte pas une garantie de sécurité totale.
 
-              L’Utilisateur est entièrement responsable de tout contenu qu’il met en ligne et il s’engage à ne pas porter   				  
-              atteinte à un tiers.
+              L’Éditeur se réserve la faculté d’une non-garantie de la fiabilité des sources, bien que les informations 						
+              diffusées sur le site soient réputées fiables.</p>
+              <hr>
+              <h5>ARTICLE 6 : Propriété intellectuelle</h5>
+              <hr>
+              <p>Les contenus du site la voie du Dragon (logos, textes, éléments graphiques, vidéos, etc.) son protégés par le 					 
+                droit d’auteur, en vertu du Code de la propriété intellectuelle.
 
-              L’Éditeur du site se réserve le droit de modérer ou de supprimer librement et à tout moment les contenus mis en 				  
-              ligne par les utilisateurs, et ce sans justification.</p>
-            <hr>
-            <h5>ARTICLE 7 : Données personnelles</h5>
-            <hr>
-            <p>
-            L’Utilisateur doit obligatoirement fournir des informations personnelles pour procéder à son inscription sur 					 
-            le site (adresse mail). 
+                L’Utilisateur devra obtenir l’autorisation de l’éditeur du site avant toute reproduction, copie ou 							  
+                publication de ces différents contenus.
 
-            L’adresse électronique (e-mail) de l’utilisateur pourra notamment être utilisée par le site la voie du 							
-            Dragon pour la communication d’informations diverses et la gestion du compte.
+                Ces derniers peuvent être utilisés par les utilisateurs à des fins privées ; tout usage commercial est 						  
+                interdit.
 
-            La voie du Dragon garantie le respect de la vie privée de l’utilisateur, conformément à la loi n°78-17 du 6 					
-            janvier 1978 relative à l'informatique, aux fichiers et aux libertés.
+                L’Utilisateur est entièrement responsable de tout contenu qu’il met en ligne et il s’engage à ne pas porter   				  
+                atteinte à un tiers.
 
-            Depuis le 25 mai 2018, date d'entrée en application du RGPD, la plupart des fichiers n'ont plus à être 							
-            déclarés à la CNIL.
-            Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016, relatif à la protection des 					
-          	personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de 						
-            ces données, et abrogeant la directive 95/46/CE (règlement général sur la protection des données).
+                L’Éditeur du site se réserve le droit de modérer ou de supprimer librement et à tout moment les contenus mis en 				  
+                ligne par les utilisateurs, et ce sans justification.</p>
+              <hr>
+              <h5>ARTICLE 7 : Données personnelles</h5>
+              <hr>
+              <p>
+              L’Utilisateur doit obligatoirement fournir des informations personnelles pour procéder à son inscription sur 					 
+              le site (adresse mail). 
 
-            En vertu des articles 39 et 40 de la loi en date du 6 janvier 1978, l'Utilisateur dispose d'un droit 					
-          	d'accès, de rectification, de suppression et d'opposition de ses données personnelles. L'Utilisateur exerce 					
-            ce droit via :
+              L’adresse électronique (e-mail) de l’utilisateur pourra notamment être utilisée par le site la voie du 							
+              Dragon pour la communication d’informations diverses et la gestion du compte.
 
-            • Un formulaire de contact via son espace personnel sur le site.</p>
-            <hr>
-            <h5>ARTICLE 8 : Liens hypertextes</h5>
-            
-            <p>Les domaines vers lesquels mènent les liens hypertextes présents sur le site n’engagent pas la 								
-              responsabilité de l’Éditeur de la voie du Dragon, qui n’a pas de contrôle sur ces liens.
+              La voie du Dragon garantie le respect de la vie privée de l’utilisateur, conformément à la loi n°78-17 du 6 					
+              janvier 1978 relative à l'informatique, aux fichiers et aux libertés.
 
-            Il est possible pour un tiers de créer un lien vers une page du site La voie du Dragon sans autorisation  
-            expresse de l’éditeur.</p>
-            <hr>
-            <h5>ARTICLE 9 : Évolution des conditions générales d’utilisation </h5>
-            <p>Le site la voie du Dragon se réserve le droit de modifier les clauses de ces conditions générales 
-             d’utilisation à tout moment et sans justification.</p>
-            <hr>
-            <h5>ARTICLE 10 : Durée du contrat</h5>
-            <p>La durée du présent contrat est indéterminée. Le contrat produit ses effets à l'égard de l'Utilisateur
-             à compter du début de l’utilisation du service.</p>
-            <hr>
-            <h5>ARTICLE 11 : Droit applicable et juridiction compétente </h5>
-            <p>Le présent contrat dépend de la législation française. 
-               En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux de Nanterre sont
-               compétents pour régler le contentieux. </p> 
-    </div><!-- /.col-md-8 -->
-    <div class="col-md-2">
-             <div class="light-cgu2">{# utilise twig pour placer une image ying yang #}
-             <img src="{{ asset('assets/img/yingyang3.jpg')}}" alt="img-fluid" title="yingyang" width="152" height="auto">
-             </div><!-- /.light-cgu2 -->
-    </div><!-- /.col-md-2 -->
-</div><!-- /.row -->
-{% endblock %}
+              Depuis le 25 mai 2018, date d'entrée en application du RGPD, la plupart des fichiers n'ont plus à être 							
+              déclarés à la CNIL.
+              Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016, relatif à la protection des 					
+              personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de 						
+              ces données, et abrogeant la directive 95/46/CE (règlement général sur la protection des données).
+
+              En vertu des articles 39 et 40 de la loi en date du 6 janvier 1978, l'Utilisateur dispose d'un droit 					
+              d'accès, de rectification, de suppression et d'opposition de ses données personnelles. L'Utilisateur exerce 					
+              ce droit via :
+
+              • Un formulaire de contact via son espace personnel sur le site.</p>
+              <hr>
+              <h5>ARTICLE 8 : Liens hypertextes</h5>
+              
+              <p>Les domaines vers lesquels mènent les liens hypertextes présents sur le site n’engagent pas la 								
+                responsabilité de l’Éditeur de la voie du Dragon, qui n’a pas de contrôle sur ces liens.
+
+              Il est possible pour un tiers de créer un lien vers une page du site La voie du Dragon sans autorisation  
+              expresse de l’éditeur.</p>
+              <hr>
+              <h5>ARTICLE 9 : Évolution des conditions générales d’utilisation </h5>
+              <p>Le site la voie du Dragon se réserve le droit de modifier les clauses de ces conditions générales 
+              d’utilisation à tout moment et sans justification.</p>
+              <hr>
+              <h5>ARTICLE 10 : Durée du contrat</h5>
+              <p>La durée du présent contrat est indéterminée. Le contrat produit ses effets à l'égard de l'Utilisateur
+              à compter du début de l’utilisation du service.</p>
+              <hr>
+              <h5>ARTICLE 11 : Droit applicable et juridiction compétente </h5>
+              <p>Le présent contrat dépend de la législation française. 
+                En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux de Nanterre sont
+                compétents pour régler le contentieux. </p> 
+      </div><!-- /.col-md-8 -->
+      <div class="col-md-2">
+              <div class="light-cgu2">{# utilise twig pour placer une image ying yang #}
+              <img src="{{ asset('assets/img/yingyang3.jpg')}}" alt="img-fluid" title="yingyang" width="152" height="auto">
+              </div><!-- /.light-cgu2 -->
+      </div><!-- /.col-md-2 -->
+  </div><!-- /.row -->
+{% endblock %}{# fin du contenu #}

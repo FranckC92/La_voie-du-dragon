@@ -1,7 +1,8 @@
+{# twig pour étendre ma base.html #}
 {% extends 'base.html.twig' %}
-{# twig pour etendre ma base sans le carrousel et les articles #}
+{# twig titre + fonction pour afficher le nom produits #}
 {% block title %}{{ product.name }}-La voie du Dragon{% endblock %}
-{# twig ci dessus pour afficher le titre #}
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
         <div class="body">
                 <div class="row">
@@ -30,4 +31,4 @@
                         </div><!-- /.col-md-8 mx-auto -->   
                 </div><!-- /.row -->
         </div><!-- /.body --> 
-{% endblock %}
+{% endblock %}{# twig fin du contenue #}

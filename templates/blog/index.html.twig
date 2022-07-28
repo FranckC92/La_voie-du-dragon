@@ -1,12 +1,13 @@
-{% extends 'base.html.twig' %}
 {# twig pour étendre ma base.html #}
+{% extends 'base.html.twig' %}
 {# twig pour titre #}
 {% block title %}Le Blog- La voie du Dragon{% endblock %}
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
         <hr>
         <h2 class="title">Blog</h2>
         <div class="row">
-            {# fonction twig/ avec conditions #}
+            {# fonction twig/ avec boucle for #}
             {% for blog in blogs %}
                     <div class="col-md-5">
                         <div class="product-item text-center">
@@ -30,6 +31,6 @@
                                     <span class="subtitle-item ">{{ blog.subtitle}}</span>
                                 </div><!-- /.col-md-4 mx-auto -->
                             </div><!-- /.row -->
-            {% endfor %}    
+            {% endfor %}{# twig fin de la boucle for #}   
         </div><!-- /.row -->
-{% endblock %}
+{% endblock %}{# twig fin du contenu #}

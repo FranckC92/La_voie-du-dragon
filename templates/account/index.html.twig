@@ -1,8 +1,9 @@
-{% extends 'base.html.twig' %}
 {# twig pour étendre ma base.html #}
+{% extends 'base.html.twig' %}
 {# twig pour titre #}
 {% block title %}Mon compte-La voie du Dragon{% endblock %}
 <!-- espace membres -->
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
   <div class="row">
             <div class="col-1 overflow-auto">
@@ -35,4 +36,4 @@
             {# fonction twig pour afficher l 'image de l'article #}
            <img src="{{ asset('assets/img/logo2.png')}}" alt="" width="1400" height="300" title="dragon foudre">  
   </div><!-- /.row --> 
-{% endblock %}
+{% endblock %}{# twig fin du contenu #}

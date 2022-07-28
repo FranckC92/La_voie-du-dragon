@@ -1,26 +1,27 @@
-{% extends 'base.html.twig' %}
 {# twig pour étendre ma base.html #}
+{% extends 'base.html.twig' %}
 {# twig pour titre #}
 {% block title %}Mon article- La voie du Dragon{% endblock %}
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
-<hr>{# fonction twig/ci dessous pour afficher le nom & descriptions #}
-<h1 class="title-item">{{ blog.name }}</h1>
-<div class="row">
-    <div class="col-md-7">
-            <div class="blog-item"> {{ blog.description}}  
-            </div><!-- /.blog-item -->
-        <hr>{# fonction twig/ci dessous pour afficher l'url #}
-        <span>{{ blog.url }}</span>
-        <hr>{# fonction twig/ci dessous pour afficher l'email #}
-        <span>{{ blog.email}}</span>
-        {# ancre avec finction twig pour envoyer sur l url avec un bouton #}      
-        <a href="{{blog.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>
-    </div><!-- /.col-md-7 -->    
-    <div class="col-md-5 my-xl-auto">
-        {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
-        <img src="/uploads/{{ blog.illustration }}" alt="{{ blog.name }}" title="{{ blog.subtitle}}"class="img-fluid">
-        {# fonction twig/ci dessous pour afficher le subtitle #}
-        <span class="subtitle-item">{{ blog.subtitle}}</span>
-    </div><!-- /.col-md-5 my-xl-auto -->    
-</div><!-- /.row -->
-{% endblock %}
+    <hr>{# fonction twig/ci dessous pour afficher le nom & descriptions #}
+    <h1 class="title-item">{{ blog.name }}</h1>
+    <div class="row">
+        <div class="col-md-7">
+                <div class="blog-item"> {{ blog.description}}  
+                </div><!-- /.blog-item -->
+            <hr>{# fonction twig/ci dessous pour afficher l'url #}
+            <span>{{ blog.url }}</span>
+            <hr>{# fonction twig/ci dessous pour afficher l'email #}
+            <span>{{ blog.email}}</span>
+            {# ancre avec finction twig pour envoyer sur l url avec un bouton #}      
+            <a href="{{blog.url}}" class="btn btn-primary" target="_blank">Aller sur le site</a>
+        </div><!-- /.col-md-7 -->    
+        <div class="col-md-5 my-xl-auto">
+            {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
+            <img src="/uploads/{{ blog.illustration }}" alt="{{ blog.name }}" title="{{ blog.subtitle}}"class="img-fluid">
+            {# fonction twig/ci dessous pour afficher le subtitle #}
+            <span class="subtitle-item">{{ blog.subtitle}}</span>
+        </div><!-- /.col-md-5 my-xl-auto -->    
+    </div><!-- /.row -->
+{% endblock %}{# twig fin du contenu #}

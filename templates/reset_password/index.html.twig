@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
-
+{# twig pour étendre ma base.html #}
+{# twig pour titre #}
 {% block title %}Mot de passe oublié- La voie du dragon{% endblock %}
-
+{# twig content pour afficher le contenue ci dessus #}
 {% block content %}
     <div class="block-small">
     {% for message in app.flashes('notice')%}

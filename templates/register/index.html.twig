@@ -2,6 +2,7 @@
 {# twig pour étendre ma base.html #}
 {# twig pour titre #}
 {% block title %}S' inscrire - La voie du Dragon{% endblock %}
+{# twig content pour afficher le contenue ci dessous #}
 {% block content %}
     <hr>
     <h1 class="register-item">Inscriptions</h1> 
@@ -15,4 +16,4 @@
                 {# twig pour envoyer formulaire #}
                 {{ form(form) }}
             </div><!-- /. form container-fluid -->
-{% endblock %}
+{% endblock %}{# twig fin du contenue #}
