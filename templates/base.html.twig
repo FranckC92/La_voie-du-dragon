@@ -150,10 +150,10 @@
                     <span class="sr-only">Next</span>
                 </a>
           </div>
-       {% endif %} 
- <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
+       {% endif %} {# fin de twig condition if pour le carousel si il est definis #}
+            <!-- Marketing messaging and featurettes
+            ================================================== -->
+            <!-- Wrap the rest of the page in another container to center all the content. -->
 
           <div class="container marketing {% if block ("carousel") is not defined %}mt-5{% endif %}">
                         {% block content %}  
@@ -163,17 +163,17 @@
           </div><!-- /.container -->
                         <!-- FOOTER -->
               <div class="container-fluid">
-                  <footer class="footer-custom">
+                  <footer class="footer-custom"><!-- footer avec class css -->
                   <ul class="col-md-4 mb-0 justify-content-center">&copy; 2022 DigitalDev</ul>
                         <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                        <img src="/assets/img/logo.png" class="" width="50" >
+                        <img src="/assets/img/logo.png" alt="logo" title="Accueil" class="img-fluid" width="50" >
                         </a>
                         <ul class="nav col-md-4 justify-content-center"> 
                           <li class="nav-item"><a href="{{ path('app_politique')}}" class="nav-link px-2 text-info">Politique confidentialité</a></li>
                         </ul>
-                  </footer>
-              </div>
-       </main>
+                  </footer><!-- fin du footer -->
+              </div><!-- /. container-fluid -->
+       </main><!-- fin du main -->
           <!-- script consentement cookies -->
           <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
           <script>
@@ -202,6 +202,5 @@
           <!-- script js&jquery -->
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
           <script src={{ asset('assets/js/bootstrap.bundle.js') }}></script>
-          
-    </body>
+    </body><!-- fin du body -->
 </html>
