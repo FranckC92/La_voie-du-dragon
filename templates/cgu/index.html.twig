@@ -1,14 +1,16 @@
 {% extends 'base.html.twig' %}
+{# twig pour étendre ma base.html #}
+{# twig pour titre #}
 {% block title %}C.G.U - La voie du Dragon{% endblock %}
 {% block content %}
 <div class="row">
     <div class="col-md-2"><!-- divise en 3 colonnes les 2 colonnes de chaque cote avec logo ying yang -->
-            <div class="light-cgu">
-            <img src="/assets/img/yingyang2.jpg" alt="symbole ying yang" title="yingyang" width="150" height="auto">
-            </div><!-- /.light-cgu -->
+              <div class="light-cgu">{# utilise twig pour placer une image ying yang #}
+              <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="yingyang" width="150" height="auto">
+              </div><!-- /.light-cgu -->
     </div><!-- /.col-md-2 -->
-  <!-- text des conditons generales d'utilisateur -->
-  <div class="col-md-8">
+    <!-- text des conditons generales d'utilisateur -->
+    <div class="col-md-8">
             <hr>
             <h1 class="title-cgu">Conditions Genérales d'utilisateur & Mentions légales - La voie du Dragon</h1>
             <hr>
@@ -171,8 +173,8 @@
                compétents pour régler le contentieux. </p> 
     </div><!-- /.col-md-8 -->
     <div class="col-md-2">
-             <div class="light-cgu2">
-             <img src="/assets/img/yingyang3.jpg" alt="symbole ying yang" title="yingyang" width="152" height="auto">
+             <div class="light-cgu2">{# utilise twig pour placer une image ying yang #}
+             <img src="{{ asset('assets/img/yingyang3.jpg')}}" alt="img-fluid" title="yingyang" width="152" height="auto">
              </div><!-- /.light-cgu2 -->
     </div><!-- /.col-md-2 -->
 </div><!-- /.row -->
