@@ -1,5 +1,5 @@
-{% extends 'base.html.twig' %}
 {# twig pour étendre ma base.html #}
+{% extends 'base.html.twig' %}
 {# twig pour titre #}
 {% block title %}Arts Martiaux - la voie du Dragon{% endblock %}
 {# twig content pour afficher le contenue ci dessous #}
@@ -33,8 +33,8 @@
                                         <a href="{{ path('product',{'slug': product.slug})}}"> 
                                         {# fonctions twig pour afficher l'image du produits/nom/subtitle #}
                                         <img src="/uploads/{{ product.illustration }}" 
-                                        alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid" width="400" 
-                                        height="400"></a></br>
+                                        alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid" width="300" 
+                                        height="200"></a></br>
                                     </div><!-- /.image-arts -->
                                     <hr>
                         </div><!-- /.col-md-4 -->

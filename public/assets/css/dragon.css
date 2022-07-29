@@ -126,15 +126,10 @@
     background-color: whitesmoke;
 }
 .light-cgu {
-    border-top: 30px solid rgb(42, 6, 6);
-    border-right: 10px solid rgb(42, 6, 6);
-    border-bottom: 10px solid rgb(42, 6, 6);
-    
+    border: 10px solid rgb(42, 6, 6);
 }
 .light-cgu2 {
-    border-top: 30px solid rgb(42, 6, 6);
-    border-left: 10px solid rgb(42, 6, 6);
-    border-bottom: 10px solid rgb(42, 6, 6);
+    border: 10px solid rgb(42, 6, 6);
 }
 
 .account-title{
