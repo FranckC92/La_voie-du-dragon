@@ -7,12 +7,15 @@
   <div class="row">
         <!-- divise en 2 colonnes -->
         <div class="col-lg-8"><!-- premiere colonne la je mets le formulaire -->
+        <p class="subtitle-item2">Ici vous pouvez nous contacter, merci de remplir, le formulaire.
+        Les messages haineux ne seront pas traitées.  Sinon  nous essayerons de répondre 
+        dans les meilleurs délais.</p> 
                 <div class="form2"><!-- utlise une div avec class css pour habiller le formulaire -->
                 {# utilise twig pour envoyer le formulaire#}
                 {{ form(form) }}
                 </div><!-- /.form2 -->
         </div><!-- /.col-lg-8 -->
-        <div class="col-lg-4 my-auto"><!-- deuxieme colonne avec logo du site  et adresse de contact -->
+        <div class="col-lg-4"><!-- deuxieme colonne avec logo du site  et adresse de contact -->
                         {# utilise twig pour  mettre le logo avec title et redimensionne image #}
                         <img src="{{ asset('assets/img/logo.png')}}" alt="img-fluid" title="La voie du dragon" width="300px" height="300px"></br>
                                 <h1 class="title-address">La voie du Dragon</h1>

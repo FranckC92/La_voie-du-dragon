@@ -59,9 +59,8 @@
     text-align:center;
     color: whitesmoke;
     border: 15px solid rgb(42, 6, 6);
-    border-top: 15px solid rgb(42, 6, 6);
     background-image: url(../img/dragon-or.jpg);
-    background-size: 1500px 500px;
+    background-size: 1000px auto;
 }
 .form3 {
    
@@ -161,6 +160,11 @@
 .subtitle-item {
     font-size: 18px;
     font-family: cursive;
+}
+.subtitle-item2 {
+    font-size: 16px;
+    font-family: cursive;
+    border: 10px solid rgb(42, 6, 6);
 }
 .text-item {
     font-size: 18px;
