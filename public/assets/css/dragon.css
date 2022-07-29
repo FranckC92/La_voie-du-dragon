@@ -37,11 +37,9 @@
 .form {
     font-weight:bold;
     text-align:center;
-    color:   #0dcaf0;
-    border: 5px solid rgb(42, 6, 6);
-    border-top: 15px solid rgb(42, 6, 6);
-    background-image: url(../img/logo2.png);
-    background-size: 1600px auto;
+    color:   whitesmoke;
+    border: 15px solid rgb(42, 6, 6);
+    background-color: #000;
 }
 .register-item, .register-item a{
     text-align:center;
@@ -74,7 +72,7 @@
 }
 
 .title {
-    font-size: 60px;
+    font-size: 30px;
     text-align: center;
     font-family: cursive;
     border: 20px solid rgb(42, 6, 6);
@@ -95,7 +93,6 @@
     border: 5px solid rgb(42, 6, 6);
     border-width: 10px;
     text-align: center;
-
 }
 .title-item2 {
     font-family:cursive;
