@@ -7,10 +7,10 @@
   <div class="row">
             <div class="col-1 overflow-auto">
                 <hr><!-- trois images -->
-                    <img src="/assets/img/yingyang2.jpg" alt="" width="80" height="68" title="yingyang"></br>
-                    <img src="/assets/img/dragon-accountxs.png" alt="" width="80" height="432" title="dragon">
-                    <img src="/assets/img/long2.jpg" width="80" alt="" height="100" title="sinogrammes dragon"> 
-            </div><!-- /.col-1 overflow-auto -->
+                    <img src="/assets/img/yingyang2.jpg" alt="symbole yingyang" width="80" height="68" title="yingyang"></br>
+                    <img src="/assets/img/dragon-accountxs.png" alt="un dragon qui s eleve" width="80" height="432" title="dragon">
+                    <img src="/assets/img/long2.jpg" width="80" alt="synogrammes dragon" height="105 " title="sinogrammes dragon"> 
+              </div><!-- /.col-1 overflow-auto -->
      <div class="col-11">
             <hr>
             <h1 class="account-title">Mon compte</h1>
@@ -31,8 +31,10 @@
                     <a href="{{path('app_account_password') }}" class="account-link">
                     Modifier mon mot de passe </a><br/>
                 </div> <!-- /.account-item --> 
+                <div class='overflow-auto'><!--bootsratp pour responisve image -->
+                {# fonction twig pour afficher l 'image de l'article #}
+                <img src="{{ asset('assets/img/logo2.png')}}" alt="" width="1020" height="200" title="dragon foudre">  
+                </div><!-- /. overflow-auto -->
       </div> <!-- /.col-11 -->
-            {# fonction twig pour afficher l 'image de l'article #}
-           <img src="{{ asset('assets/img/logo2.png')}}" alt="" width="1400" height="300" title="dragon foudre">  
   </div><!-- /.row --> 
 {% endblock %}{# twig fin du contenu #}
