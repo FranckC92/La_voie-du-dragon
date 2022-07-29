@@ -5,10 +5,7 @@
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
   <div class="row">
-      <div class="col-md-2"><!-- divise en 3 colonnes les 2 colonnes de chaque cote avec logo ying yang -->
-                <div class="light-cgu">{# utilise twig pour placer une image ying yang #}
-                <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="yingyang" width="150" height="auto">
-                </div><!-- /.light-cgu -->
+      <div class="col-md-2"><!-- divise en 3 colonnes pour faire une colonne principale a 8 -->
       </div><!-- /.col-md-2 -->
       <!-- text des conditons generales d'utilisateur -->
       <div class="col-md-8">
@@ -171,12 +168,8 @@
               <p>Le présent contrat dépend de la législation française. 
                 En cas de litige non résolu à l’amiable entre l’Utilisateur et l’Éditeur, les tribunaux de Nanterre sont
                 compétents pour régler le contentieux. </p></br>
-                <hr> 
       </div><!-- /.col-md-8 -->
-      <div class="col-md-2">
-              <div class="light-cgu2">{# utilise twig pour placer une image ying yang #}
-              <img src="{{ asset('assets/img/yingyang3.jpg')}}" alt="img-fluid" title="yingyang" width="150" height="auto">
-              </div><!-- /.light-cgu2 -->
+      <div class="col-md-2">        
       </div><!-- /.col-md-2 -->
   </div><!-- /.row -->
 {% endblock %}{# fin du contenu #}

@@ -29,7 +29,7 @@
     margin-right: 0px;
     background-color: #000;
     color:   #0dcaf0;
-    position: absolute;
+    position: sticky;
     width: 100%;
 }
 .style {
@@ -125,12 +125,7 @@
     border: 10px solid rgb(42, 6, 6);;
     background-color: whitesmoke;
 }
-.light-cgu {
-    border: 10px solid rgb(42, 6, 6);
-}
-.light-cgu2 {
-    border: 10px solid rgb(42, 6, 6);
-}
+
 
 .account-title{
     font-size: 40px;
