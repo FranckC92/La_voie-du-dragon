@@ -5,14 +5,9 @@
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
 <div class="row">
-    <div class="col-md-2"><!-- divise en 3 colonnes/2 petites sur chaque cote avec image -->
-            <div class="light-cgu"><!-- class css -->
-            {#  twig pour placer une image #}
-            <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="yingyang" 
-            width="150" height="auto">
-            </div><!-- /.light-cgu -->
+    <div class="col-md-2 overflow-auto"><!-- divise en 3 colonnes/2 petites colonnes sans rien -->
     </div><!-- /.col-md-2 -->
-    <div class="col-md-8"><!-- colonne principale avec texte -->
+    <div class="col-md-8"><!-- colonne principale avec texte largeur 8  -->
             <h1 class="title-cgu">Politique de confidentialité</h1>
             <hr>
             <h2 class="text-center">EDITEUR DU SITE</h2>
@@ -131,14 +126,8 @@
             Dans la section « Confidentialité », cliquez sur préférences.
             Dans l’onglet « Confidentialité », vous pouvez bloquer les cookies.</li>
             </ul></br>
-            <hr>
         </div><!-- /. col-md-8 -->
         <div class="col-md-2">
-            <div class="light-cgu">   
-            {#  twig pour placer une image #}
-            <img src="{{ asset('assets/img/yingyang3.jpg')}}" alt="img-fluid" title="yingyang" 
-            width="150" height="auto">
-            </div><!-- /.light-cgu -->
         </div><!-- /.col-md-2 -->
  </div><!-- /.row -->
 {% endblock %}{# twig fin du contenue #}

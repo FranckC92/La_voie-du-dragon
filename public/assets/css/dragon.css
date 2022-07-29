@@ -1,5 +1,5 @@
 .navbar-dark,  .navbar-dark a {
-    font-size: 18px;
+    font-size: 14px;
     font-weight:bold;
     font-family: cursive;
     background-color: black;
@@ -8,7 +8,7 @@
 }
 .navbar-title, .navbar-title a {
     font-family: cursive;
-    font-size: 30px;
+    font-size: 24px;
     color:  #0dcaf0;
    
 }
