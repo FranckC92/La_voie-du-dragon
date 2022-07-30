@@ -34,6 +34,10 @@ class Blog
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $url;
 
+    #[ORM\ManyToOne(targetEntity: Themes::class, inversedBy: 'blogs')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $themes;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +123,18 @@ class Blog
     public function setUrl(?string $url): self
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    public function getThemes(): ?Themes
+    {
+        return $this->themes;
+    }
+
+    public function setThemes(?Themes $themes): self
+    {
+        $this->themes = $themes;
 
         return $this;
     }

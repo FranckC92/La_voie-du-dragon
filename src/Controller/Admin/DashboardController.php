@@ -6,6 +6,7 @@ use App\Entity\Blog;
 use App\Entity\User;
 use App\Entity\Category;
 use App\Entity\Product;
+use App\Entity\Themes;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -52,6 +53,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Utilisateur', 'fas fa-user', User::class);
         yield MenuItem::linkToCrud('Categories', 'fas fa-list', Category::class);
         yield MenuItem::linkToCrud('Rubriques', 'fa-solid fa-yin-yang', Product::class);
+        yield MenuItem::linkToCrud('Themes', 'fas fa-list', Themes::class);
         yield MenuItem::linkToCrud('Blog', 'gifa-solid fa-blog', Blog::class);
     }
 }
