@@ -52,16 +52,14 @@
 
 }
 .form2 {
-    font-size: 30px;
+    font-size: 18px;
     font-weight:bold;
     text-align:center;
     color: whitesmoke;
-    border: 15px solid rgb(42, 6, 6);
-    background-image: url(../img/dragon-or.jpg);
-    background-size: 1000px auto;
+    border: 30px solid #000;
+    background-color: #000;
 }
 .form3 {
-   
     font-weight:bold;
     text-align:center;
     color: cadetblue;
