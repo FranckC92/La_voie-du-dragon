@@ -4,32 +4,42 @@
 {% block title %}Le Blog- La voie du Dragon{% endblock %}
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
-        <h2 class="title">Blog</h2>
-        <div class="row">
-            {# fonction twig/ avec boucle for #}
-            {% for blog in blogs %}
-                    <div class="col-md-5">
-                        <div class="product-item text-center">
-                        </div>
-                    </div><!-- /.col-md-5 -->
-                            <div class="row">
-                                <div class="col-8">
+    <div class="row">
+        <h1 class="title">Blog</h1>
+        <div class="col-md-2"><!-- diviser en 2 colonnes/1 er colonne pour la barre de recherche -->
+            <h2 class="title-search">Recherche</h2><!-- class css habiller barre de rechercher -->
+            <div class="form3"><!-- class css pour habiller form -->
+                {# twig pour envoyer le formulaire #}
+                {# {{ form(form) }} #}
+                {# j utilise twig pour envoyer deux images de dragon #}
+                <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
+                width="150" height="auto">
+                <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
+                width="150" height="auto">
+            </div><!-- /.form3 -->
+        </div><!-- /.col-md-2 -->
+        <div class="col-md-10"><!-- 2 colonnne plus grandes pour mettre les articles du blog -->
+            <div class="row">
+                {# fonction twig/ avec boucle for #}
+                {% for blog in blogs %}
+                        <div class="col-md-4">
+                            <div class="product-item text-center">
+                            </div><!-- /. product-item text-center -->
                                     {# fonction twig/ci dessous pour afficher le nom du blog #}
                                     <h5 class="title-item">{{ blog.name }}</h5>
                                     <div class="blog-image">
                                         {# fonction twig/ancre avec slug#}
                                         <a href="{{ path('app_blog',{'slug': blog.slug})}}"> 
                                              {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
-                                            <img src="/uploads/{{ blog.illustration }}" width="150px"
+                                            <img src="/uploads/{{ blog.illustration }}" width="400" height="auto"
                                             alt="{{ blog.name }}" title="{{ blog.subtitle}}" class="img-fluid">
                                         </a>
-                                    </div><!-- /.blog-image -->
-                                </div><!-- /.col-8 -->
-                                <div class="col-md-4 mx-auto">
-                                    {# fonction twig/ci dessous pour afficher le subtitle #}
-                                    <span class="subtitle-item ">{{ blog.subtitle}}</span>
+                                        {# fonction twig/ci dessous pour afficher le subtitle #}
+                                         <span class="subtitle-item ">{{ blog.subtitle}}</span>
+                                    </div><!-- /.blog-image --> 
                                 </div><!-- /.col-md-4 mx-auto -->
-                            </div><!-- /.row -->
-            {% endfor %}{# twig fin de la boucle for #}   
-        </div><!-- /.row -->
+            {% endfor %}{# twig fin de la boucle for #} 
+        </div><!-- /.row -->  
+        </div><!-- /.col-md-10 -->
+    </div><!-- /.row -->    
 {% endblock %}{# twig fin du contenu #}
