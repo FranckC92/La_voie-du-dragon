@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class BlogCrudController extends AbstractCrudController
@@ -23,6 +24,7 @@ class BlogCrudController extends AbstractCrudController
     {
         return [
             TextField::new('name'),
+            AssociationField::new('themes'),
             SlugField::new ('slug')->setTargetFieldName('name'),
             TextField::new('subtitle'),
             ImageField::new('illustration')

@@ -2,10 +2,10 @@
 
 namespace App\Classe;
 
-use App\Entity\Blog;
+use App\Entity\Themes;
 
 
-class Searchblog
+class Search2
 
 { 
     /**
@@ -14,7 +14,7 @@ class Searchblog
     public $string = '';
 
     /**
-     * @var Blog[]
+     * @var Themes[]
      */
-    public $blogs = [];
+    public $themes = [];
 }
