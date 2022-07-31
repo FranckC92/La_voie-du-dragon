@@ -8,15 +8,17 @@
         <h1 class="title">Blog</h1>
         <div class="col-md-2"><!-- diviser en 2 colonnes/1 er colonne pour la barre de recherche -->
             <h2 class="title-search">Recherche</h2><!-- class css habiller barre de rechercher -->
-            <div class="form3"><!-- class css pour habiller form -->
+               {# j utilise twig pour envoyer deux images de dragon #}
+               <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="dragon"
+               width="165" height="auto">
+            <div class=""><!-- class css pour habiller form -->
                 {# twig pour envoyer le formulaire #}
                 {# {{ form(form) }} #}
-                {# j utilise twig pour envoyer deux images de dragon #}
-                <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
-                width="150" height="auto">
-                <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
-                width="150" height="auto">
+            
+               
             </div><!-- /.form3 -->
+            <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="dragon"
+            width="165" height="auto">
         </div><!-- /.col-md-2 -->
         <div class="col-md-10"><!-- 2 colonnne plus grandes pour mettre les articles du blog -->
             <div class="row">
