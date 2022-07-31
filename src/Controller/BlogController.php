@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Classe\Search2;
 use App\Entity\Blog;
+use App\Form\Search2Type;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,8 +26,11 @@ class BlogController extends AbstractController
     {
 
         $blogs = $this->entityManager->getRepository(Blog::class)->findAll();
+        // declare ma variable search2 pour ma barre de recherche
+        $search2 = new Search2;
+        // envoyer mon formulaire search2type pour la barre de recherche
+        $form = $this->createForm(Search2Type::class, $search2);
 
-        
         return $this->render('blog/index.html.twig', [
             'blogs' => $blogs,
             ]);

@@ -6,7 +6,6 @@ use App\Entity\Themes;
 
 
 class Search2
-
 { 
     /**
      * @var string
