@@ -4,11 +4,8 @@
 
 body {
     padding-top: 3rem;
-    background-color: whitesmoke;
-    border: 5px solid rgb(42, 6, 6);
-    position: relative;
-    /*height: 100vh;*/
-    
+    padding-bottom: 3rem;
+    color: #5a5a5a;   
 }
 
 

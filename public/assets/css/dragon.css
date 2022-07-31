@@ -1,3 +1,10 @@
+body {
+    position: relative;
+    background-color: whitesmoke;
+    border: 5px solid rgb(42, 6, 6);
+    position: relative;
+    /*height: 100vh;*/
+}
 .navbar-dark,  .navbar-dark a {
     font-size: 14px;
     font-weight:bold;
@@ -22,7 +29,7 @@
     margin-right: 0px;
     background-color: #000;
     color:   #0dcaf0;
-    position: sticky;
+    position: absolute;
     width: 100%;
 }
 .style {
