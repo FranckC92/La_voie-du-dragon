@@ -33,6 +33,7 @@ class BlogController extends AbstractController
 
         return $this->render('blog/index.html.twig', [
             'blogs' => $blogs,
+            'form' => $form->createView(),
             ]);
     }
     #[Route('/mon-blog/{slug}', name: 'app_blog')]
