@@ -7,8 +7,10 @@
   <div class="row">
             <div class="col-2 overflow-hidden">
                 <!-- deux images -->
-                    <img src="/assets/img/yingyang2.jpg" class="img-responsive" alt="symbole yingyang" width="150" height="auto" title="yingyang"></br>
-                    <img src="/assets/img/dragon-accountxs.png"  class="img-responsive" alt="un dragon qui s eleve" width="150" height="500" title="dragon">
+                    <img src="/assets/img/yingyang2.jpg" class="img-responsive" alt="symbole yingyang" 
+                        width="150" height="auto" title="yingyang"></br>
+                    <img src="/assets/img/dragon-accountxs.png"  class="img-responsive" 
+                        alt="un dragon qui s eleve" width="150" height="500" title="dragon">
               </div><!-- /.col-1 overflow-hidden -->
      <div class="col-10 overflow-hidden">
             <!-- espace compte h1 titre -->
@@ -18,7 +20,8 @@
             C'est dans cet espace que vous allez pouvoir gérer votre mot de passe et me contacter.</p>
                     {# fonction twig pour afficher l 'image du dragon de shaolin #}
                  <img src="{{ asset('assets/img/shiruxs.jpg')}}" class="img-responsive overflow-hidden" 
-                    alt="fresque sculture dragon du temple de shaolin" width="925" height="200" title="dragon shaolin">  
+                    alt="fresque sculture dragon du temple de shaolin" width="925" height="200" 
+                    title="dragon shaolin">  
                  <div class="account-item">
                      {# fonction twig is granted pour securiser l'acces a l'admin #}
                         {% if is_granted('ROLE_ADMIN') %}
