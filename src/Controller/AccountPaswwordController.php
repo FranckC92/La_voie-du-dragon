@@ -5,14 +5,13 @@ namespace App\Controller;
 use App\Form\ChangePasswordType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AccountPaswwordController extends AbstractController
 {
-    //rajoute le parametre entitymanager pour permmttre d envoyer plus bas le form a la bdd
+    //rajoute le parametre entitymanager pour permettre de communiquer avec la bdd.
     private $entityManager;
 
     public function __construct(EntityManagerInterface $entityManager)
@@ -45,6 +44,7 @@ class AccountPaswwordController extends AbstractController
                 $notification = "Votre mot de passe actuel n'est pas le bon";
             }
         }
+        {# renvoie la vue sur twig et le formulaire sur twig #}
         return $this->render('account/password.html.twig',[
             'form' => $form->createView(),
             'notification' => $notification
