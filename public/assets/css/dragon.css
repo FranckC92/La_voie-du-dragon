@@ -154,6 +154,12 @@ body {
 .account-logo {
     border-left: 10px solid rgb(42, 6, 6);
 }
+.logo {
+    display: block;
+    margin: auto;
+    overflow-y: hidden;
+    
+}
 .feature- .feature a {
    font-size: 14px;
 }
