@@ -1,6 +1,33 @@
 # See the configuration reference at https://symfony.com/bundles/SchebTwoFactorBundle/6.x/configuration.html
 scheb_two_factor:
-
+    
+      # Backup codes feature
+    backup_codes:
+        enabled: false                 # If the backup code feature should be enabled
+        manager: acme.custom_backup_code_manager  # Use a custom backup code manager
+    
     security_tokens:
         - Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken
         - Symfony\Component\Security\Http\Authenticator\Token\PostAuthenticationToken
+
+# A list of IP addresses or netmasks, which will not trigger two-factor authentication.
+    # Supports IPv4, IPv6 and IP subnet masks.
+    ip_whitelist:
+        - 127.0.0.1  # One IPv4
+        - 192.168.0.0/16  # IPv4 subnet
+        - 2001:0db8:85a3:0000:0000:8a2e:0370:7334  # One IPv6
+        - 2001:db8:abcd:0012::0/64  # IPv6 subnet
+
+    # If you want to have your own implementation to retrieve the whitelisted IPs.
+    # The configuration option "ip_whitelist" becomes meaningless in that case.
+    # Must implement Scheb\TwoFactorBundle\Security\TwoFactor\IpWhitelist\IpWhitelistProviderInterface
+    ip_whitelist_provider: acme.custom_ip_whitelist_provider 
+
+    # If you want to exchange/extend the TwoFactorToken class, which is used by the bundle, you can have a factory
+    # service providing your own implementation.
+    # Must implement Scheb\TwoFactorBundle\Security\TwoFactor\AuthenticationContextFactoryInterface
+    two_factor_token_factory: acme.custom_two_factor_token_factory
+
+    # If you need custom conditions when to perform two-factor authentication.
+    # Must implement Scheb\TwoFactorBundle\Security\TwoFactor\Condition\TwoFactorConditionInterface
+    two_factor_condition: acme.custom_two_factor_condition
