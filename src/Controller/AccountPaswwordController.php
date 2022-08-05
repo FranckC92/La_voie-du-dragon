@@ -49,5 +49,6 @@ class AccountPaswwordController extends AbstractController
             'form' => $form->createView(),
             'notification' => $notification
         ]);
+        }
     }
 }
