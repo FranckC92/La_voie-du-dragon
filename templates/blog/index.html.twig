@@ -9,13 +9,13 @@
         <div class="col-md-2"><!-- diviser en 2 colonnes/1 er colonne pour la barre de recherche -->
             <h2 class="">Filtre</h2><!-- class css habiller barre de rechercher -->
                {# j utilise twig pour envoyer deux images de dragon #}
-               <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="dragon"
+               <img src="{{ asset('assets/img/yingyang2.jpg')}}" class="img-responsive" alt="img-fluid" title="dragon"
                width="150" height="auto">
             <div class=""><!-- class css pour habiller form -->
                 {# twig pour envoyer le formulaire #}
                  {{ form(form)|raw }} {# won't be escaped #}
             </div><!-- /.form3 -->
-            <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="dragon"
+            <img src="{{ asset('assets/img/yingyang2.jpg')}}" class="img-responsive" alt="img-fluid" title="dragon"
             width="150" height="auto">
         </div><!-- /.col-md-2 -->
         <div class="col-md-10"><!-- 2 colonnne plus grandes pour mettre les articles du blog -->
