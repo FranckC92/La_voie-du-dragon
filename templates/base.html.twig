@@ -86,7 +86,8 @@
                     </ul><!-- finde la liste -->
                         {# Conditions if else Twig #}
                         {% if app.user %}
-                        <a href="{{ path('app_account')}}">Mon compte <small> <({{ app.user.firstname}})</small>></a> | <a href="{{ path('app_logout')}}">Déconnexion</a>
+                        {# won't be escaped #}
+                        <a href="{{ path('app_account')}}">Mon compte <small> <({{ app.user.firstname|upper|raw}})</small>></a> | <a href="{{ path('app_logout')}}">Déconnexion</a>
                         {% else %}
                         <a href="{{ path('app_login')}}">Connexion</a> | <a href="{{ path('app_register')}}">Inscription</a>
                         {% endif %}{# finde la conditions twig if else #}

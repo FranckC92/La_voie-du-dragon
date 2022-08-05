@@ -1,31 +1,31 @@
 {# twig pour étendre ma base.html #}
 {% extends 'base.html.twig' %}
 {# twig titre + fonction pour afficher le nom produits #}
-{% block title %}{{ product.name }}-La voie du Dragon{% endblock %}
+{% block title %}{{ product.name|upper|raw }} {# won't be escaped #}-La voie du Dragon{% endblock %}
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
         <div class="row">
                 {# twig pour afficher le nom du produits et je le mets en H1 comme titre #}
-                 <h1 class="title2">{{ product.name }}</h1>
+                 <h1 class="title2">{{ product.name|upper|raw }}</h1> {# won't be escaped #}
                  <div class="col-md-4"> <!-- 1er colonne moins large pour mettre image -->
                         {# fonctions twig pour afficher image/nom/subtitle #}
-                        <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}"
-                        title="{{ product.subtitle}}" class="img-fluid" width="300" height="300"></br>
+                        <img src="/uploads/{{ product.illustration }}" alt="{{ product.name|upper|raw }}" {# won't be escaped #}
+                        title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid" width="300" height="300"></br>
                         {# twig pour afficher le sous titre de l image #}
-                        <span class="subtitle-item">{{ product.subtitle}}</span></br>
+                        <span class="subtitle-item">{{ product.subtitle|upper|raw}}</span></br> {# won't be escaped #}
                         <hr>{# twig pour afficher l email #}
-                        <span>{{ product.email}}</span></br>
+                        <span>{{ product.email|upper|raw}}</span></br> {# won't be escaped #}
                         <hr>{# twig pour afficher l'url #}
-                        <span class="subtitle-item">{{ product.url }}</span>
+                        <span class="subtitle-item">{{ product.url|upper|raw }}</span> {# won't be escaped #}
                 </div><!-- /.col-md-4 -->
                         <!-- 2eme colonne plus grande pour afficher la description avec bouton -->
                  <div class="col-md-8 mx-auto"><!-- mx auto pour afficher le texte a l image -->
                         <div class="text-item">
                                 {# twig pour afficher description #}
-                                 {{ product.description}}  
+                                 {{ product.description|upper|raw}} {# won't be escaped #} 
                         </div><!-- /.text-item -->
                         <hr>{# twig pour afficher l url & html pour le bouton #}        
-                        <a href="{{product.url}}" class="btn btn-primary"
+                        <a href="{{product.url|upper|raw}}" {# won't be escaped #} class="btn btn-primary"
                         target="_blank">Aller sur le site</a>
                 </div><!-- /.col-md-8 mx-auto -->   
         </div><!-- /.row -->

@@ -16,7 +16,7 @@
 				{# twig pour afficher le logo #}
 				<img src="/assets/img/{{ 'logo.png' }}"class="amg-fluid" 
 				alt="logo " title="Logo la voie du Dragon" width="300" >
-				{{ form(form)}}
+				{{ form(form)|raw }} {# won't be escaped #}
 			</div><!-- /. form2 -->
 	</div><!-- /.block-small -->
 {% endblock %}{# twig fin du contenue #}

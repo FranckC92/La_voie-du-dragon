@@ -13,9 +13,7 @@
                width="150" height="auto">
             <div class=""><!-- class css pour habiller form -->
                 {# twig pour envoyer le formulaire #}
-                 {{ form(form) }} 
-            
-               
+                 {{ form(form)|raw }} {# won't be escaped #}
             </div><!-- /.form3 -->
             <img src="{{ asset('assets/img/yingyang2.jpg')}}" alt="img-fluid" title="dragon"
             width="150" height="auto">
@@ -28,16 +26,16 @@
                             <div class="product-item text-center">
                             </div><!-- /. product-item text-center -->
                                     {# fonction twig/ci dessous pour afficher le nom du blog #}
-                                    <h5 class="title-item">{{ blog.name }}</h5>
+                                    <h5 class="title-item">{{ blog.name|upper|raw }}</h5>{# won't be escaped #}
                                     <div class="blog-image">
                                         {# fonction twig/ancre avec slug#}
-                                        <a href="{{ path('app_blog',{'slug': blog.slug})}}"> 
+                                        <a href="{{ path('app_blog',{'slug': blog.slug|upper|raw})}}">{# won't be escaped #}
                                              {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
-                                            <img src="/uploads/{{ blog.illustration }}" width="400" height="auto"
-                                            alt="{{ blog.name }}" title="{{ blog.subtitle}}" class="img-fluid">
+                                            <img src="/uploads/{{ blog.illustration }}"  width="400" height="auto"
+                                            alt="{{ blog.name|upper|raw }}" title="{{ blog.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid">
                                         </a>
                                         {# fonction twig/ci dessous pour afficher le subtitle #}
-                                         <span class="subtitle-item ">{{ blog.subtitle}}</span>
+                                         <span class="subtitle-item ">{{ blog.subtitle|upper|raw}}{# won't be escaped #}</span>
                                     </div><!-- /.blog-image --> 
                                 </div><!-- /.col-md-4 mx-auto -->
             {% endfor %}{# twig fin de la boucle for #} 

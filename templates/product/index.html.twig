@@ -9,12 +9,9 @@
                     <h2 class="title-search">Recherche</h2><!-- class css habiller barre de rechercher -->
                     <div class="form3"><!-- class css pour habiller form -->
                         {# twig pour envoyer le formulaire #}
-                        {{ form(form) }}
+                        {{ form(form)|raw }} {# won't be escaped #}
                         {# j utilise twig pour envoyer deux images de dragon #}
-                        <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
-                        width="150" height="auto">
-                        <img src="{{ asset('assets/img/dragon-account.png')}}" alt="img-fluid" title="dragon"
-                        width="150" height="auto">
+                       
                     </div><!-- /.form3 -->
             </div><!-- /.col-md-2 -->
             <div class="col-md-10"><!-- 2 colonnne plus grandes pour mettre les fiches(product) -->
@@ -25,15 +22,17 @@
                         <div class="col-md-4"><!-- fiche produits largeur -->
                                     <div class="title-item2">
                                         {# twig pour afficher la fiche produits #}
-                                        <h2>{{ product.name }}</h2>
+                                        <h2>{{ product.name|upper|raw }}</h2>{# won't be escaped #}
                                     </div><!-- /.title-item2 -->
                                     <div class="image-arts"><!-- css classe pour habiller la fiche -->
                                         {# twig pour afficher le slug #}
-                                        <a href="{{ path('product',{'slug': product.slug})}}"> 
+                                        <a href="{{ path('product',{'slug': product.slug|upper|raw})}}">{# won't be escaped #}
                                         {# fonctions twig pour afficher l'image du produits/nom/subtitle #}
-                                        <img src="/uploads/{{ product.illustration }}" 
-                                        alt="{{ product.name }}" title="{{ product.subtitle}}" class="img-fluid" width="300" 
-                                        height="200"></a></br>
+                                            <img src="/uploads/{{ product.illustration}}" 
+                                            alt="{{ product.name|upper|raw }}" {# won't be escaped #} 
+                                            title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid"
+                                            width="300"  height="200">
+                                        </a></br>
                                     </div><!-- /.image-arts -->
                                     <hr>
                         </div><!-- /.col-md-4 -->

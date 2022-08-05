@@ -13,6 +13,6 @@
         {% endif %} {# fin de la  condition if pour notifications #}
             <div class="form container-fluid">
                 {# twig pour envoyer formulaire #}
-                {{ form(form) }}
+                {{ form(form)|raw }} {# won't be escaped #}
             </div><!-- /. form container-fluid -->
 {% endblock %}{# twig fin du contenue #}

@@ -16,7 +16,7 @@
             <!-- espace compte h1 titre -->
             <h1 class="account-title">Mon compte</h1>
              {# fonction twig pour afficher le nom d'utilisateur #}
-            <p class="account-item">Bienvenue {{ app.user.firstname }} dans votre compte.</br>
+            <p class="account-item">Bienvenue {{ app.user.firstname|upper|raw }} {# won't be escaped #} dans votre compte.</br>
             C'est dans cet espace que vous allez pouvoir gérer votre mot de passe et me contacter.</p>
                     {# fonction twig pour afficher l 'image du dragon de shaolin #}
                  <img src="{{ asset('assets/img/shiruxs.jpg')}}" class="img-responsive overflow-hidden" 

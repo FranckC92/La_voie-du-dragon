@@ -69,10 +69,13 @@ body {
 .form3 {
     font-weight:bold;
     text-align:center;
-    color: cadetblue;
+    color: aqua;
     border: 5px solid #000;
     border-top: 15px solid #000;
-    background-image: url(../img/logo2.png);
+    background-color: #000;
+    background-image: url(../img/dragon-account.png);
+    background-size: contain;
+
    
 }
 

@@ -19,7 +19,8 @@
             {% if app.user %}
                 {# fonction twig pour afficher identification utilsateur & route pour se deconnecter #}
                 <div class="mb-3">
-                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    You are logged in as {{ app.user.userIdentifier|upper|raw }} {# won't be escaped #},
+                 <a href="{{ path('app_logout') }}">Logout</a>
                 </div><!-- /. mb-3 -->
             {% endif %}{# twig fin de la condition if #}
             <h1>Se connecter</h1>
@@ -27,8 +28,9 @@
                 <div class="row">
                         <label for="inputEmail">Votre email</label>
                         <hr>{# input et twig fonction pour afficher nom de l'utilisateur #}
-                        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" 
-                        class="form-control" placeholder="Votre adresse email"required autofocus>
+                        <input type="email" value="{{ last_username|upper|raw }}" {# won't be escaped #}
+                         name="email" id="inputEmail" class="form-control"
+                         placeholder="Votre adresse email"required autofocus>
                 </div><!-- /.row -->
                     <hr>
                 <div class="row">
