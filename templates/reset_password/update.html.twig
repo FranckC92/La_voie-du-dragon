@@ -9,7 +9,7 @@
 			{# twig boucle For #}
 			{% for message in app.flashes('notice')%}
 				{# div avec alert et fonction twig pour faire apparaitre message #}
-				<div class="alert alert-info">{{ message }}
+				<div class="alert alert-info">{{ message|upper|raw }} {# won't be escaped #}
 				</div><!-- /. alert alert-info -->
 			{% endfor %}{# twig fin de la boucle for #}
 			<div class="form2">

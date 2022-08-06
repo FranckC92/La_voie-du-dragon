@@ -7,7 +7,7 @@
     <h1 class="register-item">Inscriptions</h1> 
         {# twig conditions if pour notification #}
         {% if notification %}
-            <div  class="alert alert-info">{{notification}}
+            <div  class="alert alert-info">{{notification|upper|raw}}
             </div><!-- /.alert alert-info -->
             </hr>
         {% endif %} {# fin de la  condition if pour notifications #}
