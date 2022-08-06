@@ -32,7 +32,7 @@ class ResetPasswordController extends AbstractController
             //renvoye a la page home
             return $this->redirectToRoute('app_home');
         }
-        //si l email a ete envoyé si c est le cas tu peux me 
+        //condition if si l email a nie été recupéré
         if ($request->get('email')){
             $user = $this->entityManager->getRepository(User::class)->findOneByEmail($request->get('email'));
                 //si mon ux existe bien et dans certains conditions alors plusieurs operation resetpassowrd
@@ -43,24 +43,23 @@ class ResetPasswordController extends AbstractController
                 $reset_password->setToken(Uniqid());
                 $reset_password->setCreatedAt(new DateTimeImmutable());
                 $this->entityManager->persist($reset_password);
+                // on envoye a la bdd
                 $this->entityManager->flush();
-
                 //Envoyer un email à l ux avec un lien pour remettre à jour le mot de passe
                 $url = $this->generateUrl('update_password', [
                     'token' =>$reset_password->getToken()
                 ]);
-                
-                $content = "Bonjour ".$user->getFirstname()."</br>Vous avez demandé à renitialiser votre mot de passe sur votre site HelpDevIdf.</br>";
-                $content = "Merci de bien vouloir cliquer sur le lien suivant pour <a href='".$url."'>Mettre à jour votre mot de passe</a>.";
+                $content = "Bonjour ".$user->getFirstname()."</br>Vous avez demandé à renitialiser votre mot de passe sur 
+                            votre site HelpDevIdf.</br>";
+                $content = "Merci de bien vouloir cliquer sur le lien suivant pour <a href='".$url."'>Mettre à jour votre
+                             mot de passe</a>.";
                 $mail = new Mail();
-                $mail->send($user->getEmail(), $user->getFirstname().' '.$user->getLastname(),'Réinitialiser votre mot de passe sur HelpDevIdf', $content);
+                $mail->send($user->getEmail(), $user->getFirstname().' '.$user->getLastname(),'Réinitialiser votre mot de
+                         passe sur HelpDevIdf', $content);
                 $this->addFlash('notice', 'vous allez recevoir un mail de renitialisation de votre mot de passe');
             } else {
                 $this->addFlash('notice', 'cette adresse email est inconnue dans notre base de données');
-               
-
             }
-        
         }
         return $this->render('reset_password/index.html.twig');
     }
@@ -72,7 +71,6 @@ class ResetPasswordController extends AbstractController
     {
         //je vais chercher rese mon entree reste passwword associé t 
         $reset_password = $this->entityManager->getRepository(ResetPassword::class)->findOneByToken($token);
-       
         //si il n existe tu peux faire un renvoi sur la route
         if (!$reset_password) {
             return $this->redirectToRoute('app_reset_password');
@@ -80,39 +78,30 @@ class ResetPasswordController extends AbstractController
         // verifier createdAt = now = 2h 
         $now = new \DateTime();
         if ($now > $reset_password->getCreatedAt()->modify('+ 2 hour')) {
-            
             //on vas rajouter pour faire notificitaions addflash
             $this->addFlash('notice', 'Votre demande de mot de passe a expiré.Merci de la renouveller.');
             return $this->redirectToRoute('app_reset_password');
         }
-       
         //Rendre une vue avec mot de passe et confirmez votre mot de passe
         $form = $this->createForm(ResetPasswordType::class);
         $form->handleRequest($request);
-
+        // condition if si le formulaier a bien étè remplis et validé
         if ($form->isSubmitted() && $form->isValid()) {
                 $new_pwd= $form->get('new_password')->getData();
-               
-       
-       
         //encodage mot de passe
-        
             $password = $encoder->hashPassword($reset_password->getUser(),$new_pwd);
-            
             $reset_password->getUser()->setPassword($password);
-        
-      
         //transmettre a la bdd
         $this->entityManager->flush();
+        // notification
         $notification = 'Votre mot de passe a bien été mis à jour.';
-        //redirection de l ux vers la page de connexion
+        // methode addflash un message court et redirection de l ux vers la page de connexion
         $this->addFlash('notice', 'votre mot de passe a bien étè mis à jour.');
         return $this->redirectToRoute('app_login');
     }
-
+        // envoye mon formulaire à twig avec createView
         return $this->render('reset_password/update.html.twig', [
             'form'=>$form->createView()
         ]);
-    }
-   
+    } 
 }
