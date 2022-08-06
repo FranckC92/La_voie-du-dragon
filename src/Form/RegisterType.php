@@ -53,9 +53,17 @@ class RegisterType extends AbstractType
                 "type"=> PasswordType::class,
                 "invalid_message" => "le mot de passe et la confirmation doivent être identique.",
                 "label" => "Votre mot de passe",
+                'constraints' => new Length([
+                    'min'=> 8,
+                    'max'=> 30
+                ]),
                 "required" => true,
                 "first_options" => [
                     'label' => 'Mot de passe',
+                    'constraints' => new Length([
+                        'min'=> 8,
+                        'max'=> 30
+                    ]),
                     'attr'=> [
                         'placeholder' => 'Merci de saisir votre mot de passe.'
                         
@@ -64,6 +72,10 @@ class RegisterType extends AbstractType
                 ],
                 "second_options" => [
                     'label' => 'Confirmez votre mot de passe',
+                    'constraints' => new Length([
+                        'min'=> 8,
+                        'max'=> 30
+                    ]),
                     'attr'=>[
                         'placeholder' => 'Merci de confirmer votre mot de passe.'
                     ]
