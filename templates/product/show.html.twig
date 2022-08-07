@@ -1,7 +1,7 @@
 {# twig pour étendre ma base.html #}
 {% extends 'base.html.twig' %}
 {# twig titre + fonction pour afficher le nom produits #}
-{% block title %}{{ product.name|upper|raw }} {# won't be escaped #}-La voie du Dragon{% endblock %}
+{% block title %}{{ product.name|upper|raw }} -La voie du Dragon{% endblock %}{# won't be escaped #}
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
         <div class="row">
