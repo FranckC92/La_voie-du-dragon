@@ -152,14 +152,14 @@
                 </a>
               </div><!-- /. id="myCarousel -->
        {% endif %} {# fin de twig condition if pour le carousel si il est definis #}
-            <!-- Marketing messaging and featurettes
+            <!-- Marketing messaging and featurettes mis dans home/index.html.twig
             ================================================== -->
             <!-- Wrap the rest of the page in another container to center all the content. -->
 
           <div class="container marketing {% if block ("carousel") is not defined %}mt-5{% endif %}">
                         {% block content %}  
                         {% endblock %}   
-          </div><!-- /.container -->
+          </div><!-- /.container marketing -->
                   <!-- FOOTER -->
                   <footer class="footer-custom"><!-- footer avec class css -->
                   <ul class="col-md-4 mb-0 justify-content-center">&copy; 2022 DigitalDev      
