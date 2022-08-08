@@ -37,7 +37,7 @@ class RegisterController extends AbstractController
             ->findOneByEmail($user->getEmail());
             $password = $encoder->hashPassword($user, $user->getPassword());
                $user->setPassword($password);
-               // si l email n est apas present en base de donnes tu peux continuer (envouyer a la bdd) si c est pas le cas notification
+               // si l email n est pas present en base de donnes tu peux continuer (envouyer a la bdd) si c est pas le cas notification
                if (!$search_mail){
             $this->entityManager->persist($user);
             $this->entityManager->flush();

@@ -1,0 +1,43 @@
+<header><!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container-fluid">{# en dessous twig pour afficher logo avec ancre pour l'accueil #}
+          <a class="navbar-brand" href="{{ path('app_home')}}"><img src="/assets/img/logo.png" alt="logo voie du dragon"
+          title="Accueil" class="img-fluid" width="50" ></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" 
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto  mb-4 mb-md-0"><!-- debut de la liste non ordonné avec bootstrap -->
+                  <li class="nav-item">
+                    <img src="/assets/img/logo2.png" class="img-fluid" title="dragon" width="50" height="auto">
+                  </li>
+                  <li class="nav-item">
+                    <p class="navbar-title"> La voie du Dragon</p>
+                  </li>
+                  <li class="nav-item">
+                    <img src="/assets/img/logo3.png" class="img-fluid" title="dragon" width="50">
+                  </li>
+                  <li class="nav-item"><!-- elements avec ancre en utilsant language twig -->
+                    <a class="nav-link" href="{{ path('app_blogs')}}">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ path('products')}}" >Arts martiaux</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{path('app_contact') }}" >Nous contacter</a>
+                  </li> 
+                  <!-- fin des éléments avec ancre en utilsant twig -->
+              </ul><!-- finde la liste -->
+                  {# Conditions if else Twig #}
+                  {% if app.user %}
+                  {# won't be escaped #}
+                  <a href="{{ path('app_account')}}">Mon compte <small> <({{ app.user.firstname|upper|raw}})</small>>
+                  </a> | <a href="{{ path('app_logout')}}">Déconnexion</a>
+                  {% else %}
+                  <a href="{{ path('app_login')}}">Connexion</a> | <a href="{{ path('app_register')}}">Inscription</a>
+                  {% endif %}{# finde la conditions twig if else #}
+          </div><!-- /. collapse navbar-collapse" id="navbarCollapse -->
+      </div><!-- /. container-fluid -->
+    </nav><!-- fin de la navbarre -->
+  </header>
