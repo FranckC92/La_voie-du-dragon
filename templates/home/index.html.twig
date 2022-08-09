@@ -5,17 +5,20 @@
 {% block carousel %}{% endblock %}
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
-    <!-- inclus mon text presentation et 3 collones dans le layout -->
-    {% include "layout/txttc.html.twig" %}
-      <!-- début des articles  -->
+       <!-- mon text presentation  -->
+    {% include "layout/presentationtxt.html.twig" %}
+       <!-- trois collones -->
+    {% include "layout/threecolon.html.twig" %}
+       <!-- début des articles  -->
       <hr class="featurette-divider">
-      <!-- mon 1er article -->
+       <!-- mon 1er article -->
     {% include "layout/article1.html.twig" %}
-      <!-- deuxieme article -->
+      <hr class="featurette-divider">
+       <!-- deuxieme article -->
     {% include "layout/article2.html.twig"%}
       <hr class="featurette-divider">
       <!-- troisieme articles -->
-      
+    {% include "layout/article3.html.twig"%}
       <hr class="featurette-divider">
       <!-- /fin des articles -->
       <!-- spotify sons -->
