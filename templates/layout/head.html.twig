@@ -1,0 +1,51 @@
+<head>
+    <!-- meta utf-8 -->
+    <meta charset="utf-8">
+    <!-- meta pour que le site soit responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- SEO Referencement Robots -->
+    <meta name = "robots" content = "index, follow, all" >
+    <meta name = "description" content = "Blog sur le bien être en géneral, qi qonk et 
+    auto-hypnose,méditations, et aussi une biblitotheques sur les arts martiaux externes 
+    et internes" >
+    <meta name = "keywords" content = "Blog,arts martiaux externes, arts martiaux internes, 
+    Qi Qonk, tai chi chuan, méditations, bien être, philosophie, histoire des arts martiaux">
+    <meta property = "og:description" content = "C'est un Blog dédié aux arts martiaux et aux 
+    autres aspects des arts martiaux internes et externes, la partie  bien être, et la partie 
+    philosophique, des articles et des videos.Une bibliotheque dédié sur l histoire et les 
+    differents arts martiaux et les maitres qui ont influencées les arts martiaux externes et internes" > 
+    <!-- meta framework author bootsrap -->
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <!-- titlte -->
+    <title>{% block title %}La voie du Dragon{% endblock %}</title> 
+    <!-- Boostrap -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/dragon.css')}}">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="{{ asset('icons/favicon.ico') }}">
+    <!-- responsive -->
+    <style>
+      .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('assets/css/carousel.css')}}" rel="stylesheet">
+    <!-- liens pour cookies consentement osano-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    {% block javascripts %}
+    {#{{ encore_entry_script_tags('app') }}#}
+    {% endblock %}
+  </head>
