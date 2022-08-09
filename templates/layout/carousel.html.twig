@@ -1,54 +1,60 @@
-
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <img src="/assets/img/{{ 'body2.jpg' }}"class="d-block w-50"alt="premier slide bienvenue" title="artiste martial qui pratique à l'aurore" >
-                              <div class="container">
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+            <div class="carousel-item active">
+                 <img src="/assets/img/{{ 'body2.jpg' }}"class="d-block w-50" 
+                 alt="premier slide bienvenue" title="artiste martial qui pratique à l'aurore" >
+                <div class="container">
                                   <div class="carousel-caption ">
                                       <h2 class="title-carousel">Bienvenue dans la voie du Dragon</h2>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="carousel-item">
+                                  </div><!-- /. carousel-caption -->
+                </div><!-- /. container -->
+            </div><!-- /. carosel item active -->
+                <div class="carousel-item">
                               <img src="/assets/img/{{ 'c1.jpg' }}"class="d-block w-100"alt="deuxieme slide wudang" title="chaines de montagne des monts Wudang">
-                              <div class="container">
-                                    <div class="carousel-caption text-center">
-                                        <h2 class="title-carousel2">Espace Membre Inscrivez-vous</h2>
-                                        <p class="text-carousel">Vous pouvez à tout moment vous désinscrire , et l'espace membre vous permet de contacter l'adminsitrateur. Si vous avez des infos ou une histoire à raconter..</p>
-                                        <p><a class="btn btn-lg btn-primary" href="{{ path('app_register')}}" role="button">Inscriptions</a></p>
-                                    </div><!-- /. carousel-caption text-center -->
-                                </div><!-- /. container -->
-                          </div><!-- /. carousel-item -->
-                          <div class="carousel-item">
-                              <img src="/assets/img/{{ 'c4.jpg' }}"class="d-block w-100"alt="troisieme slide shaolin" title="Temple de Shaolin">
-                              <div class="container">
-                                      <div class="carousel-caption">
-                                          <h2 class="title-carousel2">Temple de Shaolin</h2>
-                                      </div><!-- /. carsousel-caption -->
-                              </div><!-- /. container -->
-                          </div><!-- /. carsousel-item -->
-                          <div class="carousel-item">
-                              <img src="/assets/img/{{ 'templehd.jpg' }}"class="d-block w-100"alt="quatrieme slide artiste martial" title="artiste martial tai chi la vague" >
-                                <div class="container">
-                                        <div class="carousel-caption text-right">
-                                        </div><!-- /. carousel-caption text-right -->
-                                </div><!-- /. container -->
-                          </div><!-- /. carsousel-item -->
-                          <div class="carousel-item">
-                              <img src="/assets/img/{{ 'dragon-or.jpg' }}"class="d-block w-100"alt="cinquieme slide" title="dragon or">
-                              <div class="container">
-                                      <div class="carousel-caption text-right">
-                                      </div><!-- /. carousel-caption text-right -->
-                              </div><!-- /. container -->
-                          </div><!-- /. carousel-item -->
-                    </div><!-- /.carousel-inner -->
-                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only text-info">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                      <span class="sr-only text-info">Next</span>
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>               
-                    </a>
-              </div><!-- /. id="myCarousel -->
+                        <div class="container">
+                            <div class="carousel-caption text-center">
+                                <h2 class="title-carousel2">Espace Membre Inscrivez-vous</h2>
+                                    <p class="text-carousel">Vous pouvez à tout moment vous désinscrire , 
+                                        et l'espace membre vous permet de contacter l'adminsitrateur. Si vous 
+                                        avez des infos ou une histoire à raconter..</p>
+                                    <p><a class="btn btn-lg btn-primary" href="{{ path('app_register')}}" 
+                                        role="button">Inscriptions</a></p>
+                            </div><!-- /. carousel-caption text-center -->
+                        </div><!-- /. container -->
+                </div><!-- /. carousel-item -->
+                <div class="carousel-item">
+                    <img src="/assets/img/{{ 'c4.jpg' }}"class="d-block w-100"alt="troisieme slide shaolin"
+                         title="Temple de Shaolin">
+                        <div class="container">
+                             <div class="carousel-caption">
+                                    <h2 class="title-carousel2">Temple de Shaolin</h2>
+                             </div><!-- /. carsousel-caption -->
+                        </div><!-- /. container -->
+                 </div><!-- /. carsousel-item -->
+                <div class="carousel-item">
+                    <img src="/assets/img/{{ 'templehd.jpg' }}"class="d-block w-100"
+                        alt="quatrieme slide artiste martial" title="artiste martial tai chi la vague" >
+                        <div class="container">
+                            <div class="carousel-caption text-right">
+                            </div><!-- /. carousel-caption text-right -->
+                        </div><!-- /. container -->
+                </div><!-- /. carsousel-item -->
+                <div class="carousel-item">
+                              <img src="/assets/img/{{ 'dragon-or.jpg' }}"class="d-block w-100"
+                                alt="cinquieme slide" title="dragon or">
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                        </div><!-- /. carousel-caption text-right -->
+                    </div><!-- /. container -->
+                </div><!-- /. carousel-item -->
+     </div><!-- /.carousel-inner -->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only text-info">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="sr-only text-info">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>               
+        </a>
+</div><!-- /. id="myCarousel -->
        
