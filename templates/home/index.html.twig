@@ -5,122 +5,17 @@
 {% block carousel %}{% endblock %}
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
-    <!-- blog de bienvenue -->
-    <div class="row"> 
-     <div class="doubledragon">
-        <div class="p-4 p-md-3 ">
-              <p class="subtitle-item ">Ce site est un blog sur les arts martiaux,<a href="#histoire_arts_martiaux"> l'histoire</a>, les différents styles. L'idée est de 
-              rétablir la vérité sur l'histoire des arts martiaux et rediriger vers les sites officiels des disciplines.
-              Les arts martiaux, c'est bien plus que des enchaînements de coups de pieds et de poings ou de la soumission.
-              L'objectif est de centraliser et de vous faire découvrir les autres aspects des arts martiaux et du bien être en général.Des articles sur les lieux important tel que
-              le berceau du kung fu <a href="#temple_shaolin">Temple de Shaolin</a>, et le fameux <a href="#temple_mt_wu_dang"> Temple du Mont WU-Dang</a>.Dans la partie
-              <a  href="{{ path('app_blogs')}}">BLOG</a> , des articles et prochainement des liens sur des videos de bien être, réservé aux Membres, <a href={{ path('app_register')}}>l'inscription est gratuite</a>,
-               l'onglet <a href="{{ path('products')}}">Arts martiaux</a> vous emmenes à la bibliothèques de l histoire, les écoles, les styles, les maitres, bien sur il va me falloir
-              beaucoup de temps et de patience pour la completer à 100%, merci par avance pour votre patience.
-              </p> 
-            <p class="home-item">"Le bonheur n'est pas la destination, le bonheur c'est le chemin"</p>
-            <p class="home-item"> citation de Lao Tseu</p>
-        </div><!-- /.p-4 p-md-3 -->
-      </div><!-- /.doubledragon -->
-    </div><!-- /.row -->
-    <!-- trois colonnes apres le carousel -->
-    <div class="row"> 
-          <div class="col-lg-4">
-              <img src="{{ asset('assets/img/body.png')}}" class="img-fluid mt-3" width="140" height="140" title="ying yang dragon"alt="Arts martiaux internes ou externes?">
-                 <hr>
-                  <h2 class="fw-normal">Arts martiaux Internes ou Externes?</h2>
-                  <p>Les arts martiaux externes (waija) sont qualifiées de pratiques dures, renforcement musculaires, dépassement de soi.
-                    Les arts martiaux internes (neija) sont  focalisés sur les aspects mentaux, spirituels et l'énergie (chi ou qi).
-                    Un moteur de recherche sur la page arts martiaux vous permets de connaitre les arts martiaux internes ou externes.</p>
-                  <p><a class="btn btn-info" href="{{ path('products')}}">C'est ici</a></p>
-          </div><!-- 1/.col-lg-4 -->
-          <div class="col-lg-4">
-              <img src="{{ asset('assets/img/taichichuan.png')}}" class="bd-placeholder-img mt-3" width="140" height="140" title="ying yang symbole du taoisme" alt="Tai Chi Chuan un art martial interne">
-              <hr>
-              <h2 class="fw-normal">Tai Chi Chuan "Boxe du fait suprême"</h2>
-                <p>Art martial chinois dit « interne » (neijia). Traduit souvent par "la boxe du poing suprême" littéralement ce serait plus le "boxe du fait suprême". Très souvent vue comme une gymnastique.
-                  Les premiers textes citant le Tai Chi datent du 13 e Siecle, nommant  <a href="#temple_mt_wu_dang"> Zhang Sanfeng.</a> Sinon il apparait bien plus tard  par Chen Wangting...</p>
-              <p> <a class="btn btn-info" href="{{ path('products')}}">Pour lire la suite</a></p>
-          </div><!-- 2/.col-lg-4 -->
-          <div class="col-lg-4">
-                <img class="bd-placeholder-img rounded-circle mt-3" width="140" height="140" src="{{ asset('assets/img/qiqong.png')}}" alt="Qi Qong ying yang" title="Qi Qong gymnastique millénaire">
-                <hr>
-                <h2 class="fw-normal">Qi Qong</h2>
-                <p class="subtitle-item">Gymnastique Millénaire</p>
-                <p>Le <b>Qi Qong </b>ou la réalisation de la maitrise du souffle. Gymnastique chinoise millénaire, d’après la légende c’est le moine
-                <b>Bodhidharma</b> vers le 5 e siècle, aurait amené au  <a href="#temple_shaolin">Temple de Shaolin</a>
-                sa science médicale et de combat et l'aurait partagé au Moines de Shaolin pour se protéger des brigands et animaux sauvages de la région.</p>
-                <p><a class="btn btn-info" href="{{ path('app_blogs')}}">Par ici pour lire la suite</a></p>
-            </div><!-- 3/.col-lg-4 -->
-    </div><!-- /.row -->
-      <!-- début des articles -->
+    <!-- inclus mon text presentation et 3 collones dans le layout -->
+    {% include "layout/txttc.html.twig" %}
+      <!-- début des articles  -->
       <hr class="featurette-divider">
-      <!-- premier article -->
-      <div class="row featurette">
-        <!--  1 er colonne avec une plus grande largeur pour le text -->
-        <div class="col-md-7">
-          <h2 class="featurette-heading fw-normal lh-1" id="temple_shaolin">Temple de shaolin <span class="text-muted">Les Moines Guerriers Bouddhistes</span></h2>
-          <p class="feature"><b>Le monastère de Shaolin</b> se situe sur le mont Song dans la province de Henan en chine. C'est un 
-          temple bouddhiste Chan (zen en nippon) qui fut édifié vers la fin du V Siècle, en l'honneur du moine indien <b>Batuo</b>.
-          Le style <b>Shaolin Quan</b> est généralement considéré comme le premier art martial institutionnalisé. Selon la légende,
-          <b> Bodhidharma</b> aurait enseigné cet art martial au ve siècle aux moines du temple Shaolin, pour les aider à se défendre 
-          des animaux et des brigands qui rôdaient autour du monastère. Le <B>shǒubó</b> (手搏, attesté dès le IIIe siècle av. J.-C.),
-          et le <B>xiang bo</b> (similaire au sanda) dans les années 600 av. J.-C., ne sont que deux exemples d'anciens arts martiaux chinois.
-          Il existe deux styles : Shaolin Quan. Le style du Nord et celui du Sud. La différence est due à la situation géographique de la Chine.
-          Au Sud peu de place, le style du Sud se caractérise par des mouvements courts, puissants et des positions assez hautes. Au Nord de 
-          vastes plaines permettant de s’entraîner, se définit en souplesse, amplitude et de basses positions, suites ou enchaînements de mouvements 
-          permettant un travail aussi bien respiratoire que musculaire.. Le temple Shaolin du Nord est
-          l'original du Monastère de Shaolin, (Henan). Au sud le Temple Nan monastère Shaolin en Fujian est détruit depuis plusieurs siècles. 
-          (L’existence et l’emplacement sont encore discutés). Chaque école utilise cinq animaux de base (Dragon, Serpent, Grue, Tiger, Léopard),
-          chacun a plusieurs branches, à son tour.
-          </p><p><a class="btn btn-info" href="{{ path('products')}}">La suite...</a></p>{# twig ancre pour envoyer sur page product #}
-        </div><!-- /.col-md-7 -->
-        <!-- 2 eme colonne pour les images moins large -->
-        <div class="col-md-5">
-          {# j utilise twig pour faire afficher les photos #}
-          <img src="{{ asset('assets/img/c4.jpg')}}" class="img-fluid" width="500" height="500" title="L'entrée du temple" alt="Temple de Shaolin les Moines guerriers">
-          <p class="text-center">Monastère Shaolin</p>
-          <img src="{{ asset('assets/img/c8.jpg')}}" class="img-fluid" width="500" height="500" title="Démonstration du Shaolin Quan"alt="Démonstration du shaolin Quan">
-          <p class="text-center">Démonstration du Shaolin Quan</p>
-        </div><!-- /.col-md-5 -->
-      </div><!-- /.row featurette -->
-      <hr class="featurette-divider">
+      <!-- mon 1er article -->
+    {% include "layout/article1.html.twig" %}
       <!-- deuxieme article -->
-      <div class="row featurette">
-            <!-- 1er colonne avec text je rajoute du bootstap order-md-2 pour inverser l ordre et la mettre en 2 -->
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading fw-normal lh-1" id="temple_mt_wu_dang">Mont Wudang <span class="text-muted">Les Moines Guerriers Taoistes</span></h2>
-              <p class="feature">Le Monts Wudang , Le berceau des arts martiaux internes Taoiste.
-              Les monts Wudang sont une chaine de montagnes d’une superficie de 250km2, dans la province du <b>Hubei</b>, en chine.
-              A  son point le plus élevé, le Sommet du pilier céleste altitude 1 613 mètres. Un panorama de 72 pics, 36 falaises et 24 torrents. 
-              Les monastères ont été classés sites de l'héritage culturel mondial par l'UNESCO en 1994 .
-              L'ensemble de ce complexe de batiments est consititué de  72 temples, 9 monastères, 36 couvents et 9 palais racontent l' histoire 
-              trois dynasties chinoises des Yuan, Ming et Qing. Certains édifices datent du <b>VIIe siècle,</b>tout début de la dynastie des Tang.</p>
-              {# utilise twig pour renvoyer sur la page blog #}
-              <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">Par ici pour lire la suite</a>
-            </div><!-- /.col-md-7 order-md-2 -->
-             <!-- 2 eme colonne avec image je rajoute du bootstap order-md-1 pour inverser l ordre et la mettre en 1 er -->
-            <div class="col-md-5 order-md-1"><!-- en dessous twig pour mettre image -->
-            <img src="{{ asset('assets/img/c9.jpg')}}" class="img-fluid" width="500" height="500" alt="Arts martiaux internes ou externes?" title="Chaines des Monts Wudang">
-            <p class="text-center">Temple du Mont Wudang</p>
-          </div><!-- /.col-md-5 order-md-1 -->
-      </div><!-- /.row featurette -->
+    {% include "layout/article2.html.twig"%}
       <hr class="featurette-divider">
       <!-- troisieme articles -->
-      <div class="row featurette">
-          <div class="col-md-7"><!-- 1er colonne avec text -->
-              <h2 class="featurette-heading fw-normal lh-1" id="histoire_arts_martiaux">L'histoire des Arts Martiaux <span class="text-muted">Les origines</span></h2>
-              <p class="lead">L’histoire des arts martiaux, malgré ce que pense beaucoup de personnes, les arts martiaux ne vient pas de <b>chine</b> mais c’est encore plus ancien.
-              Les premières traces remontent en <b>Egypte</b> et en <b>Nubie</b>, il y a plus de 3000 ans. Le <b>Aha ou Ahah,kermet Mariama</b>est une forme de boxe et de lutte pratiquées
-              par les prêtes. Le <b>Kuta </b>a été créer par les gardes du corps des Anciens Pharaons pour trouver les meilleures méthodes efficaces pour défendre le Phararon. <b>La lutte de Nubie</b>, pratiquée depuis plus de 3000 ans, a vraisemblablement précédé la lutte grecque de plusieurs centaines d’années. </p>
-              <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">La suite</a>
-          </div><!-- /.col-md-7 -->
-          <div class="col-md-5"><!-- 2 eme colonne pour l'image -->
-          {# twig pour mettre image #}
-          <img src="{{ asset('assets/img/body9.jpg')}}" class="img-fluid" width="500" height="500" title="coup de pied"alt="L'histoire des arts martiaux">
-          <p class="text-center">Coup de pied du cheval</p>
-          </div><!-- /.col-md-5 -->
-      </div><!-- /.row featurette -->
+      
       <hr class="featurette-divider">
       <!-- /fin des articles -->
       <!-- spotify sons -->
