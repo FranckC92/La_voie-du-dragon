@@ -1,4 +1,3 @@
-{# twig pour étendre ma base.html #}
 {% extends 'base.html.twig' %}
 {# function twig pour blocker le carousel #}
 {% block title %}Home - La voie du Dragon{% endblock %}
@@ -22,8 +21,7 @@
       <hr class="featurette-divider">
       <!-- /fin des articles -->
       <!-- spotify sons -->
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/15k7PgVvz3M2DEUTRM42uE?utm_source=generator" width="100%" height="80" frameBorder="0"
-      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></br>
+    {% include "layout/spotify.html.twig"%}
 {% endblock %}{# twig fin du block de contenue #}
 
 

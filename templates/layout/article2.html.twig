@@ -1,19 +1,24 @@
 <div class="row featurette">
     <!-- 1er colonne avec text je rajoute du bootstap order-md-2 pour inverser l ordre et la mettre en 2 -->
     <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1" id="temple_mt_wu_dang">Mont Wudang <span class="text-muted">Les Moines Guerriers Taoistes</span></h2>
+        <h2 class="featurette-heading fw-normal lh-1" id="temple_mt_wu_dang">Mont Wudang 
+            <span class="text-muted">Les Moines Guerriers Taoistes</span>
+        </h2>
             <p class="feature">Le Monts Wudang , Le berceau des arts martiaux internes Taoiste.
-            Les monts Wudang sont une chaine de montagnes d’une superficie de 250km2, dans la province du <b>Hubei</b>, en chine.
-            A  son point le plus élevé, le Sommet du pilier céleste altitude 1 613 mètres. Un panorama de 72 pics, 36 falaises et 24 torrents. 
-            Les monastères ont été classés sites de l'héritage culturel mondial par l'UNESCO en 1994 .
-            L'ensemble de ce complexe de batiments est consititué de  72 temples, 9 monastères, 36 couvents et 9 palais racontent l' histoire 
-            trois dynasties chinoises des Yuan, Ming et Qing. Certains édifices datent du <b>VIIe siècle,</b>tout début de la dynastie des Tang.</p>
+                 Les monts Wudang sont une chaine de montagnes d’une superficie de 250km2, dans la province du <b>Hubei</b>,
+                 en chine. A  son point le plus élevé, le Sommet du pilier céleste altitude 1 613 mètres. 
+                 Un panorama de 72 pics, 36 falaises et 24 torrents. 
+                 Les monastères ont été classés sites de l'héritage culturel mondial par l'UNESCO en 1994 .
+                 L'ensemble de ce complexe de batiments est consititué de  72 temples, 9 monastères, 36 couvents 
+                 et 9 palais racontent l' histoire trois dynasties chinoises des Yuan, Ming et Qing. 
+                 Certains édifices datent du <b>VIIe siècle,</b>tout début de la dynastie des Tang.</p>
         {# utilise twig pour renvoyer sur la page blog #}
         <a class="btn btn-sm btn-info" href="{{ path('app_blogs')}}">Par ici pour lire la suite</a>
     </div><!-- /.col-md-7 order-md-2 -->
     <!-- 2 eme colonne avec image je rajoute du bootstap order-md-1 pour inverser l ordre et la mettre en 1 er -->
     <div class="col-md-5 order-md-1"><!-- en dessous twig pour mettre image -->
-        <img src="{{ asset('assets/img/c9.jpg')}}" class="img-fluid" width="500" height="500" alt="Arts martiaux internes ou externes?" title="Chaines des Monts Wudang">
+        <img src="{{ asset('assets/img/c9.jpg')}}" class="img-fluid" width="500" height="500" 
+            alt="Arts martiaux internes ou externes?" title="Chaines des Monts Wudang">
         <p class="text-center">Temple du Mont Wudang</p>
     </div><!-- /.col-md-5 order-md-1 -->
 </div><!-- /.row featurette -->
