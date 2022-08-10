@@ -15,7 +15,8 @@
             <hr>{# fonction twig/ci dessous pour afficher l'email #}
             <span>{{ blog.email|upper|raw}}{# won't be escaped #}</span>
             {# ancre avec finction twig pour envoyer sur l url avec un bouton #}      
-            <a href="{{blog.url|upper|raw}}" {# won't be escaped #} class="btn btn-primary" target="_blank">Aller sur le site</a>
+            <a href="{{blog.url|upper|raw}}" {# won't be escaped #} class="btn btn-primary" 
+               target="_blank">Aller sur le site</a>
         </div><!-- /.col-md-7 -->    
         <div class="col-md-5 mx-xl-auto">
             {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}

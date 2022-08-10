@@ -10,7 +10,8 @@
                  <div class="col-md-4"> <!-- 1er colonne moins large pour mettre image -->
                         {# fonctions twig pour afficher image/nom/subtitle #}
                         <img src="/uploads/{{ product.illustration }}" alt="{{ product.name|upper|raw }}" {# won't be escaped #}
-                        title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid" width="300" height="300"></br>
+                        title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid" width="300"
+                                 height="300"></br>
                         {# twig pour afficher le sous titre de l image #}
                         <span class="subtitle-item">{{ product.subtitle|upper|raw}}</span></br> {# won't be escaped #}
                         <hr>{# twig pour afficher l email #}

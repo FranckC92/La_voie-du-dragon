@@ -54,13 +54,14 @@ class RegisterController extends AbstractController
         if ($this->getUser()){
            
             return $this->redirectToRoute('app_login');
-        }
+          // return $this->render('security/login.html.twig');
+        } else {
         
         return $this->render('register/index.html.twig', [
 
             'form' => $form->createView(),
             'notification' => $notification
-        ]);
+        ]); }
 
         
         

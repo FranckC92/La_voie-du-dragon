@@ -10,7 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-    #[Route('/la-voie-du-dragon', name: 'app_home')]
+    #[Route('/', name: 'app_home')]
     public function index(): Response
     {
         //créations cookies avec propriété nom/valeur/expiration/path(home)/domaine/secu hhtps & http
