@@ -28,7 +28,7 @@ class ProductController extends AbstractController
         //declare et recupere donnes repoostyory fichier
         $products = $this->entityManager->getRepository(Product::class)->findAll();
       
-        //barre de rechercher et enoie du form lie a laclasse search
+        //barre de rechercher et envoye du form lie a la classe search
         $search = new Search();
         $form = $this->createForm( SearchType::class, $search);
         //formulaire
