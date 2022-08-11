@@ -31,6 +31,12 @@ class BlogController extends AbstractController
         // envoyer mon formulaire search2type pour la barre de recherche
         $form = $this->createForm(Search2Type::class, $search2);
 
+        if ($form->isSubmitted() && $form->isValid()){
+            $blogs = $this->entityManager->getRepository(Blog::class)->findWithSearch2($search2);
+            
+           
+        }
+
         return $this->render('blog/index.html.twig', [
             'blogs' => $blogs,
             'form' => $form->createView(),
