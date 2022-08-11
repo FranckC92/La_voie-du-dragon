@@ -42,7 +42,10 @@ class BlogController extends AbstractController
 
         $blog = $this->entityManager->getRepository(Blog::class)->findOneBySlug($slug);
 
-       
+        if (!$blog) {
+            return $this->redirectToRoute('app_blogs');
+
+        }
  
         return $this->render('blog/show.html.twig', [
             'blog' => $blog,
