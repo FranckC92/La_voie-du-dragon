@@ -33,10 +33,8 @@ class BlogController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()){
             $blogs = $this->entityManager->getRepository(Blog::class)->findWithSearch2($search2);
-            
-           
         }
-
+        // j'envoye le formulaire et je crée la vue avec creatVieuw
         return $this->render('blog/index.html.twig', [
             'blogs' => $blogs,
             'form' => $form->createView(),
