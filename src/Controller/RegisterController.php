@@ -61,10 +61,8 @@ class RegisterController extends AbstractController
 
             'form' => $form->createView(),
             'notification' => $notification
-        ]); }
-
-        
-        
+                                        ]); 
+                }
     }
 }
 
