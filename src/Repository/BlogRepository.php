@@ -38,7 +38,7 @@ class BlogRepository extends ServiceEntityRepository
 
         if (!empty($search2->string)) 
         {   $query =$query
-            ->andWhere('p.name LIKE :string')
+            ->andWhere('b.name LIKE :string')
             ->setParameter('string',"%{$search2->string}%");
 
         }
