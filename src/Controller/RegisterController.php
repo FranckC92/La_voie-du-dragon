@@ -45,7 +45,7 @@ class RegisterController extends AbstractController
             $mail = new Mail();
            
             $notification = "Votre inscription s'est correctement déroulée.Veuillez vous
-            connecter à votre compte, connexion en haut a droite de la barre de navigation";
+            connecter à votre compte, connexion en haut a droite de la barre de la navigation";
                }else{
                 $notification = "L'email existe déja. Merci d'essayer avec un autre email";
                }
@@ -55,8 +55,8 @@ class RegisterController extends AbstractController
             
             // return $this->redirectToRoute('app_account');
             // return $this->redirectToRoute('connection');
-            // return $this->redirectToRoute('compte');
-            return $this->redirectToRoute('app_login');
+            // return $this->redirectToRoute('/compte');
+            //return $this->redirectToRoute('app_login');
             // return $this->render('security/login.html.twig');
         } else {
         
