@@ -45,7 +45,7 @@ class RegisterController extends AbstractController
             $mail = new Mail();
            
             $notification = "Votre inscription s'est correctement déroulée.Veuillez vous
-            connecter à votre compte";
+            connecter à votre compte, connexion en haut a droite de la barre de navigation";
                }else{
                 $notification = "L'email existe déja. Merci d'essayer avec un autre email";
                }
