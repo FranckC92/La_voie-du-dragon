@@ -1,10 +1,39 @@
 # See the configuration reference at https://symfony.com/bundles/SchebTwoFactorBundle/6.x/configuration.html
 scheb_two_factor:
-    
-      # Backup codes feature
+    # Trusted device feature
+    trusted_device:
+        enabled: false                 # If the trusted device feature should be enabled
+        manager: acme.custom_trusted_device_manager  # Use a custom trusted device manager
+        lifetime: 5184000              # Lifetime of the trusted device token
+        extend_lifetime: false         # Automatically extend lifetime of the trusted cookie on re-login
+        cookie_name: trusted_device    # Name of the trusted device cookie
+        cookie_secure: false           # true|false|auto Set the 'Secure' (HTTPS Only) flag on the trusted device cookie
+        cookie_same_site: "lax"        # The same-site option of the cookie, can be "lax", "strict" or null
+        cookie_domain: ".osano.com"  # Domain to use when setting the cookie, fallback to the request domain if not set
+        cookie_path: "/"               # Path to use when setting the cookie
+
+    # TOTP authentification config
+    totp:
+        enabled: true                  # If TOTP authentication should be enabled, default false
+        window: 1                      # How many codes before/after the current one would be accepted as valid
+        template: security/2fa_form.html.twig   # Template used to render the authentication form
+        # form_renderer: acme.custom_form_renderer  # Use a custom form renderer service
+    # Backup codes feature
     backup_codes:
         enabled: false                 # If the backup code feature should be enabled
         manager: acme.custom_backup_code_manager  # Use a custom backup code manager
+
+    # email authentification config
+    email:
+        digits: 6
+    # google authentification config
+    google:
+        enabled: true                  # If Google Authenticator should be enabled, default false
+        server_name: Server Name       # Server name used in QR code
+        issuer: Issuer Name            # Issuer name used in QR code
+        digits: 6                      # Number of digits in authentication code
+        window: 1                      # How many codes before/after the current one would be accepted as valid
+        template: security/2fa_form.html.twig   # Template used to render the authentication form
     
     security_tokens:
         - Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken
