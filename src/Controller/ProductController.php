@@ -31,8 +31,9 @@ class ProductController extends AbstractController
         //barre de rechercher et envoye du form lie a la classe search
         $search = new Search();
         $form = $this->createForm( SearchType::class, $search);
-        //formulaire
+        //fais une ecoute
         $form->handleRequest($request);
+        // conditions if si valide et remplie
         if ($form->isSubmitted() && $form->isValid()){
             $products = $this->entityManager->getRepository(Product::class)->findWithSearch($search);
             

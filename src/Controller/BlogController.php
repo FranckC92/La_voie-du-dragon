@@ -30,7 +30,9 @@ class BlogController extends AbstractController
         $search2 = new Search2;
         // envoyer mon formulaire search2type pour la barre de recherche
         $form = $this->createForm(Search2Type::class, $search2);
-
+         //fais une ecoute
+         $form->handleRequest($request);
+         // conditions if si valide et remplie
         if ($form->isSubmitted() && $form->isValid()){
             $blogs = $this->entityManager->getRepository(Blog::class)->findWithSearch2($search2);
         }

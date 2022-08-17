@@ -3,8 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\Blog;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use App\Classe\Search2;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @extends ServiceEntityRepository<Blog>
@@ -20,7 +21,29 @@ class BlogRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Blog::class);
     }
+    public function findWithsearch2 (Search2 $search2)
+    {
+        $query = $this
+        ->createQueryBuilder('b')
+        ->select('t','b')
+        ->join('b.themes', 't');
+         
+        if (!empty($search2->themes)) {
+            $query= $query
+            ->andWhere('t.id IN (:themes)')
+            ->setParameter('themes', $search2->themes);
+        }
+       
 
+
+        if (!empty($search2->string)) 
+        {   $query =$query
+            ->andWhere('p.name LIKE :string')
+            ->setParameter('string',"%{$search2->string}%");
+
+        }
+        return $query->getQuery()->getResult();
+    }
     public function add(Blog $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
