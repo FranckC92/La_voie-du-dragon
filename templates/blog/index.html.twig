@@ -31,7 +31,7 @@
                                         {# fonction twig/ancre avec slug#}
                                         <a href="{{ path('app_blog',{'slug': blog.slug|upper|raw})}}">{# won't be escaped #}
                                              {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
-                                            <img src="/uploads/{{ blog.illustration }}"  width="400" height="auto"
+                                            <img src="/uploads/{{ blog.illustration }}"  width="100%" height="100%"
                                             alt="{{ blog.name|upper|raw }}" title="{{ blog.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid">
                                         </a>
                                         {# fonction twig/ci dessous pour afficher le subtitle #}
