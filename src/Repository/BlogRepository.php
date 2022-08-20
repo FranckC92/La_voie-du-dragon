@@ -21,6 +21,11 @@ class BlogRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Blog::class);
     }
+    /**
+     * Barre de recherche search2 pour la page du blog, quipermet
+     * au utilisateurs de faire une recherche par string et par themes
+     * @return Blog[]
+     */
     public function findWithsearch2 (Search2 $search2)
     {
         $query = $this
@@ -34,8 +39,6 @@ class BlogRepository extends ServiceEntityRepository
             ->setParameter('themes', $search2->themes);
         }
        
-
-
         if (!empty($search2->string)) 
         {   $query =$query
             ->andWhere('b.name LIKE :string')

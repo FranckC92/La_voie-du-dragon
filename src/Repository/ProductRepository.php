@@ -24,7 +24,8 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
         /**
-     *  Fonction  pour recuperer en fonction de la recherche de produits de l'ux
+     *  Fonction  pour recuperer en fonction de la recherche de produits de l'utilisateur
+     * une recherche par string et par categories
      *  @return Product[]
      */
     public function findWithsearch (Search $search)
