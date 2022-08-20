@@ -50,14 +50,10 @@ class RegisterController extends AbstractController
                 $notification = "L'email existe déja. Merci d'essayer avec un autre email";
                }
          }
-        //conditions si le formulaire remplis tu renvois sur la page connection
+        //conditions si le formulaire remplis tu renvois sur la page Mon compte
         if ($this->getUser()){
             
-            // return $this->redirectToRoute('app_account');
-            // return $this->redirectToRoute('connection');
-            // return $this->redirectToRoute('/compte');
-            //return $this->redirectToRoute('app_login');
-            // return $this->render('security/login.html.twig');
+             return $this->redirectToRoute('app_account');
         } else {
         
         return $this->render('register/index.html.twig', [
