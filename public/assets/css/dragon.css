@@ -14,8 +14,8 @@ body {
     justify-content: center;
 }
 .navbar-title, .navbar-title a {
-    font-family: cursive;
-    font-size: 24px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 30px;
     color:  #0dcaf0;
    
 }
