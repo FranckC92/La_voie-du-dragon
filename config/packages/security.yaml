@@ -33,7 +33,6 @@ security:
     access_control:
           - { path: ^/admin, roles: ROLE_ADMIN }
           - { path: ^/compte, roles: ROLE_USER }
-          - { path: ^/contact, roles: ROLE_USER }
           - { path: ^/les-blogs, roles: ROLE_USER }
           
 

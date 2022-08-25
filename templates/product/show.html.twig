@@ -10,8 +10,8 @@
                  <div class="col-md-4"> <!-- 1er colonne moins large pour mettre image -->
                         {# fonctions twig pour afficher image/nom/subtitle #}
                         <img src="/uploads/{{ product.illustration }}" alt="{{ product.name|upper|raw }}" {# won't be escaped #}
-                        title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid" width="300"
-                                 height="300"></br>
+                        title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="img-fluid" width="100%"
+                                 height="100%"></br>
                         {# twig pour afficher le sous titre de l image #}
                         <span class="subtitle-item">{{ product.subtitle|upper|raw}}</span></br> {# won't be escaped #}
                         <hr>{# twig pour afficher l email #}
@@ -20,7 +20,7 @@
                         <span class="subtitle-item">{{ product.url|upper|raw }}</span> {# won't be escaped #}
                 </div><!-- /.col-md-4 -->
                         <!-- 2eme colonne plus grande pour afficher la description avec bouton -->
-                 <div class="col-md-8 mx-auto"><!-- mx auto pour afficher le texte a l image -->
+                 <div class="col-md-8 mx-auto overflow-hidden"><!-- mx auto pour afficher le texte a l image -->
                         <div class="text-item">
                                 {# twig pour afficher description #}
                                  {{ product.description|upper|raw}} {# won't be escaped #} 

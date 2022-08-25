@@ -94,7 +94,6 @@ body {
 }
 .title-item {
     font-family:cursive;
-    font-weight:bold;
     border: 5px solid rgb(42, 6, 6);
     border-width: 10px;
     text-align: center;
@@ -165,7 +164,8 @@ body {
     border: 10px solid #000;
 }
 .text-item {
-    font-size: 18px;
+    font-size: 14px;
+    font-family: cursive;
     border:2px solid #000;
     background-color: azure;
 }
