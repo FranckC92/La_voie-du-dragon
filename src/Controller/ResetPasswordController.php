@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Classe\Mail;
+
 use App\Entity\User;
 use DateTimeImmutable;
 use App\Entity\ResetPassword;
@@ -53,9 +53,9 @@ class ResetPasswordController extends AbstractController
                             votre site HelpDevIdf.</br>";
                 $content = "Merci de bien vouloir cliquer sur le lien suivant pour <a href='".$url."'>Mettre à jour votre
                              mot de passe</a>.";
-                $mail = new Mail();
-                $mail->send($user->getEmail(), $user->getFirstname().' '.$user->getLastname(),'Réinitialiser votre mot de
-                         passe sur HelpDevIdf', $content);
+               // $mail = new Mail();
+               // $mail->send($user->getEmail(), $user->getFirstname().' '.$user->getLastname(),'Réinitialiser votre mot de
+                //         passe ', $content);
                 $this->addFlash('notice', 'vous allez recevoir un mail de renitialisation de votre mot de passe');
             } else {
                 $this->addFlash('notice', 'cette adresse email est inconnue dans notre base de données');
