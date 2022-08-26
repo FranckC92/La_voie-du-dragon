@@ -4,9 +4,16 @@
 {% block title %}Nous contacter - La voie du Dragon{% endblock %}
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
+        {# twig boucle for #}
+        {% for message in app.flashes('notice')%}
+        {# alert et fonction twig pour messages #}
+        <div class="alert alert-info">{{ message|upper|raw}}
+        </div><!-- /.alert alert-info -->
+        {% endfor %}{# twig fin de la boucle for #}
   <div class="row">
         <!-- divise en 2 colonnes -->
         <div class="col-lg-8"><!-- premiere colonne la je mets le formulaire -->
+        <h2 class="title2">Nous contacter</h2>
         <p class="subtitle-item2">Ici vous pouvez nous contacter, merci de remplir, le formulaire.
         Les messages haineux ne seront pas traitées.  Sinon  nous essayerons de répondre 
         dans les meilleurs délais.</p> 
@@ -18,8 +25,8 @@
         <div class="col-lg-4 mx-auto"><!-- deuxieme colonne avec logo du site  et adresse de contact -->
                    
                         {# utilise twig pour  mettre le logo avec title et redimensionne image #}
-                        <img src="{{ asset('assets/img/logo.png')}}" alt="img-fluid" title="La voie du dragon" 
-                                width="300px" height="300px"></br>
+                        <img src="{{ asset('assets/img/logo.png')}}" alt="img-responsive" title="La voie du dragon" 
+                                width="60%" height="30%"></br>
                                 <h1 class="title-address">La voie du Dragon</h1>
                                 <hr>
                                 <p class="text-address">square de la forge</br>
