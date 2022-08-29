@@ -13,13 +13,11 @@ body {
 .nav-link{
     color: whitesmoke;
     font-family: cursive;
-    
 }
-.navbar-item-custom a {
+.navbar-item-custom, .navbar-item-custom a {
    font-size: small;
    color: #0dcaf0;
    font-family: cursive;
-   margin-right: 0%;
 }
 .navbar-brand {
     font-size: 30px;
