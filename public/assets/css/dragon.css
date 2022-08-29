@@ -5,19 +5,26 @@ body {
     position: relative;
     /*height: 100vh;*/
 }
-.navbar-dark,  .navbar-dark a {
+.navbar-dark {
     font-size: 14px;
-    font-weight:bold;
-    font-family: cursive;
-    background-color: black;
-    color:  #0dcaf0;
-    justify-content: center;
-}
-.navbar-title, .navbar-title a {
     font-family: Brush Script MT, Brush Script Std, cursive;
+    background-color: black;
+}
+.nav-link{
+    color: whitesmoke;
+    font-family: cursive;
+    
+}
+.navbar-item-custom a {
+   font-size: small;
+   color: #0dcaf0;
+   font-family: cursive;
+   margin-right: 0%;
+}
+.navbar-brand {
     font-size: 30px;
+    font-weight:bold;
     color:  #0dcaf0;
-   
 }
 .footer-custom{
     display: flex;
