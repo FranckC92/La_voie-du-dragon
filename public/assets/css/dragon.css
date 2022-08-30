@@ -5,6 +5,10 @@ body {
     position: relative;
     /*height: 100vh;*/
 }
+.navbar-collapse, .navbar-collapse a {
+    display: flex;
+    justify-content: space-around;
+}
 .navbar-dark {
     font-size: 14px;
     font-family: Brush Script MT, Brush Script Std, cursive;

@@ -1,15 +1,12 @@
 <header>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black">
-	
-			<div>
-				<a class="navbar-brand" href="{{ path('app_home')}}"><img src="/assets/img/logo.png" alt="logo voie du dragon" title="Accueil" class="img-fluid" width="50">La voie du Dragon
-					
-				</a>
+				<a class="navbar-brand" href="{{ path('app_home')}}">
+				<img src="/assets/img/logo.png" alt="logo voie du dragon" title="Accueil" 
+				class="img-fluid" width="50">La voie du Dragon</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-			</div>
-			<div class="collapse navbar-collapse" id="navbarCollapse" style="display:flex; justify-content:space-around">
+		<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="{{ path('app_blogs')}}">Blog</a>
@@ -21,7 +18,6 @@
 						<a class="nav-link" href="{{path('app_contact') }}">Nous contacter</a>
 					</li>
 				</ul>
-		
 			<div class="navbar-item-custom">
 				{# Conditions if else Twig #}
 				{% if app.user %}
@@ -38,10 +34,7 @@
 					<a href="{{ path('app_register')}}">Inscription</a>
 				{% endif %}
 				{# finde la conditions twig if else #}
-			</div>
-			<!-- /.navbar-item-custom-->
-    </div>
-			<!-- /. collapse navbar-collapse"-->
-	
+			</div><!-- /.navbar-item-custom-->
+		</div><!-- /. collapse navbar-collapse"-->
 	</nav>
 </header>
