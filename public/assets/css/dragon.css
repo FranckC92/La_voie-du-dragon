@@ -28,6 +28,9 @@ body {
     font-weight:bold;
     color:  #0dcaf0;
 }
+.dropdown-item, .dropdown-item a{
+    font-family: cursive;
+}
 .footer-custom{
     display: flex;
     flex-wrap: wrap;
