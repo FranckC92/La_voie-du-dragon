@@ -245,7 +245,7 @@ body {
   .cover {
     object-fit: cover;
   } 
-  .title-404 {
+.title-404 {
     font-size: 60px;
     font-family: Brush Script MT, Brush Script Std, cursive;
     color: #000;
@@ -261,3 +261,4 @@ body {
     width: 50%;
     height: 50%;
   } 
+
