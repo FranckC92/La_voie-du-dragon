@@ -32,7 +32,7 @@
                                         <a href="{{ path('app_blog',{'slug': blog.slug|upper|raw})}}">{# won't be escaped #}
                                              {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
                                             <img src="/uploads/{{ blog.illustration }}" alt="{{ blog.name|upper|raw }}" 
-                                            title="{{ blog.subtitle|upper|raw}}" class="contain narrow2">
+                                            title="{{ blog.subtitle|upper|raw}}" class="contain" width="283"  height="200">
                                         </a>
                                         {# fonction twig/ci dessous pour afficher le subtitle #}
                                          <span class="subtitle-item ">{{ blog.subtitle|upper|raw}}{# won't be escaped #}</span>
