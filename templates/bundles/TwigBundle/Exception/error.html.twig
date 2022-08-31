@@ -4,13 +4,15 @@
 {% block title %}Page introuvable- La voie du Dragon{% endblock %}
 {# twig content pour afficher le contenue ci dessous #}
 {% block content %}
-<div class="d-flex justify-content-center">
-    <div class="block-small"> 
-        <img src="{{ asset('assets/img/logo.png')}}" alt="img-responsive" title="La voie du dragon" 
-         width="60%" height="30%">
-        <h1 class="title-address">Page introuvable</h1>
-        <p class="text-address">Désolé, cette page n'existe pas.</p>
-        <a href="{{ path('app_home') }}" class="btn btn-info">Revenir à l'accueil</a>
-    </div><!-- /.form2 -->
+<div class="row">
+    <div class="col-md-4"></div>
+        <div class="col-md-4 d-flex justify-content-center align-content-center">
+            <img src="{{ asset('assets/img/logo.png')}}" alt="img-responsive" title="La voie du dragon" 
+            width="60%" height="30%">
+            <h1 class="title-address">Page introuvable</h1>
+            <p class="text-address">Désolé, cette page n'existe pas.</p>
+            <a href="{{ path('app_home') }}" class="btn btn-info">Revenir à l'accueil</a>
+        </div><!-- /.col-md-4 d-flex-->
+    <div class="col-md-4"></div>
 </div>
 {% endblock %}{# twig fin du contenue #}
