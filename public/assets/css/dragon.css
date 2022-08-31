@@ -178,7 +178,7 @@ body {
 .text-item {
     font-size: 14px;
     font-family: cursive;
-    text-transform: lowercase;
+    text-transform:initial;
     border:2px solid #000;
     background-color: azure;
 }
@@ -227,6 +227,7 @@ body {
 .blog-item {
     font-family: cursive;
     font-size: 14px;
+    text-transform:initial;
     border: 5px solid rgb(42, 6, 6);
 }
 .blog-image {

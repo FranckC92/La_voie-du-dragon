@@ -22,7 +22,7 @@
                  <div class="col-md-8 mx-auto overflow-hidden"><!-- mx auto pour afficher le texte a l image -->
                         <div class="text-item">
                                 {# twig pour afficher description #}
-                                 {{ product.description|upper|raw}} {# won't be escaped #} 
+                                 {{ product.description|raw}} {# won't be escaped #} 
                         </div><!-- /.text-item -->
                         <hr>{# twig pour afficher l url & html pour le bouton #}        
                         <a href="{{product.url|upper|raw}}" {# won't be escaped #} class="btn btn-primary"
