@@ -178,6 +178,7 @@ body {
 .text-item {
     font-size: 14px;
     font-family: cursive;
+    text-transform: lowercase;
     border:2px solid #000;
     background-color: azure;
 }
@@ -224,7 +225,7 @@ body {
     text-align: center;
 }
 .blog-item {
-    font-family: Arial 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
     font-size: 14px;
     border: 5px solid rgb(42, 6, 6);
 }
