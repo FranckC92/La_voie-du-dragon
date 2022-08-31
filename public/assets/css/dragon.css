@@ -245,3 +245,19 @@ body {
   .cover {
     object-fit: cover;
   } 
+  .title-404 {
+    font-size: 60px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: #000;
+    text-align: center;
+}
+.text-404 {
+    font-size: 16px;
+    font-family: cursive;
+    color: #000;
+    text-align: center;
+}
+.narrow2 {
+    width: 50%;
+    height: 50%;
+  } 
