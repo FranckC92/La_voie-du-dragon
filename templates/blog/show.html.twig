@@ -7,7 +7,7 @@
     {# fonction twig/ci dessous pour afficher le nom & descriptions #}
     <h1 class="title-item">{{ blog.name|upper|raw }}</h1>
     <div class="row">
-        <div class="col-md-7 overflow-hidden">
+        <div class="col-md-7 mx-auto overflow-hidden">
                 <div class="blog-item"> {{ blog.description|upper|raw}}{# won't be escaped #}  
                 </div><!-- /.blog-item -->
             <hr>{# fonction twig/ci dessous pour afficher l'url #}
@@ -18,10 +18,10 @@
             <a href="{{blog.url|upper|raw}}" {# won't be escaped #} class="btn btn-primary" 
                target="_blank">Aller sur le site</a>
         </div><!-- /.col-md-7 -->    
-        <div class="col-md-5 mx-xl-auto">
+        <div class="col-md-5">
             {# fonction twig pour afficher l 'image de l'article avec le nom/subtitle #}
             <img src="/uploads/{{ blog.illustration }}" alt="{{ blog.name|upper|raw }}" {# won't be escaped #}
-             title="{{ blog.subtitle|upper|raw}}" {# won't be escaped #} class="img-responsive" width="80%" height="80%">
+             title="{{ blog.subtitle|upper|raw}}" {# won't be escaped #} class="cover narrow">
             {# fonction twig/ci dessous pour afficher le subtitle #}
             <span class="subtitle-item">{{ blog.subtitle|upper|raw}}{# won't be escaped #}</span>
         </div><!-- /.col-md-5 my-xl-auto -->    
