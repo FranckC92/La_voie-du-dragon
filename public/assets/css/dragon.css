@@ -169,6 +169,11 @@ body {
 .subtitle-item {
     font-size: 16px;
     font-family: cursive;
+    display: flex;
+    justify-content: center;
+    border-right: 5px solid rgb(42, 6, 6);
+    border-left: 5px solid rgb(42, 6, 6);
+    border-bottom: 5px solid rgb(42, 6, 6);
 }
 .subtitle-item2 {
     font-size: 16px;
@@ -236,6 +241,8 @@ body {
 }
 .blog-image {
     border: 5px solid rgb(42, 6, 6); 
+    display: flex;
+    justify-items: center;
 }
 .contain {
     object-fit: contain;
@@ -267,4 +274,8 @@ body {
 .narrow3 {
     width: 230px;
     height: 200px;
+  } 
+.narrow4 {
+    width: 230px;
+    height: 150px;
   } 
