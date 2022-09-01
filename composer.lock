@@ -5684,16 +5684,16 @@
         },
         {
             "name": "symfony/mailer",
-            "version": "v6.1.1",
+            "version": "v6.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
-                "reference": "db6a19a5c896139901c2de59fc9849379e0ff3b6"
+                "reference": "55a7cb8f8518d35e2a039daaec6e1ee20509510e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/db6a19a5c896139901c2de59fc9849379e0ff3b6",
-                "reference": "db6a19a5c896139901c2de59fc9849379e0ff3b6",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/55a7cb8f8518d35e2a039daaec6e1ee20509510e",
+                "reference": "55a7cb8f8518d35e2a039daaec6e1ee20509510e",
                 "shasum": ""
             },
             "require": {
@@ -5738,7 +5738,7 @@
             "description": "Helps sending emails",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/mailer/tree/v6.1.1"
+                "source": "https://github.com/symfony/mailer/tree/v6.1.4"
             },
             "funding": [
                 {
@@ -5754,7 +5754,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-06T19:15:01+00:00"
+            "time": "2022-08-03T05:16:05+00:00"
         },
         {
             "name": "symfony/mailjet-mailer",
@@ -5909,16 +5909,16 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v6.1.1",
+            "version": "v6.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "56508865dd883dce3c863af11b3e8053adab30d7"
+                "reference": "5d1de2d3c52f8ca469c488f4b9e007e9e9cee0b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/56508865dd883dce3c863af11b3e8053adab30d7",
-                "reference": "56508865dd883dce3c863af11b3e8053adab30d7",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/5d1de2d3c52f8ca469c488f4b9e007e9e9cee0b3",
+                "reference": "5d1de2d3c52f8ca469c488f4b9e007e9e9cee0b3",
                 "shasum": ""
             },
             "require": {
@@ -5970,7 +5970,7 @@
                 "mime-type"
             ],
             "support": {
-                "source": "https://github.com/symfony/mime/tree/v6.1.1"
+                "source": "https://github.com/symfony/mime/tree/v6.1.4"
             },
             "funding": [
                 {
@@ -5986,7 +5986,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-09T12:51:38+00:00"
+            "time": "2022-08-19T14:27:04+00:00"
         },
         {
             "name": "symfony/monolog-bridge",
