@@ -238,11 +238,11 @@ body {
 .contain {
     object-fit: contain;
   }
-  .narrow {
+.narrow {
     width: 100%;
     height: 80%;
   } 
-  .cover {
+.cover {
     object-fit: cover;
   } 
 .title-404 {
@@ -261,4 +261,5 @@ body {
     width: 50%;
     height: 50%;
   } 
+
 

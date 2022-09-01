@@ -28,8 +28,7 @@
                                         {# fonctions twig pour afficher l'image du produits/nom/subtitle #}
                                             <img src="/uploads/{{ product.illustration}}" 
                                             alt="{{ product.name|upper|raw }}" {# won't be escaped #} 
-                                            title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="contain"
-                                            width="300"  height="200">
+                                            title="{{ product.subtitle|upper|raw}}" {# won't be escaped #} class="cover narrow" >
                                         </a></br>
                                     </div><!-- /.image-arts -->
                                     <hr>
