@@ -185,6 +185,8 @@ body {
 }
 .image-arts {
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
 }
 .title-carousel {
     font-size: 50px;
@@ -262,4 +264,7 @@ body {
     height: 50%;
   } 
 
-
+.narrow3 {
+    width: 230px;
+    height: 200px;
+  } 
