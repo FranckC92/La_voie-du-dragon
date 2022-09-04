@@ -4,12 +4,16 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegisterType;
+
+use Symfony\Component\Mime\Email;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Mailer\Messenger\SendEmailMessage;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+
 
 class RegisterController extends AbstractController
 {
@@ -41,7 +45,8 @@ class RegisterController extends AbstractController
             $this->entityManager->persist($user);
             $this->entityManager->flush();
 
-          //  $mail = new Mail();
+            $email = new Email();
+            $email->send('contact@lavoiedudragon.fr', 'User', 'Mail Inscriptions', 'Félecitations vous êtes bien inscrit');
            
             $notification = "Votre inscription s'est correctement déroulée.Veuillez vous
             connecter à votre compte, connexion en haut a droite de la barre de la navigation";
