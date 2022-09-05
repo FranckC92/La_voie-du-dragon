@@ -6,9 +6,11 @@ use App\Entity\User;
 use App\Form\RegisterType;
 
 
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Mailer\Mailer;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,7 +27,7 @@ class RegisterController extends AbstractController
         
     }
     #[Route('/register ', name: 'app_register')]
-    public function index(Request $request, UserPasswordHasherInterface $encoder)
+    public function index(Request $request, UserPasswordHasherInterface $encoder,MailerInterface $mailer)
     {
         $notification = null;
 
@@ -46,9 +48,20 @@ class RegisterController extends AbstractController
             $this->entityManager->persist($user);
             $this->entityManager->flush();
 
-           //$mailer = new Mailer;
-           // $email = new Email();
-           // $email->send('contact@lavoiedudragon.fr', 'User', 'Mail Inscriptions', 'Félecitations vous êtes bien inscrit');
+           //Email avec mailer mailerchimp
+           $email = (new Email())
+            ->from('lavoiedudragonidf@gmail.com')
+            ->to('contact@lavoiedudragon.fr')
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            //->priority(Email::PRIORITY_HIGH)
+            ->subject('Inscriptions')
+            ->text('Félécitations, vous êtes désormais un membre de la voie du Dragon.')
+            ->html('<p>See Twig integration for better HTML integration!</p>');
+
+        $mailer->send($email);
+
            
             $notification = "Votre inscription s'est correctement déroulée.Veuillez vous
             connecter à votre compte, connexion en haut a droite de la barre de la navigation";
