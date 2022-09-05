@@ -3,20 +3,23 @@
 namespace App\Controller;
 
 
-
 use App\Form\ContactType;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\Mailer;
 use Doctrine\ORM\EntityManagerInterface;
-use phpDocumentor\Reflection\PseudoTypes\True_;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
+use phpDocumentor\Reflection\PseudoTypes\True_;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 
 class ContactController extends AbstractController
 {
     
     #[Route('/contact', name: 'app_contact')]
-    public function index(Request $request): Response
+    public function index(Request $request, MailerInterface $mailer): Response
     {
       
         //creation du formulaire
@@ -28,9 +31,20 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
              $this->addFlash('notice', "Merci de nous avoir contacter, votre message a bien étè envoyé");
-            // mail a reparemeter
-           // $mail = new Mail();
-           // $mail->send('lavoiedudragonidf@gmail.com', 'la voie du Dragon', 'vous avez reçu un nouveau contact', '');
+            //Email avec mailer mailerchimp
+            $email = (new Email())
+            ->from('contact@lavoidudragon.fr')
+            ->to('contact@lavoiedudragon.fr')
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            //->priority(Email::PRIORITY_HIGH)
+            ->subject('Test')
+            ->text('Félécitations, le mail fonctionne')
+            ->html('<p>See Twig integration for better HTML integration!</p>');
+
+        $mailer->send($email);
+
            return $this->redirectToRoute('app_contact');
         }
             //envoyer formulaire sur le vue de twig

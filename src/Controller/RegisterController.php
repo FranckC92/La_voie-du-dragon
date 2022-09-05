@@ -47,21 +47,6 @@ class RegisterController extends AbstractController
                if (!$search_mail){
             $this->entityManager->persist($user);
             $this->entityManager->flush();
-
-           //Email avec mailer mailerchimp
-           $email = (new Email())
-            ->from('contact@lavoidudragon.fr')
-            ->to('lavoiedudragonidf@gmail.com')
-            //->cc('cc@example.com')
-            //->bcc('bcc@example.com')
-            //->replyTo('fabien@example.com')
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject('Inscriptions')
-            ->text('Félécitations, vous êtes désormais un membre de la voie du Dragon.')
-            ->html('<p>See Twig integration for better HTML integration!</p>');
-
-        $mailer->send($email);
-
            
             $notification = "Votre inscription s'est correctement déroulée.Veuillez vous
             connecter à votre compte, connexion en haut a droite de la barre de la navigation";
