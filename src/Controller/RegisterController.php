@@ -50,8 +50,8 @@ class RegisterController extends AbstractController
 
            //Email avec mailer mailerchimp
            $email = (new Email())
-            ->from('lavoiedudragonidf@gmail.com')
-            ->to('contact@lavoiedudragon.fr')
+            ->from('contact@lavoidudragon.fr')
+            ->to('lavoiedudragonidf@gmail.com')
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
             //->replyTo('fabien@example.com')
