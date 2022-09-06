@@ -33,7 +33,7 @@ class ContactController extends AbstractController
              $this->addFlash('notice', "Merci de nous avoir contacter, votre message a bien étè envoyé");
             //Email avec mailer mailerchimp
             $email = (new Email())
-            ->from('contact@lavoidudragon.fr')
+            ->from('lavoiedudragonidf@gmail.com')
             ->to('contact@lavoiedudragon.fr')
             //->cc('cc@example.com')
             //->bcc('bcc@example.com')
