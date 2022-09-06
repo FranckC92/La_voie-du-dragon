@@ -2,15 +2,16 @@
 
 namespace App\Controller;
 
+
 use App\Entity\User;
+
+
+
+use App\Mailer\Mail;
 use App\Form\RegisterType;
-
-
-use Symfony\Component\Mime\Email;
-use Symfony\Component\Mailer\Mailer;
 use Doctrine\ORM\EntityManagerInterface;
+
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,7 +28,7 @@ class RegisterController extends AbstractController
         
     }
     #[Route('/register ', name: 'app_register')]
-    public function index(Request $request, UserPasswordHasherInterface $encoder,MailerInterface $mailer)
+    public function index(Request $request, UserPasswordHasherInterface $encoder, Mail $mail)
     {
         $notification = null;
 
@@ -45,8 +46,12 @@ class RegisterController extends AbstractController
                $user->setPassword($password);
                // si l email n est pas present en base de donnes tu peux continuer (envouyer a la bdd) si c est pas le cas notification
                if (!$search_mail){
+                
+                
             $this->entityManager->persist($user);
+
             $this->entityManager->flush();
+            $mail->sendEmail();
            
             $notification = "Votre inscription s'est correctement déroulée.Veuillez vous
             connecter à votre compte, connexion en haut a droite de la barre de la navigation";

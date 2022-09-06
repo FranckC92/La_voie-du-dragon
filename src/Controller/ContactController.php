@@ -31,7 +31,7 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
              $this->addFlash('notice', "Merci de nous avoir contacter, votre message a bien étè envoyé");
-            //Email avec mailer mailerchimp
+            //Email avec mailer google
             $email = (new Email())
             ->from('lavoiedudragonidf@gmail.com')
             ->to('contact@lavoiedudragon.fr')
