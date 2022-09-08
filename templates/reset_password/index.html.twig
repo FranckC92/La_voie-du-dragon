@@ -8,7 +8,7 @@
             {# twig boucle for #}
             {% for message in app.flashes('notice')%}
             {# alert et fonction twig pour messages #}
-            <div class="alert alert-info">{{ message|upper|raw }}
+            <div class="alert alert-info">{{ message|raw }}
             </div><!-- /.alert alert-info -->
             {% endfor %}{# twig fin de la boucle for #}
             <hr>
