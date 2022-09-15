@@ -4,13 +4,9 @@ namespace App\Controller;
 
 
 use App\Entity\User;
-
-
-
 use App\Mailer\Mail;
 use App\Form\RegisterType;
 use Doctrine\ORM\EntityManagerInterface;
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -46,13 +42,10 @@ class RegisterController extends AbstractController
                $user->setPassword($password);
                // si l email n est pas present en base de donnes tu peux continuer (envouyer a la bdd) si c est pas le cas notification
                if (!$search_mail){
-                
-                
             $this->entityManager->persist($user);
-
+                // on envoie a la bdd
             $this->entityManager->flush();
             $mail->sendEmail();
-           
             $notification = "Votre inscription s'est correctement déroulée.Veuillez vous
             connecter à votre compte, connexion en haut a droite de la barre de la navigation";
                }else{
