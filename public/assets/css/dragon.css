@@ -283,3 +283,7 @@ body {
     width: 230px;
     height: 150px;
   } 
+  .narrowCarousel {
+    width: 100%;
+    height: 100%;
+  } 
