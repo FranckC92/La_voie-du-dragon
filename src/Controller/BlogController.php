@@ -21,7 +21,7 @@ class BlogController extends AbstractController
         $this->entityManager = $entityManager;
     }
  
-    #[Route('/les-blogs', name: 'app_blogs')]
+    #[Route('/Espace-membres', name: 'app_blogs')]
     public function index(Request $request): Response
     {
 

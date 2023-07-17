@@ -21,7 +21,7 @@ class ProductController extends AbstractController
     {
         $this->entityManager = $entityManager;
     }
-    #[Route('/nos-articles', name: 'products')]
+    #[Route('/mon-blog', name: 'products')]
     public function index(Request $request): Response
     {
      
