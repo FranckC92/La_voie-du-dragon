@@ -1,6 +1,5 @@
 body {
     position: relative;
-    background-color: whitesmoke;
     border: 5px solid rgb(42, 6, 6);
     position: relative;
     /*height: 100vh;*/
@@ -40,7 +39,7 @@ body {
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
-    background-color: #000;
+    background-color: #0a0240;
     color:   #0dcaf0;
     position: absolute;
     width: 100%;
@@ -226,10 +225,10 @@ body {
     text-align: center;
 }
 .doubledragon {
-    background-color: cadetblue;
-    border: 10px solid rgb(42, 6, 6);
+    background-color: #F2A649;
+    border: 10px solid #0a0240;
     border-radius: 60px;
-    color:#000;
+    color: #0a0240;;
 }
 .home-item {
     font-size: 24px;
